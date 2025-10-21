@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Socket.IO chat</title>
+        <style>
+            body,
+            html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            canvas {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Create a drawing area by adding the canvas element -->
+        <canvas id="myCanvas" style="border: 1px solid #000"></canvas>
+
+        <!-- Include Socket.IO and Paper.js libraries for client-side scripting -->
+        <script src="/socket.io/socket.io.js"></script>
+
+        <!-- Include the client-side script file containing game controls -->
+        <script>
+            // Connect to the server with Socket.IO
+            const socket = io();
+
+            // Select the Canvas element
+            const canvas = document.getElementById("myCanvas");
+            const ctx = canvas.getContext("2d");
+
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            let drawing = false; // Drawing mode: true if drawing, false if not
+            let prevX = 0; // Previous mouse position X
+            let prevY = 0; // Previous mouse position Y
+
+            //handle mobile touch
+            canvas.addEventListener("touchstart", function (event) {
+                event.preventDefault();
+                const rect = canvas.getBoundingClientRect();
+                const touch = event.touches[0];
+                socket.emit("consola", touch)
+                const x = touch.clientX - rect.left;
+                const y = touch.clientY - rect.top;
+                // Start a new path
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+            });
+
+            canvas.addEventListener("touchmove", function (event) {
+                event.preventDefault();
+                const rect = canvas.getBoundingClientRect();
+                const touch = event.touches[0];
+                const x = touch.clientX - rect.left;
+                const y = touch.clientY - rect.top;
+                // Draw a line to the new position
+                ctx.lineTo(x, y);
+                ctx.strokeStyle = "red";
+                ctx.stroke();
+
+                // Emit more precise drawing information to the server
+                socket.emit("draw", {
+                    x1: prevX,
+                    y1: prevY,
+                    x2: x,
+                    y2: y,
+                    color: "red"
+                });
+
+                [prevX, prevY] = [x, y]; // Update the previous position to the current position
+
+            });
+            
+            // When drawing starts
+            canvas.addEventListener("mousedown", (e) => {
+                drawing = true; // Start drawing mode
+                [prevX, prevY] = [e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop]; // Set the starting point
+                ctx.beginPath(); // Start a new drawing path
+                ctx.moveTo(prevX, prevY); // Move to the starting point
+            });
+
+            // When drawing continues
+            canvas.addEventListener("mousemove", (e) => {
+                if (!drawing) return; // Exit if not in drawing mode
+
+                const currentX = e.clientX - canvas.offsetLeft; // Current mouse position X
+                const currentY = e.clientY - canvas.offsetTop; // Current mouse position Y
+
+                // Draw a smooth line between the two points
+                ctx.lineJoin = "round"; // Round line joins
+                ctx.lineCap = "round"; // Round line ends
+                ctx.lineWidth = 2; // Line thickness
+                ctx.lineTo(currentX, currentY); // Draw up to the current position
+                ctx.strokeStyle = "blue";
+                ctx.stroke(); // Apply the drawing
+
+                // Emit more precise drawing information to the server
+                socket.emit("draw", {
+                    x1: prevX,
+                    y1: prevY,
+                    x2: currentX,
+                    y2: currentY,
+                    color:"blue"
+                });
+
+                [prevX, prevY] = [currentX, currentY]; // Update the previous position to the current position
+            });
+
+            // When drawing ends
+            canvas.addEventListener("mouseup", () => {
+                drawing = false; // End drawing mode
+                ctx.closePath(); // Close the drawing path
+            });
+
+            // When drawing ends
+            canvas.addEventListener("touchend", () => {
+                event.preventDefault();
+                drawing = false; // End drawing mode
+                ctx.closePath(); // Close the drawing path
+            });
+
+            // Receive drawing information from the server
+            socket.on("draw", (data) => {
+                // Draw based on the received drawing information
+                ctx.lineJoin = "round";
+                ctx.lineCap = "round";
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(data.x1, data.y1);
+                ctx.lineTo(data.x2, data.y2);
+                ctx.strokeStyle = data.color;
+                ctx.stroke();
+            });
+        </script>
+    </body>
+</html>
