@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive canvas</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
+      canvas {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+    <script src="canvas.js" defer></script>
+  </head>
+  <body>
+    <canvas id="myCanvas" style="border: 1px solid #000000"></canvas>
+    <button id="clearButton" style="position: absolute; top: 10px; left: 10px; z-index: 10;">
+      Clear Canvas
+    </button>
+     <button id="modeButton" style="position: absolute; top: 40px; left: 10px; z-index: 10;">
+      *****
+    </button>
+    <button id="redStroke" style="position: absolute; top: 80px; left: 10px; z-index: 10; background-color: red;width: 30px; height: 30px; padding: 0; border: none;">
+    </button>
+        </button>
+    <button id="greenStroke" style="position: absolute; top: 120px; left: 10px; z-index: 10; background-color: rgb(1, 255, 1);width: 30px; height: 30px; padding: 0; border: none;">
+    </button>
+
+  </body>
+</html>
