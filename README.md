@@ -1,8 +1,9 @@
 # parse-a-sketch
 
-hfeuhfh aslkdñlksadjalkdj
+App for human evaluation of (human and AI generated) 2d Architecture plans.
 
-hola esto es una pruebad
+
+
 ## Citation
 
 ```
