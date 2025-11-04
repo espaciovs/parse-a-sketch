@@ -1,4 +1,6 @@
 examples/drawing-server/node_modules
 examples/canvas-experiments/node_modules
+examples/drawing-server/package-lock.json
+examples/canvas-experiments/package-lock.json
 examples/base-de-datos/.venv
 examples/base-de-datos/__pycache__
