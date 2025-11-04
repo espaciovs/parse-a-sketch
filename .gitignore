@@ -1,2 +1,4 @@
 examples/drawing-server/node_modules
 examples/canvas-experiments/node_modules
+examples/base-de-datos/.venv
+examples/base-de-datos/__pycache__
