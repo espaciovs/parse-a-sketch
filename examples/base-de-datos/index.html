@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .status {
+                width: 100%;
+                margin: 0;
+                font-family: "Courier New", Courier, monospace;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+            }
+            #canvas {
+                border: 1px solid #000;
+                cursor: crosshair;
+                display: block;
+                margin: 20px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="status">
+            <span id="statusText">Comprobando servidor...</span>
+            <span id="statusIndicator" style="width: 20px; height: 20px; margin-left: 10px"></span>
+        </p>
+
+        <canvas id="canvas" width="600" height="600"></canvas>
+        <div class="controls">
+            <button type="button" onclick="clearCanvas()">Limpiar</button>
+            <button type="button" onclick="saveCanvas()">Guardar</button>
+            <span id="saveStatus"></span>
+        </div>
+
+        <pre id="data-puntos"></pre>
+
+        <script>
+            const canvas = document.getElementById("canvas");
+            const ctx = canvas.getContext("2d");
+            let isDrawing = false;
+
+            // Información que se va mandar al servidor
+            let lineWidth = 3;
+            let strokeStyle = "#FF0000";
+            let modoCanvas = "draw";
+            let id = "ipUsuario";
+            let planta = 0;
+            let pregunta = 0;
+            let corregido = true;
+
+            // Objeto vacio que se enviará al servidor
+            let drawingData = {
+                data: [],
+                currentData: [],
+            };
+
+            // Mostrar el objeto en el DOM
+            document.getElementById("data-puntos").textContent = JSON.stringify(drawingData, null, 2);
+
+            ctx.lineCap = "round";
+            ctx.lineWidth = lineWidth;
+            ctx.strokeStyle = strokeStyle;
+
+            canvas.addEventListener("mousedown", (e) => {
+                // Se enciende el modo dibujo
+                isDrawing = true;
+
+                // Se añade al array currentData los valores grosor de linea, color de linea, las primeras coordenada x e y
+                drawingData.currentData.push(lineWidth, strokeStyle, e.offsetX, e.offsetY);
+
+                // Mostrar el objeto en el DOM
+                document.getElementById("data-puntos").textContent = JSON.stringify(drawingData, null, 2);
+            });
+
+            canvas.addEventListener("mousemove", (e) => {
+                if (isDrawing) {
+                    // Se añade al array las coordenadas x e y de los nuevos puntos
+                    drawingData.currentData.push(e.offsetX, e.offsetY);
+
+                    // Se dibuja el trazo actual en progreso
+                    if (drawingData.currentData.length > 0) {
+                        ctx.beginPath();
+                        ctx.moveTo(drawingData.currentData[2], drawingData.currentData[3]);
+                        for (let i = 4; i < drawingData.currentData.length; i += 2) {
+                            ctx.lineTo(drawingData.currentData[i], drawingData.currentData[i + 1]);
+                        }
+                        ctx.stroke();
+                    }
+
+                    // Mostrar el objeto en el DOM
+                    document.getElementById("data-puntos").textContent = JSON.stringify(drawingData, null, 2);
+                }
+            });
+
+            canvas.addEventListener("mouseup", () => {
+                if (isDrawing && drawingData.currentData.length > 0) {
+                    // Se pasan los valores de currentData a data
+                    drawingData.data.push([...drawingData.currentData]);
+                    // Se vacia currentData
+                    drawingData.currentData = [];
+                }
+                // Se apaga el modo dibujo
+                isDrawing = false;
+
+                // Mostrar el objeto en el DOM
+                document.getElementById("data-puntos").textContent = JSON.stringify(drawingData, null, 2);
+            });
+
+            canvas.addEventListener("mouseleave", () => {
+                if (isDrawing && drawingData.currentData.length > 0) {
+                    // Se pasan los valores de currentData a data
+                    drawingData.data.push([...drawingData.currentData]);
+                    // Se vacia currentData
+                    drawingData.currentData = [];
+                }
+                // Se apaga el modo dibujo
+                isDrawing = false;
+
+                // Mostrar el objeto en el DOM
+                document.getElementById("data-puntos").textContent = JSON.stringify(drawingData, null, 2);
+            });
+
+            function clearCanvas() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                // Se limpia el canvas y se vacia el objeto
+                drawingData = {
+                    data: [],
+                    currentData: [],
+                };
+
+                // Mostrar el objeto en el DOM
+                document.getElementById("data-puntos").textContent = JSON.stringify(drawingData, null, 2);
+            }
+
+            async function saveCanvas() {
+
+                const saveStatus = document.getElementById("saveStatus");
+
+                // Se comprueba si hay algo dibujado
+                if (drawingData.data.length === 0) {
+                    saveStatus.textContent = "⚠️ No hay nada que guardar";
+                    saveStatus.style.color = "orange";
+                    return;
+                }
+
+                //Si hay algo dibujado se intenta guardar
+                try {
+                    // La información que se envía al servidor
+                    const jsonData = {
+                        id: id,
+                        planta: planta,
+                        pregunta: pregunta,
+                        corregido: corregido,
+                        modoCanvas: modoCanvas,
+                        ancho: canvas.width,
+                        alto: canvas.height,
+                        datos: drawingData.data,
+                    };
+
+                    const response = await fetch("http://127.0.0.1:5000/guardar-animacion", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(jsonData),
+                    });
+
+                    if (response.ok) {
+                        // Si se guarda bien
+                        const result = await response.json();
+                        saveStatus.textContent = `✅ ${result.message} (${result.size})`;
+                        saveStatus.style.color = "green";
+                        // Se limpia el canvas y se vacia el objeto
+                        clearCanvas();
+                    } else {
+                        // Si no se guarda bien
+                        saveStatus.textContent = "❌ Error al guardar: " + response;
+                        console.log(response);
+                        saveStatus.style.color = "red";
+                    }
+                } catch (error) {
+                    // Si falla la conexión
+                    saveStatus.textContent = "❌ Error de conexión";
+                    saveStatus.style.color = "red";
+                }
+            }
+
+            async function checkServerStatus() {
+                try {
+                    const response = await fetch("http://127.0.0.1:5000/");
+
+                    if (response.ok) {
+                        document.getElementById("statusText").textContent = "Servidor activo";
+                        document.getElementById("statusIndicator").style.backgroundColor = "green";
+                    } else {
+                        document.getElementById("statusText").textContent = "Error de conexión con el servidor";
+                        document.getElementById("statusIndicator").style.backgroundColor = "red";
+                    }
+                } catch (error) {
+                    document.getElementById("statusText").textContent = "Servidor inactivo";
+                    document.getElementById("statusIndicator").style.backgroundColor = "red";
+                }
+            }
+
+            checkServerStatus();
+        </script>
+    </body>
+</html>
