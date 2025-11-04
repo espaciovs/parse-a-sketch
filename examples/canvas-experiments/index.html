@@ -2,37 +2,756 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Interactive canvas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
+      * {
+        box-sizing: border-box;
+      }
+
       html,
       body {
+        font-family: "Ubuntu", sans-serif;
         margin: 0;
         padding: 0;
-        height: 100%;
-        width: 100%;
-      }
-      canvas {
-        display: block;
+        height: 100dvh;
         width: 100vw;
-        height: 100vh;
+        background-color: #ffffff;
+        color: #333;
+        overflow: hidden;
+        position: fixed;
+      }
+
+      .header {
+        font-family: "Ubuntu", sans-serif;
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 7dvh;
+        padding: 0 20px;
+        background-color: #ffffff;
+        border-bottom: 1px solid #ff6cb3;
+        z-index: 100;
+      }
+
+      .header h1 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: 500;
+        color: #ff84c0;
+      }
+
+      .header h2 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 400;
+        color: #777;
+      }
+
+      .planta {
+        display: flex;
+        width: 100%;
+        height: 86dvh;
+        margin-top: 7dvh;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .planta_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 1/1;
+        height: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 0;
+      }
+
+      #myCanvas {
+        aspect-ratio: 1 / 1;
+      }
+
+      .canvas-controls {
+        position: fixed;
+        bottom: 8dvh;
+        left: 20px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        z-index: 1000;
+      }
+
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 7dvh;
+        padding: 0 20px;
+        background-color: #ffffff;
+        border-top: 1px solid #ff6cb3;
+        z-index: 100;
+      }
+
+      button {
+        font-family: "Ubuntu", sans-serif;
+        background-color: #ff6cb3;
+        color: white;
+        border: none;
+        border-radius: 0;
+        padding: 12px 24px;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        position: relative;
+        z-index: 10;
+      }
+
+      button:hover {
+        background-color: #fa7bb8;
+      }
+
+      button:active {
+        background-color: #d20467;
+      }
+
+      .canvas-controls button {
+        padding: 8px 16px;
+        font-size: 13px;
+      }
+
+      #colorSelectors {
+        transform: scaleX(0);
+      }
+
+      #redStroke,
+      #greenStroke {
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        border: 2px solid #e0e0e0;
+        cursor: pointer;
+        transition: transform 0.1s ease;
+      }
+
+      #moveObjectTools {
+        transform: scaleX(0);
+      }
+
+      #DrawMode,
+      #MoveObjectMode {
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        border: 2px solid #e0e0e0;
+        cursor: pointer;
+        transition: transform 0.1s ease;
+      }
+
+      .selected-stroke {
+        border: 4px solid #fff !important;
+        box-shadow: 0 0 9px #777;
+      }
+
+      #redStroke {
+        background-color: #ff548d;
+      }
+
+      #greenStroke {
+        background-color: #55ffad;
+      }
+
+      #redStroke:hover,
+      #greenStroke:hover {
+        transform: scale(1.1);
+      }
+
+      #pregunta {
+        margin: 0;
+        text-align: center;
+        font-size: clamp(14px, 2.5vw, 18px);
+        font-weight: 400;
+        color: #777;
+        flex: 1;
+        padding: 0 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      #prevButton,
+      #nextButton {
+        font-size: 20px;
+        padding: 5px 30px;
+      }
+
+      /* Media queries para móviles */
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          padding: 5px 10px;
+          gap: 4px;
+        }
+
+        .header h1 {
+          font-size: 20px;
+        }
+
+        .header h2 {
+          font-size: 14px;
+        }
+
+        .canvas-controls button {
+          padding: 6px 12px;
+          font-size: 12px;
+        }
+
+        #redStroke,
+        #greenStroke {
+          width: 30px;
+          height: 30px;
+        }
+
+        .footer {
+          padding: 0 20px;
+        }
+
+        #prevButton,
+        #nextButton {
+          font-size: 18px;
+          padding: 4px 25px;
+        }
+
+        #pregunta {
+          font-size: clamp(12px, 3vw, 16px);
+          padding: 0 10px;
+        }
       }
     </style>
-    <script src="canvas.js" defer></script>
+
+    <script src="/socket.io/socket.io.js"></script>
   </head>
   <body>
-    <canvas id="myCanvas" style="border: 1px solid #000000"></canvas>
-    <button id="clearButton" style="position: absolute; top: 10px; left: 10px; z-index: 10;">
-      Clear Canvas
-    </button>
-     <button id="modeButton" style="position: absolute; top: 40px; left: 10px; z-index: 10;">
-      *****
-    </button>
-    <button id="redStroke" style="position: absolute; top: 80px; left: 10px; z-index: 10; background-color: red;width: 30px; height: 30px; padding: 0; border: none;">
-    </button>
-        </button>
-    <button id="greenStroke" style="position: absolute; top: 120px; left: 10px; z-index: 10; background-color: rgb(1, 255, 1);width: 30px; height: 30px; padding: 0; border: none;">
-    </button>
+    <div class="header">
+      <h1>Taller Data-Home</h1>
+      <h2 id="nombre_planta"></h2>
+    </div>
 
+    <div class="planta" id="planta">
+      <div class="planta_img"><canvas id="myCanvas"></canvas></div>
+
+      <div class="canvas-controls">
+        <button id="clearButton">Clear Canvas</button>
+        <div id="colorSelectors">
+          <button id="redStroke"></button>
+          <button id="greenStroke" class="selected-stroke"></button>
+        </div>
+        <div id="moveObjectTools">
+          <button id="DrawMode">Draw</button>
+          <button id="MoveObjectMode">Move</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <button id="prevButton">&lt;</button>
+      <h3 id="pregunta">
+        Sala de espera, para empezar haz clic en la flecha ->
+      </h3>
+      <button id="nextButton">></button>
+    </div>
+
+    <script>
+      //Temitas de socket.io
+      const socket = io();
+
+      let currentModoCanvas;
+
+      socket.on("imagen-cambiada", (plantaObj) => {
+        console.log("Imagen recibida:", plantaObj);
+        const nombrePlantaElement = document.getElementById("nombre_planta");
+        nombrePlantaElement.textContent = plantaObj.titulo;
+
+        const plantaImg = document.querySelector(".planta_img");
+        plantaImg.style.backgroundImage = `url(${plantaObj.imagen})`;
+
+        clearCanvas();
+      });
+
+      //Temitas de canvas:
+      const canvas = document.getElementById("myCanvas");
+      const container = document.getElementById("planta");
+      const size = Math.min(container.clientWidth, container.clientHeight);
+      canvas.width = size;
+      canvas.height = size;
+      canvas.style.display = "block";
+      canvas.style.margin = "auto";
+      const ctx = canvas.getContext("2d");
+      let red = "#ff548d";
+      let green = "#55ffad";
+
+      window.addEventListener("resize", function () {
+        // crear una copia temporal
+        const temp = document.createElement("canvas");
+        temp.width = canvas.width;
+        temp.height = canvas.height;
+        temp.getContext("2d").drawImage(canvas, 0, 0);
+        temp.strokeStyle = ctx.strokeStyle;
+        temp.lineWidth = ctx.lineWidth;
+        const size = Math.min(container.clientWidth, container.clientHeight);
+        canvas.width = size;
+        canvas.height = size;
+
+        ctx.drawImage(temp, 0, 0, canvas.width, canvas.height);
+        ctx.strokeStyle = temp.strokeStyle;
+        ctx.lineWidth = temp.lineWidth;
+      });
+
+      // Funcion para actualizar el modo de dibujo, meter aqui nuevos casos!
+      function actualizarDrawMode() {
+        
+
+        switch (currentModoCanvas) {
+          case "Draw":
+            canvas.style.cursor = "default";
+
+            
+            break;
+          case "Text":
+            canvas.style.cursor = "text";
+            
+
+            break;
+
+          case "Point":
+            canvas.style.cursor = "crosshair";
+            
+            break;
+
+          case "MoveObject":
+            canvas.style.cursor = "grab";
+            break;
+
+
+
+          default:
+            canvas.style.cursor = "default";
+            
+        }
+      }
+
+      // Set stroke style and text style
+      const textType = "18px Ubuntu, sans-serif";
+      ctx.strokeStyle = green;
+      ctx.lineWidth = 6;
+      ctx.lineCap = "round";
+      const redStrokeButton = document.getElementById("redStroke");
+      const greenStrokeButton = document.getElementById("greenStroke");
+      redStrokeButton.addEventListener("click", function () {
+        ctx.strokeStyle = red;
+        redStrokeButton.classList.add("selected-stroke");
+        greenStrokeButton.classList.remove("selected-stroke");
+      });
+      greenStrokeButton.addEventListener("click", function () {
+        ctx.strokeStyle = green;
+        greenStrokeButton.classList.add("selected-stroke");
+        redStrokeButton.classList.remove("selected-stroke");
+      });
+
+      //variables para modificar el texto
+      let textObjects = [];
+      let draggingText = null;
+      let dragOffsetX,
+        dragOffsetY = 0;
+
+      //--------------------FUNCIONES PARA PC--------------------//
+
+      // Handle mouse DOWN - iniciar path
+      canvas.addEventListener("mousedown", function (event) {
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+        const x = (event.clientX - rect.left) * scaleX;
+        const y = (event.clientY - rect.top) * scaleY;
+
+        switch (currentModoCanvas) {
+          case "Draw":
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+
+            break;
+          case "Text":
+            const clickedText = textObjects.find(
+              (obj) =>
+                x >= obj.x &&
+                x <= obj.x + obj.width + 10 &&
+                y >= obj.y - obj.height + 10 &&
+                y <= obj.y
+            );
+            if (clickedText) {
+              draggingText = clickedText;
+              dragOffsetX = x - clickedText.x;
+              dragOffsetY = y - clickedText.y;
+            } else {
+              const text = prompt("Introduce el texto:");
+              if (text !== null && text !== "") {
+                ctx.save();
+                ctx.font = textType;
+                const metrics = ctx.measureText(text);
+                const width = metrics.width;
+                const height = parseInt(textType, 10) || 18;
+                ctx.restore();
+                textObjects.push({ text, x, y, width, height });
+                drawAll();
+              }
+            }
+            break;
+
+          case "Point":
+            ctx.beginPath();
+            ctx.arc(x, y, 7, 0, 2 * Math.PI);
+            ctx.fillStyle = "#fa7bb8";
+            ctx.fill();
+          default:
+            break;
+        }
+      });
+
+      // Handle mouse MOVE - dibujar
+      canvas.addEventListener("mousemove", function (event) {
+        switch (currentModoCanvas) {
+          case "Draw":
+            if (event.buttons !== 1) return; // Only draw when mouse is pressed
+
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+            const x = (event.clientX - rect.left) * scaleX;
+            const y = (event.clientY - rect.top) * scaleY;
+
+            ctx.lineTo(x, y);
+            ctx.stroke();
+
+            break;
+
+          case "Text":
+            if (draggingText) {
+              const rect = canvas.getBoundingClientRect();
+              const scaleX = canvas.width / rect.width;
+              const scaleY = canvas.height / rect.height;
+              const x = (event.clientX - rect.left) * scaleX;
+              const y = (event.clientY - rect.top) * scaleY;
+              draggingText.x = x - dragOffsetX;
+              draggingText.y = y - dragOffsetY;
+              drawAll();
+            }
+            break;
+
+          case "Point":
+            return;
+            break;
+
+          default:
+            break;
+        }
+      });
+
+      // Cerrar el path cuando se suelta el ratón
+      canvas.addEventListener("mouseup", function () {
+        ctx.closePath();
+        draggingText = null;
+      });
+
+      //Editar el texto con doble click
+      canvas.addEventListener("dblclick", function (event) {
+        const x = event.offsetX;
+        const y = event.offsetY;
+        if (currentModoCanvas === "Text") {
+          const clickedText = textObjects.find(
+            (obj) =>
+              x >= obj.x &&
+              x <= obj.x + obj.width &&
+              y >= obj.y - obj.height &&
+              y <= obj.y
+          );
+          if (clickedText) {
+            const newText = prompt("Edita el texto:", clickedText.text);
+            if (newText !== null && newText !== "") {
+              clickedText.text = newText;
+              ctx.save();
+              ctx.font = textType;
+              clickedText.width = ctx.measureText(newText).width;
+              ctx.restore();
+              drawAll();
+            }
+          }
+        }
+      });
+
+      //--------------------FUNCIONES PARA MÓVILES--------------------//
+      //handle mobile touch
+      canvas.addEventListener("touchstart", function (event) {
+        event.preventDefault();
+        const touch = event.touches[0];
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+        const x = (touch.clientX - rect.left) * scaleX;
+        const y = (touch.clientY - rect.top) * scaleY;
+
+        switch (currentModoCanvas) {
+          case "Draw":
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            break;
+
+          case "Text":
+            const clickedText = textObjects.find(
+              (obj) =>
+                x >= obj.x &&
+                x <= obj.x + obj.width &&
+                y >= obj.y - obj.height &&
+                y <= obj.y
+            );
+            if (clickedText) {
+              draggingText = clickedText;
+              dragOffsetX = x - clickedText.x;
+              dragOffsetY = y - clickedText.y;
+            } else {
+              const text = prompt("Introduce el texto:");
+              if (text !== null && text !== "") {
+                ctx.save();
+                ctx.font = textType;
+                const metrics = ctx.measureText(text);
+                const width = metrics.width;
+                const height = parseInt(textType, 10) || 18;
+                ctx.restore();
+                textObjects.push({ text, x, y, width, height });
+                drawAll();
+              }
+            }
+            break;
+
+          case "Point":
+            ctx.beginPath();
+            ctx.arc(x, y, 7, 0, 2 * Math.PI);
+            ctx.fillStyle = "#fa7bb8";
+            ctx.fill();
+            ctx.closePath();
+            break;
+          default:
+            break;
+        }
+      });
+
+      canvas.addEventListener("touchmove", function (event) {
+        switch (currentModoCanvas) {
+          case "Draw":
+            event.preventDefault();
+            const touch = event.touches[0];
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+            const x = (touch.clientX - rect.left) * scaleX;
+            const y = (touch.clientY - rect.top) * scaleY;
+
+            ctx.lineTo(x, y);
+            ctx.stroke();
+
+            break;
+
+          case "Text":
+            if (draggingText) {
+              const touch = event.touches[0];
+              const rect = canvas.getBoundingClientRect();
+              const scaleX = canvas.width / rect.width;
+              const scaleY = canvas.height / rect.height;
+              const x = (touch.clientX - rect.left) * scaleX;
+              const y = (touch.clientY - rect.top) * scaleY;
+              draggingText.x = x - dragOffsetX;
+              draggingText.y = y - dragOffsetY;
+              drawAll();
+            }
+            break;
+
+          case "Point":
+            return;
+            break;
+
+          default:
+            break;
+        }
+      });
+
+      // Cerrar el path cuando se levanta el dedo
+      canvas.addEventListener("touchend", function (event) {
+        event.preventDefault();
+
+        ctx.closePath();
+      });
+
+      //Editar texto con doble click
+
+      let lastTap = 0;
+      let lastTapX = 0;
+      let lastTapY = 0;
+
+      canvas.addEventListener("touchstart", function (event) {
+        const touch = event.touches[0];
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+        const x = (touch.clientX - rect.left) * scaleX;
+        const y = (touch.clientY - rect.top) * scaleY;
+
+        const now = Date.now();
+        // Si el segundo toque es en menos de 400ms y cerca del anterior
+        if (
+          now - lastTap < 400 &&
+          Math.abs(x - lastTapX) < 30 &&
+          Math.abs(y - lastTapY) < 30
+        ) {
+          if (currentModoCanvas === "Text") {
+            const clickedText = textObjects.find(
+              (obj) =>
+                x >= obj.x &&
+                x <= obj.x + obj.width &&
+                y >= obj.y - obj.height &&
+                y <= obj.y
+            );
+            if (clickedText) {
+              const newText = prompt("Edita el texto:", clickedText.text);
+              if (newText !== null && newText !== "") {
+                clickedText.text = newText;
+                ctx.save();
+                ctx.font = textType;
+                clickedText.width = ctx.measureText(newText).width;
+                ctx.restore();
+                drawAll();
+              }
+            }
+          }
+        }
+        lastTap = now;
+        lastTapX = x;
+        lastTapY = y;
+      });
+
+      function drawAll() {
+        clearCanvas();
+        ctx.save();
+        ctx.font = textType;
+        textObjects.forEach((obj) => {
+          ctx.fillStyle = ctx.strokeStyle || "#000";
+          ctx.fillText(obj.text, obj.x, obj.y);
+        });
+        ctx.restore();
+      }
+
+      // Clear canvas button
+      const clearButton = document.getElementById("clearButton");
+      clearButton.addEventListener("click", function () {
+        clearCanvas();
+      });
+
+      function clearCanvas() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+
+      //------------------temitas de preguntas--------------------------
+
+      let preguntas = [];
+
+      //cargar preguntas
+      async function cargarPreguntas() {
+        try {
+          const response = await fetch("json/preguntas.json");
+          if (!response.ok) {
+            throw new Error("Error al cargar el JSON de preguntas");
+          }
+          const data = await response.json();
+          preguntas = data.preguntas;
+        } catch (error) {
+          console.error("Error:", error);
+        }
+
+        console.log("Preguntas cargadas:", preguntas);
+      }
+
+      const preguntas_text = document.getElementById("pregunta");
+
+      let pregunta_index = 0;
+
+      function nextPregunta() {
+        pregunta_index = (pregunta_index + 1) % preguntas.length;
+        preguntas_text.innerText = preguntas[pregunta_index].texto;
+        currentModoCanvas = preguntas[pregunta_index].modoCanvas;
+        console.log("Modo de dibujo cambiado a:", currentModoCanvas);
+        actualizarDrawMode();
+        actualizarToolset();
+        clearCanvas();
+      }
+
+      function prevPregunta() {
+        pregunta_index =
+          (pregunta_index - 1 + preguntas.length) % preguntas.length;
+        preguntas_text.innerText = preguntas[pregunta_index].texto;
+        currentModoCanvas = preguntas[pregunta_index].modoCanvas;
+        console.log("Modo de dibujo cambiado a:", currentModoCanvas);
+        actualizarDrawMode();
+        actualizarToolset();
+        clearCanvas();
+      }
+
+
+      function actualizarToolset() {
+
+        const colorSelectors = document.getElementById("colorSelectors");
+        const moveObjectTools = document.getElementById("moveObjectTools");
+
+        console.log("Actualizando toolset para pregunta:", preguntas[pregunta_index].colorSelector, preguntas[pregunta_index].moveObject);
+        if(preguntas[pregunta_index].colorSelector==="true"){
+          colorSelectors.style.transform = "scaleX(1)";
+        } else {
+          colorSelectors.style.transform = "scaleX(0)";
+        }
+
+        if(preguntas[pregunta_index].moveObject==="true"){
+          console.log("Mostrando moveObjectTools");
+          moveObjectTools.style.transform = "scaleX(1)";
+        } else {
+          moveObjectTools.style.transform = "scaleX(0)";
+        }
+
+
+      }
+
+      const nextButton = document.getElementById("nextButton");
+      nextButton.addEventListener("click", nextPregunta);
+
+      const prevButton = document.getElementById("prevButton");
+      prevButton.addEventListener("click", prevPregunta);
+
+      document.addEventListener("DOMContentLoaded", cargarPreguntas);
+    </script>
   </body>
 </html>

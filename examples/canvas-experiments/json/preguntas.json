@@ -1,0 +1,40 @@
+{
+    "preguntas" : [
+        {
+            "id": "pregunta_0",
+            "texto": "Default",
+            "modoCanvas": "Draw",
+            "colorSelector": "true",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_1",
+            "texto": "¿En qué sitio dormiría tu gato?",
+            "modoCanvas": "Draw",
+            "colorSelector": "true",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_2",
+            "texto": "¿Qué te sugiere cada espacio?",
+            "modoCanvas": "Text",
+            "colorSelector": "true",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_3",
+            "texto": "¿Qué lugar es el indicado para descansar?",
+            "modoCanvas": "Point",
+            "colorSelector": "false",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_4",
+            "texto": "¿Qué muebles cambiarías?",
+            "modoCanvas": "MoveObject",
+            "colorSelector": "true",
+            "moveObject": "true"
+
+        }
+    ]
+}

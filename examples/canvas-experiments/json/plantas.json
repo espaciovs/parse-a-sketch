@@ -1,0 +1,29 @@
+{
+  "plantas": [
+    {
+      "id": "planta_1",
+      "titulo": "Grupo 1",
+      "imagen": "img/P_001.jpg"
+      
+    },
+    {
+      "id": "planta_2", 
+      "titulo": "Grupo 2",
+      "imagen": "img/P_002.jpg"
+      
+    },
+    {
+      "id": "planta_3",
+      "titulo": "Grupo 3", 
+      "imagen": "img/P_003.jpg"
+      
+    },
+    {
+      "id": "planta_4",
+      "titulo": "Grupo 4",
+      "imagen": "img/P_004.jpg"
+      
+    }
+
+  ]
+}

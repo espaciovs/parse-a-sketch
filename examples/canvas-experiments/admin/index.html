@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="/socket.io/socket.io.js"></script>
+   
+</head><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Plantas</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <style>
+        .control-plantas {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .control-plantas button {
+            padding: 12px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <p>Admin totalus</p>
+
+    <div class="control-plantas">
+        <h3>Seleccionar Planta:</h3>
+        <div id="lista-plantas">
+            <!-- Botones -->
+        </div>
+    </div>
+
+    <script>
+        const socket = io();
+        let plantas = [];
+        
+
+        // Cargar las plantas
+        async function cargarPlantas() {
+            try {
+                const response = await fetch('../json/plantas.json');
+                if (!response.ok) {
+                    throw new Error('Error al cargar el JSON');
+                }
+                const data = await response.json();
+                plantas = data.plantas;
+                generarListaPlantas();
+            } catch (error) {
+                console.error('Error:', error);
+   
+            }
+        }
+
+
+
+        function generarListaPlantas() {
+            const contenedor = document.getElementById('lista-plantas');
+            contenedor.innerHTML = '';
+            
+            plantas.forEach((planta) => {
+                const boton = document.createElement('button');
+                boton.textContent = planta.titulo;
+                boton.onclick = () => cambiarImagen(planta);
+                contenedor.appendChild(boton);
+            });
+        }
+
+        function cambiarImagen(planta) {
+            console.log('Enviando cambio:', planta);
+            socket.emit('cambiar-imagen', {
+                id: planta.id,
+                imagen: planta.imagen,
+                titulo: planta.titulo,
+                
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', cargarPlantas);
+    </script>
+</body>
+</html>
