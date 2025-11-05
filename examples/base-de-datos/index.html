@@ -19,6 +19,11 @@
                 display: block;
                 margin: 20px 0;
             }
+            #debug {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 10px;
+            }
         </style>
     </head>
     <body>
@@ -28,13 +33,25 @@
         </p>
 
         <canvas id="canvas" width="600" height="600"></canvas>
-        <div class="controls">
-            <button type="button" onclick="clearCanvas()">Limpiar</button>
-            <button type="button" onclick="saveCanvas()">Guardar</button>
-            <span id="saveStatus"></span>
-        </div>
+        <div id="debug">
+            <div>
+                <div class="controls">
+                    <button type="button" onclick="clearCanvas()">Limpiar</button>
+                    <button type="button" onclick="saveData()">Guardar</button>
+                    <span id="saveStatus"></span>
+                </div>
 
-        <pre id="data-puntos"></pre>
+                <pre id="data-puntos"></pre>
+            </div>
+            <div>
+                <div class="controls">
+                    <button type="button" onclick="loadData('0')">Cargar</button>
+                    <button type="button" onclick="loadPrimerDato('0')">Cargar primer dato</button>
+                </div>
+                <pre id="lista-datos"></pre>
+                <pre id="primer-dato"></pre>
+            </div>
+        </div>
 
         <script>
             const canvas = document.getElementById("canvas");
@@ -44,7 +61,6 @@
             // Información que se va mandar al servidor
             let lineWidth = 3;
             let strokeStyle = "#FF0000";
-            let modoCanvas = "draw";
             let id = "ipUsuario";
             let planta = 0;
             let pregunta = 0;
@@ -67,8 +83,8 @@
                 // Se enciende el modo dibujo
                 isDrawing = true;
 
-                // Se añade al array currentData los valores grosor de linea, color de linea, las primeras coordenada x e y
-                drawingData.currentData.push(lineWidth, strokeStyle, e.offsetX, e.offsetY);
+                // Se añade al array currentData los valores de modoCanvas, grosor de linea, color de linea, las primeras coordenada x e y
+                drawingData.currentData.push("linea", lineWidth, strokeStyle, e.offsetX, e.offsetY);
 
                 // Mostrar el objeto en el DOM
                 document.getElementById("data-puntos").textContent = JSON.stringify(drawingData, null, 2);
@@ -82,8 +98,8 @@
                     // Se dibuja el trazo actual en progreso
                     if (drawingData.currentData.length > 0) {
                         ctx.beginPath();
-                        ctx.moveTo(drawingData.currentData[2], drawingData.currentData[3]);
-                        for (let i = 4; i < drawingData.currentData.length; i += 2) {
+                        ctx.moveTo(drawingData.currentData[3], drawingData.currentData[4]);
+                        for (let i = 5; i < drawingData.currentData.length; i += 2) {
                             ctx.lineTo(drawingData.currentData[i], drawingData.currentData[i + 1]);
                         }
                         ctx.stroke();
@@ -134,8 +150,7 @@
                 document.getElementById("data-puntos").textContent = JSON.stringify(drawingData, null, 2);
             }
 
-            async function saveCanvas() {
-
+            async function saveData() {
                 const saveStatus = document.getElementById("saveStatus");
 
                 // Se comprueba si hay algo dibujado
@@ -153,13 +168,12 @@
                         planta: planta,
                         pregunta: pregunta,
                         corregido: corregido,
-                        modoCanvas: modoCanvas,
                         ancho: canvas.width,
                         alto: canvas.height,
                         datos: drawingData.data,
                     };
 
-                    const response = await fetch("http://127.0.0.1:5000/guardar-animacion", {
+                    const response = await fetch("http://127.0.0.1:5000/guardar", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
@@ -184,6 +198,57 @@
                     // Si falla la conexión
                     saveStatus.textContent = "❌ Error de conexión";
                     saveStatus.style.color = "red";
+                }
+            }
+
+            async function loadData(planta) {
+                try {
+                    const response = await fetch(`http://127.0.0.1:5000/listar/${planta}`);
+
+                    if (response.ok) {
+                        const result = await response.json();
+
+                        document.getElementById("lista-datos").textContent = result.datos.length > 0 ? result.datos.join("\n") : "No hay datos guardados";
+                    } else {
+                        document.getElementById("lista-datos").textContent = "❌ Error al cargar datos";
+                    }
+                } catch (error) {
+                    document.getElementById("lista-datos").textContent = "❌ Error de conexión: ";
+                }
+            }
+
+            async function loadPrimerDato(planta) {
+                try {
+                    // Primero obtenemos la lista de archivos
+                    const response = await fetch(`http://127.0.0.1:5000/listar/${planta}`);
+                    if (!response.ok) {
+                        document.getElementById("primer-dato").textContent = "❌ Error al listar archivos";
+                        return;
+                    }
+
+                    const result = await response.json();
+
+                    // Verificamos si hay archivos
+                    if (result.datos.length === 0) {
+                        document.getElementById("primer-dato").textContent = "No hay archivos disponibles";
+                        return;
+                    }
+
+                    // Tomamos el primer archivo
+                    const primerArchivo = result.datos[0];
+
+                    // Cargamos el contenido del primer archivo
+                    const cargarResponse = await fetch(`http://127.0.0.1:5000/cargar/datos/${planta}/${primerArchivo}`);
+
+                    if (cargarResponse.ok) {
+                        const datos = await cargarResponse.json();
+                        // Mostramos los datos formateados
+                        document.getElementById("primer-dato").textContent = JSON.stringify(datos, null, 2);
+                    } else {
+                        document.getElementById("primer-dato").textContent = "❌ Error al cargar el archivo";
+                    }
+                } catch (error) {
+                    document.getElementById("primer-dato").textContent = "❌ Error de conexión";
                 }
             }
 

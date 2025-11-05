@@ -7,54 +7,29 @@ from datetime import datetime
 app = Flask(__name__)
 CORS(app)
 
-def string_to_json(string_data):
-    """Convierte string compacto a JSON de dibujo"""
-    parts = string_data.split("|")
-    if len(parts) == 0:
-        return None
-    
-    # Extraer dimensiones
-    dimensions = parts[0].split(",")
-    width = int(dimensions[0])
-    height = int(dimensions[1])
-    
-    # Extraer trazos
-    strokes = []
-    for i in range(1, len(parts)):
-        coords = list(map(float, parts[i].split(",")))
-        stroke = []
-        for j in range(0, len(coords), 2):
-            stroke.append([coords[j], coords[j + 1]])
-        strokes.append(stroke)
-    
-    return {
-        'width': width,
-        'height': height,
-        'strokes': strokes
-    }
-
 @app.route("/")
 def status():
     return {"status": True}
 
-@app.route("/guardar-animacion", methods=['POST'])
-def guardar_animacion():
+@app.route("/guardar", methods=['POST'])
+def guardar():
     try:
-        # Recibir JSON del cliente
+        # Recibir objeto del cliente
         data = request.get_json()
 
+        # Datos principales
         ancho = data.get('ancho')
         alto = data.get('alto')
         datos = data.get('datos')
-        modoCanvas = data.get('modoCanvas')
     
         # Formato: ancho,alto|x1,y1,x2,y2|x3,y3,x4,y4|...
-        string_data = f"{ancho},{alto},{modoCanvas}"
+        string_data = f"{ancho},{alto}"
     
         for dato in datos:
             string_data += "|"
             string_data += ",".join([str(elemento) for elemento in dato])
 
+        # Datos de identificación
         planta = str(data.get('planta'))
         carpeta = f'datos/{planta}'
         os.makedirs(carpeta, exist_ok=True)
@@ -74,56 +49,93 @@ def guardar_animacion():
         file_size = os.path.getsize(filepath)
         
         return jsonify({
-            'message': f'Animación guardada como {filename}',
+            'message': f'Datos guardados como {filename}',
             'filepath': filepath,
             'size': f'{file_size} bytes'
         }), 200
         
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+    
 
-@app.route("/listar-animaciones", methods=['GET'])
-def listar_animaciones():
+@app.route("/listar/<path:ruta>", methods=['GET'])
+def listar(ruta):
     try:
-        carpeta = 'datos/planta-1'
+        carpeta = f'datos/{ruta}'
         if not os.path.exists(carpeta):
-            return jsonify({'animations': []}), 200
+            return jsonify({'datos': []}), 200
         
         files = [f for f in os.listdir(carpeta) if f.endswith('.txt')]
         files.sort(key=lambda x: os.path.getmtime(os.path.join(carpeta, x)), reverse=True)
         
-        return jsonify({'animations': files}), 200
+        return jsonify({'datos': files}), 200
         
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+    
 
-@app.route("/cargar-animacion/<path:ruta>")
-def cargar_animacion(ruta):
-    """Endpoint que carga el archivo y devuelve JSON"""
+@app.route("/cargar/<path:ruta>", methods=['GET'])
+def cargar(ruta):
     try:
-        filepath = os.path.join('datos', ruta)
+        if not os.path.exists(ruta):
+            return jsonify({'error': 'Archivo no encontrado'}), 404
         
-        # Leer el archivo de texto
-        with open(filepath, 'r') as f:
+        # Extraer información de la ruta: datos/{planta}/{pregunta}_{id}{_corregido}.txt
+        partes_ruta = ruta.split('/')
+        planta = partes_ruta[1]  # Asumiendo estructura datos/planta/archivo.txt
+        
+        # Extraer información del nombre del archivo
+        nombre_archivo = partes_ruta[-1].replace('.txt', '')
+        
+        # Verificar si está corregido
+        corregido = nombre_archivo.endswith('_corregido')
+        if corregido:
+            nombre_archivo = nombre_archivo.replace('_corregido', '')
+        
+        # Separar pregunta e id: pregunta_id
+        partes_nombre = nombre_archivo.split('_')
+        pregunta = partes_nombre[0]
+        id = partes_nombre[1]
+        
+        # Leer el archivo
+        with open(ruta, 'r') as f:
             string_data = f.read()
         
-        # Convertir string a JSON
-        json_data = string_to_json(string_data)
+        # Separar por "|" para obtener las secciones
+        partes = string_data.split('|')
         
-        if json_data is None:
-            return jsonify({'error': 'Formato de archivo inválido'}), 400
+        # La primera parte contiene: ancho,alto,modoCanvas
+        metadata = partes[0].split(',')
+        ancho = int(metadata[0])
+        alto = int(metadata[1])
         
-        return jsonify(json_data), 200
+        # Las demás partes son los datos
+        datos = []
+        for i in range(1, len(partes)):
+            elementos = partes[i].split(',')
+            fila = []
+            for elemento in elementos:
+                try:
+                    fila.append(float(elemento))  # Intenta convertir a número
+                except ValueError:
+                    fila.append(elemento)  # Si falla, mantiene el string
+            datos.append(fila)
         
-    except FileNotFoundError:
-        return jsonify({'error': 'Archivo no encontrado'}), 404
+        # Reconstruir el objeto original completo
+        objeto = {
+            'id': id,
+            'planta': planta,
+            'pregunta': pregunta,
+            'corregido': corregido,
+            'ancho': ancho,
+            'alto': alto,
+            'datos': datos
+        }
+        
+        return jsonify(objeto), 200
+        
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-# Mantener el endpoint antiguo por compatibilidad
-@app.route("/datos/<path:ruta>")
-def servir_archivo(ruta):
-    return send_from_directory('datos', ruta)
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
