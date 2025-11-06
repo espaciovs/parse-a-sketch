@@ -93,6 +93,7 @@
         flex-direction: row;
         gap: 10px;
         z-index: 1000;
+        align-items: center;
       }
 
       .footer {
@@ -137,12 +138,22 @@
         font-size: 13px;
       }
 
-      #colorSelectors {
-        transform: scaleX(0);
+      .tool-group {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        transform-origin: left center;
+        transition: transform 0.3s ease;
       }
 
-      #redStroke,
-      #greenStroke {
+      .tool-group.hidden {
+        transform: scaleX(0);
+        width: 0;
+        overflow: hidden;
+      }
+
+      .color-button,
+      .tool-button {
         width: 35px;
         height: 35px;
         padding: 0;
@@ -151,36 +162,31 @@
         transition: transform 0.1s ease;
       }
 
-      #moveObjectTools {
-        transform: scaleX(0);
-      }
-
-      #DrawMode,
-      #MoveObjectMode {
-        width: 35px;
-        height: 35px;
-        padding: 0;
-        border: 2px solid #e0e0e0;
-        cursor: pointer;
-        transition: transform 0.1s ease;
-      }
-
-      .selected-stroke {
+      .color-button.selected,
+      .tool-button.selected {
         border: 4px solid #fff !important;
         box-shadow: 0 0 9px #777;
       }
 
-      #redStroke {
+      .color-button.red {
         background-color: #ff548d;
       }
 
-      #greenStroke {
+      .color-button.green {
         background-color: #55ffad;
       }
 
-      #redStroke:hover,
-      #greenStroke:hover {
+      .color-button:hover,
+      .tool-button:hover {
         transform: scale(1.1);
+      }
+
+      .tool-button {
+        font-size: 11px;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       #pregunta {
@@ -202,7 +208,6 @@
         padding: 5px 30px;
       }
 
-      /* Media queries para móviles */
       @media (max-width: 768px) {
         .header {
           flex-direction: column;
@@ -220,13 +225,17 @@
           font-size: 14px;
         }
 
+        .canvas-controls {
+          flex-wrap: wrap;
+        }
+
         .canvas-controls button {
           padding: 6px 12px;
           font-size: 12px;
         }
 
-        #redStroke,
-        #greenStroke {
+        .color-button,
+        .tool-button {
           width: 30px;
           height: 30px;
         }
@@ -250,6 +259,7 @@
 
     <script src="/socket.io/socket.io.js"></script>
   </head>
+
   <body>
     <div class="header">
       <h1>Taller Data-Home</h1>
@@ -261,13 +271,19 @@
 
       <div class="canvas-controls">
         <button id="clearButton">Clear Canvas</button>
-        <div id="colorSelectors">
-          <button id="redStroke"></button>
-          <button id="greenStroke" class="selected-stroke"></button>
+
+        <div id="colorSelectors" class="tool-group hidden">
+          <button class="color-button red" data-color="red"></button>
+          <button
+            class="color-button green selected"
+            data-color="green"
+          ></button>
         </div>
-        <div id="moveObjectTools">
-          <button id="DrawMode">Draw</button>
-          <button id="MoveObjectMode">Move</button>
+
+        <div id="moveObjectTools" class="tool-group hidden">
+          <button class="tool-button" data-tool="move">Move</button>
+          <button class="tool-button" data-tool="draw">Draw</button>
+          <button class="tool-button" data-tool="erase">Erase</button>
         </div>
       </div>
     </div>
@@ -281,477 +297,854 @@
     </div>
 
     <script>
-      //Temitas de socket.io
-      const socket = io();
+      // ==================== CONFIGURACIÓN Y CONSTANTES ====================
+      const CONFIG = {
+        IPhost: `http://192.168.1.129:5000`,
 
-      let currentModoCanvas;
+        colors: {
+          red: "#ff548d",
+          green: "#55ffad",
+          point: "#fa7bb8",
+        },
+        canvas: {
+          lineWidth: 6,
+          eraseWidth: 20,
+          pointRadius: 7,
+          textFont: "18px Ubuntu, sans-serif",
+        },
+        cursors: {
+          Draw: "default",
+          Text: "text",
+          Point: "crosshair",
+          MoveObject: "default",
+        },
+        doubleTap: {
+          threshold: 400,
+          distance: 30,
+        },
+      };
 
-      socket.on("imagen-cambiada", (plantaObj) => {
-        console.log("Imagen recibida:", plantaObj);
-        const nombrePlantaElement = document.getElementById("nombre_planta");
-        nombrePlantaElement.textContent = plantaObj.titulo;
+      // ==================== ESTADO GLOBAL DE LA APLICACIÓN ====================
+      const appState = {
+        // Canvas y contexto
+        canvas: null,
+        ctx: null,
+        container: null,
 
-        const plantaImg = document.querySelector(".planta_img");
-        plantaImg.style.backgroundImage = `url(${plantaObj.imagen})`;
+        // Modo actual
+        modoCanvas: null,
+        herramientaActual: null, // Para sub-herramientas en MoveObject
 
-        clearCanvas();
-      });
+        // Color y estilo
+        currentColor: "green",
 
-      //Temitas de canvas:
-      const canvas = document.getElementById("myCanvas");
-      const container = document.getElementById("planta");
-      const size = Math.min(container.clientWidth, container.clientHeight);
-      canvas.width = size;
-      canvas.height = size;
-      canvas.style.display = "block";
-      canvas.style.margin = "auto";
-      const ctx = canvas.getContext("2d");
-      let red = "#ff548d";
-      let green = "#55ffad";
+        // Objetos dibujados
+        textObjects: [],
+        moveableObjects: [], // Para objetos que se pueden mover en MoveObject
 
-      window.addEventListener("resize", function () {
-        // crear una copia temporal
-        const temp = document.createElement("canvas");
-        temp.width = canvas.width;
-        temp.height = canvas.height;
-        temp.getContext("2d").drawImage(canvas, 0, 0);
-        temp.strokeStyle = ctx.strokeStyle;
-        temp.lineWidth = ctx.lineWidth;
-        const size = Math.min(container.clientWidth, container.clientHeight);
-        canvas.width = size;
-        canvas.height = size;
+        // Estado de interacción
+        isDrawing: false,
+        draggingText: null,
+        draggingObject: null,
+        dragOffset: { x: 0, y: 0 },
 
-        ctx.drawImage(temp, 0, 0, canvas.width, canvas.height);
-        ctx.strokeStyle = temp.strokeStyle;
-        ctx.lineWidth = temp.lineWidth;
-      });
+        // Double tap detection
+        lastTap: { time: 0, x: 0, y: 0 },
 
-      // Funcion para actualizar el modo de dibujo, meter aqui nuevos casos!
-      function actualizarDrawMode() {
-        
+        // Preguntas
+        preguntas: [],
+        preguntaIndex: 0,
 
-        switch (currentModoCanvas) {
-          case "Draw":
-            canvas.style.cursor = "default";
+        // Planta
+        plantaActual: null,
 
-            
-            break;
-          case "Text":
-            canvas.style.cursor = "text";
-            
+        // Data para Flask
+        user: null,
+        corregido: false,
+        data: [],
+        currentData: [],
+      };
 
-            break;
+      // ==================== INICIALIZACIÓN ====================
+      function initApp() {
+        appState.user = getOrCreateUserId();
+        console.log("user: " + appState.user);
+        initCanvas();
+        initEventListeners();
+        cargarPreguntas();
 
-          case "Point":
-            canvas.style.cursor = "crosshair";
-            
-            break;
-
-          case "MoveObject":
-            canvas.style.cursor = "grab";
-            break;
-
-
-
-          default:
-            canvas.style.cursor = "default";
-            
+        // Simular socket.io si no está disponible
+        if (typeof io === "undefined") {
+          console.warn("Socket.io no disponible. Modo demo.");
         }
       }
 
-      // Set stroke style and text style
-      const textType = "18px Ubuntu, sans-serif";
-      ctx.strokeStyle = green;
-      ctx.lineWidth = 6;
-      ctx.lineCap = "round";
-      const redStrokeButton = document.getElementById("redStroke");
-      const greenStrokeButton = document.getElementById("greenStroke");
-      redStrokeButton.addEventListener("click", function () {
-        ctx.strokeStyle = red;
-        redStrokeButton.classList.add("selected-stroke");
-        greenStrokeButton.classList.remove("selected-stroke");
-      });
-      greenStrokeButton.addEventListener("click", function () {
-        ctx.strokeStyle = green;
-        greenStrokeButton.classList.add("selected-stroke");
-        redStrokeButton.classList.remove("selected-stroke");
-      });
+      function initCanvas() {
+        appState.canvas = document.getElementById("myCanvas");
+        appState.container = document.getElementById("planta");
+        appState.ctx = appState.canvas.getContext("2d");
 
-      //variables para modificar el texto
-      let textObjects = [];
-      let draggingText = null;
-      let dragOffsetX,
-        dragOffsetY = 0;
-
-      //--------------------FUNCIONES PARA PC--------------------//
-
-      // Handle mouse DOWN - iniciar path
-      canvas.addEventListener("mousedown", function (event) {
-        const rect = canvas.getBoundingClientRect();
-        const scaleX = canvas.width / rect.width;
-        const scaleY = canvas.height / rect.height;
-        const x = (event.clientX - rect.left) * scaleX;
-        const y = (event.clientY - rect.top) * scaleY;
-
-        switch (currentModoCanvas) {
-          case "Draw":
-            ctx.beginPath();
-            ctx.moveTo(x, y);
-
-            break;
-          case "Text":
-            const clickedText = textObjects.find(
-              (obj) =>
-                x >= obj.x &&
-                x <= obj.x + obj.width + 10 &&
-                y >= obj.y - obj.height + 10 &&
-                y <= obj.y
-            );
-            if (clickedText) {
-              draggingText = clickedText;
-              dragOffsetX = x - clickedText.x;
-              dragOffsetY = y - clickedText.y;
-            } else {
-              const text = prompt("Introduce el texto:");
-              if (text !== null && text !== "") {
-                ctx.save();
-                ctx.font = textType;
-                const metrics = ctx.measureText(text);
-                const width = metrics.width;
-                const height = parseInt(textType, 10) || 18;
-                ctx.restore();
-                textObjects.push({ text, x, y, width, height });
-                drawAll();
-              }
-            }
-            break;
-
-          case "Point":
-            ctx.beginPath();
-            ctx.arc(x, y, 7, 0, 2 * Math.PI);
-            ctx.fillStyle = "#fa7bb8";
-            ctx.fill();
-          default:
-            break;
-        }
-      });
-
-      // Handle mouse MOVE - dibujar
-      canvas.addEventListener("mousemove", function (event) {
-        switch (currentModoCanvas) {
-          case "Draw":
-            if (event.buttons !== 1) return; // Only draw when mouse is pressed
-
-            const rect = canvas.getBoundingClientRect();
-            const scaleX = canvas.width / rect.width;
-            const scaleY = canvas.height / rect.height;
-            const x = (event.clientX - rect.left) * scaleX;
-            const y = (event.clientY - rect.top) * scaleY;
-
-            ctx.lineTo(x, y);
-            ctx.stroke();
-
-            break;
-
-          case "Text":
-            if (draggingText) {
-              const rect = canvas.getBoundingClientRect();
-              const scaleX = canvas.width / rect.width;
-              const scaleY = canvas.height / rect.height;
-              const x = (event.clientX - rect.left) * scaleX;
-              const y = (event.clientY - rect.top) * scaleY;
-              draggingText.x = x - dragOffsetX;
-              draggingText.y = y - dragOffsetY;
-              drawAll();
-            }
-            break;
-
-          case "Point":
-            return;
-            break;
-
-          default:
-            break;
-        }
-      });
-
-      // Cerrar el path cuando se suelta el ratón
-      canvas.addEventListener("mouseup", function () {
-        ctx.closePath();
-        draggingText = null;
-      });
-
-      //Editar el texto con doble click
-      canvas.addEventListener("dblclick", function (event) {
-        const x = event.offsetX;
-        const y = event.offsetY;
-        if (currentModoCanvas === "Text") {
-          const clickedText = textObjects.find(
-            (obj) =>
-              x >= obj.x &&
-              x <= obj.x + obj.width &&
-              y >= obj.y - obj.height &&
-              y <= obj.y
-          );
-          if (clickedText) {
-            const newText = prompt("Edita el texto:", clickedText.text);
-            if (newText !== null && newText !== "") {
-              clickedText.text = newText;
-              ctx.save();
-              ctx.font = textType;
-              clickedText.width = ctx.measureText(newText).width;
-              ctx.restore();
-              drawAll();
-            }
-          }
-        }
-      });
-
-      //--------------------FUNCIONES PARA MÓVILES--------------------//
-      //handle mobile touch
-      canvas.addEventListener("touchstart", function (event) {
-        event.preventDefault();
-        const touch = event.touches[0];
-        const rect = canvas.getBoundingClientRect();
-        const scaleX = canvas.width / rect.width;
-        const scaleY = canvas.height / rect.height;
-        const x = (touch.clientX - rect.left) * scaleX;
-        const y = (touch.clientY - rect.top) * scaleY;
-
-        switch (currentModoCanvas) {
-          case "Draw":
-            ctx.beginPath();
-            ctx.moveTo(x, y);
-            break;
-
-          case "Text":
-            const clickedText = textObjects.find(
-              (obj) =>
-                x >= obj.x &&
-                x <= obj.x + obj.width &&
-                y >= obj.y - obj.height &&
-                y <= obj.y
-            );
-            if (clickedText) {
-              draggingText = clickedText;
-              dragOffsetX = x - clickedText.x;
-              dragOffsetY = y - clickedText.y;
-            } else {
-              const text = prompt("Introduce el texto:");
-              if (text !== null && text !== "") {
-                ctx.save();
-                ctx.font = textType;
-                const metrics = ctx.measureText(text);
-                const width = metrics.width;
-                const height = parseInt(textType, 10) || 18;
-                ctx.restore();
-                textObjects.push({ text, x, y, width, height });
-                drawAll();
-              }
-            }
-            break;
-
-          case "Point":
-            ctx.beginPath();
-            ctx.arc(x, y, 7, 0, 2 * Math.PI);
-            ctx.fillStyle = "#fa7bb8";
-            ctx.fill();
-            ctx.closePath();
-            break;
-          default:
-            break;
-        }
-      });
-
-      canvas.addEventListener("touchmove", function (event) {
-        switch (currentModoCanvas) {
-          case "Draw":
-            event.preventDefault();
-            const touch = event.touches[0];
-            const rect = canvas.getBoundingClientRect();
-            const scaleX = canvas.width / rect.width;
-            const scaleY = canvas.height / rect.height;
-            const x = (touch.clientX - rect.left) * scaleX;
-            const y = (touch.clientY - rect.top) * scaleY;
-
-            ctx.lineTo(x, y);
-            ctx.stroke();
-
-            break;
-
-          case "Text":
-            if (draggingText) {
-              const touch = event.touches[0];
-              const rect = canvas.getBoundingClientRect();
-              const scaleX = canvas.width / rect.width;
-              const scaleY = canvas.height / rect.height;
-              const x = (touch.clientX - rect.left) * scaleX;
-              const y = (touch.clientY - rect.top) * scaleY;
-              draggingText.x = x - dragOffsetX;
-              draggingText.y = y - dragOffsetY;
-              drawAll();
-            }
-            break;
-
-          case "Point":
-            return;
-            break;
-
-          default:
-            break;
-        }
-      });
-
-      // Cerrar el path cuando se levanta el dedo
-      canvas.addEventListener("touchend", function (event) {
-        event.preventDefault();
-
-        ctx.closePath();
-      });
-
-      //Editar texto con doble click
-
-      let lastTap = 0;
-      let lastTapX = 0;
-      let lastTapY = 0;
-
-      canvas.addEventListener("touchstart", function (event) {
-        const touch = event.touches[0];
-        const rect = canvas.getBoundingClientRect();
-        const scaleX = canvas.width / rect.width;
-        const scaleY = canvas.height / rect.height;
-        const x = (touch.clientX - rect.left) * scaleX;
-        const y = (touch.clientY - rect.top) * scaleY;
-
-        const now = Date.now();
-        // Si el segundo toque es en menos de 400ms y cerca del anterior
-        if (
-          now - lastTap < 400 &&
-          Math.abs(x - lastTapX) < 30 &&
-          Math.abs(y - lastTapY) < 30
-        ) {
-          if (currentModoCanvas === "Text") {
-            const clickedText = textObjects.find(
-              (obj) =>
-                x >= obj.x &&
-                x <= obj.x + obj.width &&
-                y >= obj.y - obj.height &&
-                y <= obj.y
-            );
-            if (clickedText) {
-              const newText = prompt("Edita el texto:", clickedText.text);
-              if (newText !== null && newText !== "") {
-                clickedText.text = newText;
-                ctx.save();
-                ctx.font = textType;
-                clickedText.width = ctx.measureText(newText).width;
-                ctx.restore();
-                drawAll();
-              }
-            }
-          }
-        }
-        lastTap = now;
-        lastTapX = x;
-        lastTapY = y;
-      });
-
-      function drawAll() {
-        clearCanvas();
-        ctx.save();
-        ctx.font = textType;
-        textObjects.forEach((obj) => {
-          ctx.fillStyle = ctx.strokeStyle || "#000";
-          ctx.fillText(obj.text, obj.x, obj.y);
-        });
-        ctx.restore();
+        resizeCanvas();
+        setupCanvasStyle();
       }
 
-      // Clear canvas button
-      const clearButton = document.getElementById("clearButton");
-      clearButton.addEventListener("click", function () {
-        clearCanvas();
-      });
+      function resizeCanvas() {
+        const size = Math.min(
+          appState.container.clientWidth,
+          appState.container.clientHeight
+        );
 
-      function clearCanvas() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // Guardar contenido si existe
+        const tempCanvas = document.createElement("canvas");
+        tempCanvas.width = appState.canvas.width;
+        tempCanvas.height = appState.canvas.height;
+        const tempCtx = tempCanvas.getContext("2d");
+        tempCtx.drawImage(appState.canvas, 0, 0);
+
+        // Redimensionar
+        appState.canvas.width = size;
+        appState.canvas.height = size;
+
+        // Restaurar contenido
+        appState.ctx.drawImage(tempCanvas, 0, 0, size, size);
+        setupCanvasStyle();
+        redrawAll(false);
       }
 
-      //------------------temitas de preguntas--------------------------
-
-      let preguntas = [];
-
-      //cargar preguntas
-      async function cargarPreguntas() {
-        try {
-          const response = await fetch("json/preguntas.json");
-          if (!response.ok) {
-            throw new Error("Error al cargar el JSON de preguntas");
-          }
-          const data = await response.json();
-          preguntas = data.preguntas;
-        } catch (error) {
-          console.error("Error:", error);
-        }
-
-        console.log("Preguntas cargadas:", preguntas);
+      function setupCanvasStyle() {
+        const ctx = appState.ctx;
+        ctx.strokeStyle = CONFIG.colors[appState.currentColor];
+        ctx.fillStyle = CONFIG.colors[appState.currentColor];
+        ctx.lineWidth = CONFIG.canvas.lineWidth;
+        ctx.lineCap = "round";
+        ctx.font = CONFIG.canvas.textFont;
       }
 
-      const preguntas_text = document.getElementById("pregunta");
+      // ==================== GESTIÓN DE MODOS ====================
+      function cambiarModo(nuevoModo, herramienta = null) {
+        appState.modoCanvas = nuevoModo;
+        appState.herramientaActual =
+          herramienta || getHerramientaDefault(nuevoModo);
 
-      let pregunta_index = 0;
-
-      function nextPregunta() {
-        pregunta_index = (pregunta_index + 1) % preguntas.length;
-        preguntas_text.innerText = preguntas[pregunta_index].texto;
-        currentModoCanvas = preguntas[pregunta_index].modoCanvas;
-        console.log("Modo de dibujo cambiado a:", currentModoCanvas);
-        actualizarDrawMode();
+        actualizarCursor();
         actualizarToolset();
-        clearCanvas();
+
+        console.log(
+          `Modo cambiado a: ${nuevoModo}${
+            herramienta ? ` (${herramienta})` : ""
+          }`
+        );
       }
 
-      function prevPregunta() {
-        pregunta_index =
-          (pregunta_index - 1 + preguntas.length) % preguntas.length;
-        preguntas_text.innerText = preguntas[pregunta_index].texto;
-        currentModoCanvas = preguntas[pregunta_index].modoCanvas;
-        console.log("Modo de dibujo cambiado a:", currentModoCanvas);
-        actualizarDrawMode();
-        actualizarToolset();
-        clearCanvas();
+      function getHerramientaDefault(modo) {
+        const defaults = {
+          MoveObject: "move",
+          Draw: "draw",
+          Text: "text",
+          Point: "point",
+        };
+        return defaults[modo] || null;
       }
 
+      function actualizarCursor() {
+        const { modoCanvas, herramientaActual } = appState;
+
+        if (modoCanvas === "MoveObject") {
+          switch (herramientaActual) {
+            case "move":
+              appState.canvas.style.cursor = "grab";
+              break;
+            case "draw":
+              appState.canvas.style.cursor = "crosshair";
+              break;
+            case "erase":
+              appState.canvas.style.cursor = "not-allowed";
+              break;
+          }
+        } else {
+          appState.canvas.style.cursor =
+            CONFIG.cursors[modoCanvas] || "default";
+        }
+      }
 
       function actualizarToolset() {
+        if (!appState.preguntas[appState.preguntaIndex]) return;
 
+        const pregunta = appState.preguntas[appState.preguntaIndex];
         const colorSelectors = document.getElementById("colorSelectors");
         const moveObjectTools = document.getElementById("moveObjectTools");
 
-        console.log("Actualizando toolset para pregunta:", preguntas[pregunta_index].colorSelector, preguntas[pregunta_index].moveObject);
-        if(preguntas[pregunta_index].colorSelector==="true"){
-          colorSelectors.style.transform = "scaleX(1)";
+        // Mostrar/ocultar selectores de color
+        if (pregunta.colorSelector === "true") {
+          colorSelectors.classList.remove("hidden");
         } else {
-          colorSelectors.style.transform = "scaleX(0)";
+          colorSelectors.classList.add("hidden");
         }
 
-        if(preguntas[pregunta_index].moveObject==="true"){
-          console.log("Mostrando moveObjectTools");
-          moveObjectTools.style.transform = "scaleX(1)";
+        // Mostrar/ocultar herramientas de MoveObject
+        if (pregunta.moveObject === "true") {
+          moveObjectTools.classList.remove("hidden");
+          // Seleccionar herramienta por defecto
+          updateToolSelection("move");
         } else {
-          moveObjectTools.style.transform = "scaleX(0)";
+          moveObjectTools.classList.add("hidden");
         }
-
-
       }
 
-      const nextButton = document.getElementById("nextButton");
-      nextButton.addEventListener("click", nextPregunta);
+      function updateToolSelection(tool) {
+        document.querySelectorAll(".tool-button").forEach((btn) => {
+          if (btn.dataset.tool === tool) {
+            btn.classList.add("selected");
+          } else {
+            btn.classList.remove("selected");
+          }
+        });
+      }
 
-      const prevButton = document.getElementById("prevButton");
-      prevButton.addEventListener("click", prevPregunta);
+      // ==================== UTILIDADES DE COORDENADAS ====================
+      function getCanvasCoordinates(clientX, clientY) {
+        const rect = appState.canvas.getBoundingClientRect();
+        const scaleX = appState.canvas.width / rect.width;
+        const scaleY = appState.canvas.height / rect.height;
 
-      document.addEventListener("DOMContentLoaded", cargarPreguntas);
+        return {
+          x: (clientX - rect.left) * scaleX,
+          y: (clientY - rect.top) * scaleY,
+        };
+      }
+
+      // ==================== HANDLERS DE EVENTOS ====================
+      function handleStart(x, y) {
+        const { modoCanvas, herramientaActual, ctx } = appState;
+
+        switch (modoCanvas) {
+          case "Draw":
+            appState.isDrawing = true;
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            break;
+
+          case "Text":
+            handleTextStart(x, y);
+            break;
+
+          case "Point":
+            drawPoint(x, y);
+            break;
+
+          case "MoveObject":
+            handleMoveObjectStart(x, y);
+            break;
+        }
+      }
+
+      function handleMove(x, y) {
+        const { modoCanvas, herramientaActual, isDrawing, ctx } = appState;
+
+        switch (modoCanvas) {
+          case "Draw":
+            if (isDrawing) {
+              ctx.lineTo(x, y);
+              ctx.stroke();
+            }
+            break;
+
+          case "Text":
+            handleTextMove(x, y);
+            break;
+
+          case "MoveObject":
+            handleMoveObjectMove(x, y);
+            break;
+        }
+      }
+
+      function handleEnd() {
+        const { ctx } = appState;
+        appState.isDrawing = false;
+        appState.draggingText = null;
+        appState.draggingObject = null;
+        ctx.closePath();
+      }
+
+      // ==================== MODO TEXT ====================
+      function handleTextStart(x, y) {
+        const clickedText = findTextAt(x, y);
+
+        if (clickedText) {
+          appState.draggingText = clickedText;
+          appState.dragOffset = {
+            x: x - clickedText.x,
+            y: y - clickedText.y,
+          };
+        } else {
+          const text = prompt("Introduce el texto:");
+          if (text !== null && text !== "") {
+            addTextObject(text, x, y);
+          }
+        }
+      }
+
+      function handleTextMove(x, y) {
+        if (appState.draggingText) {
+          appState.draggingText.x = x - appState.dragOffset.x;
+          appState.draggingText.y = y - appState.dragOffset.y;
+          redrawAll(false);
+        }
+      }
+
+      function handleTextEdit(x, y) {
+        const clickedText = findTextAt(x, y);
+        if (clickedText) {
+          const newText = prompt("Edita el texto:", clickedText.text);
+          if (newText !== null && newText !== "") {
+            clickedText.text = newText;
+            clickedText.width = appState.ctx.measureText(newText).width;
+            clickedText.color = appState.currentColor;
+            redrawAll(false);
+          }
+        }
+      }
+
+      function addTextObject(text, x, y) {
+        appState.ctx.save();
+        appState.ctx.font = CONFIG.canvas.textFont;
+        const metrics = appState.ctx.measureText(text);
+        const width = metrics.width;
+        const height = parseInt(CONFIG.canvas.textFont, 10) || 18;
+        appState.ctx.restore();
+
+        appState.textObjects.push({
+          text,
+          x,
+          y,
+          width,
+          height,
+          color: appState.currentColor,
+        });
+
+        redrawAll(false);
+      }
+
+      function findTextAt(x, y) {
+        return appState.textObjects.find(
+          (obj) =>
+            x >= obj.x &&
+            x <= obj.x + obj.width + 10 &&
+            y >= obj.y - obj.height + 10 &&
+            y <= obj.y
+        );
+      }
+
+      // ==================== MODO MOVEOBJECT ====================
+      function handleMoveObjectStart(x, y) {
+        const { herramientaActual, ctx } = appState;
+
+        switch (herramientaActual) {
+          case "move":
+            // Aquí podrías detectar objetos movibles
+            const clickedObject = findMoveableObjectAt(x, y);
+            if (clickedObject) {
+              appState.draggingObject = clickedObject;
+              appState.dragOffset = {
+                x: x - clickedObject.x,
+                y: y - clickedObject.y,
+              };
+            }
+            break;
+
+          case "draw":
+            appState.isDrawing = true;
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            break;
+
+          case "erase":
+            appState.isDrawing = true;
+            eraseAt(x, y);
+            break;
+        }
+      }
+
+      function handleMoveObjectMove(x, y) {
+        const { herramientaActual, isDrawing, ctx } = appState;
+
+        switch (herramientaActual) {
+          case "move":
+            if (appState.draggingObject) {
+              appState.draggingObject.x = x - appState.dragOffset.x;
+              appState.draggingObject.y = y - appState.dragOffset.y;
+              redrawAll(false);
+            }
+            break;
+
+          case "draw":
+            if (isDrawing) {
+              ctx.lineTo(x, y);
+              ctx.stroke();
+            }
+            break;
+
+          case "erase":
+            if (isDrawing) {
+              eraseAt(x, y);
+            }
+            break;
+        }
+      }
+
+      function findMoveableObjectAt(x, y) {
+        // Buscar en objetos de texto también
+        const textObj = findTextAt(x, y);
+        if (textObj) return textObj;
+
+        // Buscar en otros objetos movibles
+        return appState.moveableObjects.find(
+          (obj) =>
+            x >= obj.x - obj.width / 2 &&
+            x <= obj.x + obj.width / 2 &&
+            y >= obj.y - obj.height / 2 &&
+            y <= obj.y + obj.height / 2
+        );
+      }
+
+      function eraseAt(x, y) {
+        const ctx = appState.ctx;
+        ctx.save();
+        ctx.globalCompositeOperation = "destination-out";
+        ctx.beginPath();
+        ctx.arc(x, y, CONFIG.canvas.eraseWidth / 2, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.restore();
+      }
+
+      // ==================== MODO POINT ====================
+      function drawPoint(x, y) {
+        const ctx = appState.ctx;
+        ctx.beginPath();
+        ctx.arc(x, y, CONFIG.canvas.pointRadius, 0, 2 * Math.PI);
+        ctx.fillStyle = CONFIG.colors.point;
+        ctx.fill();
+        ctx.closePath();
+      }
+
+      // ==================== DIBUJO ====================
+      function redrawAll(clearData) {
+        clearCanvas();
+        drawTextObjects();
+        drawMoveableObjects();
+        if (clearData) {
+          clearData();
+        }
+      }
+
+      function drawTextObjects() {
+        const ctx = appState.ctx;
+        ctx.save();
+        ctx.font = CONFIG.canvas.textFont;
+
+        appState.textObjects.forEach((obj) => {
+          ctx.fillStyle = CONFIG.colors[obj.color] || CONFIG.colors.green;
+          ctx.fillText(obj.text, obj.x, obj.y);
+        });
+
+        ctx.restore();
+      }
+
+      function drawMoveableObjects() {
+        // Aquí se dibujarían otros objetos movibles si los hubiera
+        // Por ahora, los textObjects también son movibles
+      }
+
+      function clearCanvas() {
+        appState.ctx.clearRect(
+          0,
+          0,
+          appState.canvas.width,
+          appState.canvas.height
+        );
+      }
+
+      function clearData() {
+        appState.textObjects = [];
+        appState.moveableObjects = [];
+      }
+
+      // ==================== PREGUNTAS ====================
+      async function cargarPreguntas() {
+        try {
+          // Preguntas de ejemplo (normalmente vendría de JSON)
+          appState.preguntas = [
+            {
+              texto: "Sala de espera, para empezar haz clic en la flecha ->",
+              modoCanvas: "Draw",
+              colorSelector: "false",
+              moveObject: "false",
+            },
+            {
+              texto: "Dibuja las zonas comunes",
+              modoCanvas: "Draw",
+              colorSelector: "true",
+              moveObject: "false",
+            },
+            {
+              texto: "Añade etiquetas de texto",
+              modoCanvas: "Text",
+              colorSelector: "true",
+              moveObject: "false",
+            },
+            {
+              texto: "Marca los puntos de acceso",
+              modoCanvas: "Point",
+              colorSelector: "false",
+              moveObject: "false",
+            },
+            {
+              texto: "Reorganiza los espacios (puedes mover, dibujar o borrar)",
+              modoCanvas: "MoveObject",
+              colorSelector: "true",
+              moveObject: "true",
+            },
+          ];
+
+          console.log("Preguntas cargadas:", appState.preguntas);
+        } catch (error) {
+          console.error("Error cargando preguntas:", error);
+        }
+      }
+
+      function nextPregunta() {
+        appState.preguntaIndex =
+          (appState.preguntaIndex + 1) % appState.preguntas.length;
+        saveData();
+        actualizarPregunta();
+        loadDataByQuestionByUser(
+          appState.plantaActual.id,
+          appState.preguntaIndex,
+          appState.user
+        );
+      }
+
+      function prevPregunta() {
+        appState.preguntaIndex =
+          (appState.preguntaIndex - 1 + appState.preguntas.length) %
+          appState.preguntas.length;
+
+        actualizarPregunta();
+      }
+
+      function actualizarPregunta() {
+        const pregunta = appState.preguntas[appState.preguntaIndex];
+        if (!pregunta) return;
+
+        document.getElementById("pregunta").innerText = pregunta.texto;
+        cambiarModo(pregunta.modoCanvas);
+        clearCanvas(true);
+      }
+
+      // ==================== EVENT LISTENERS ====================
+      function initEventListeners() {
+        // Eventos de canvas
+        appState.canvas.addEventListener("mousedown", handleMouseDown);
+        appState.canvas.addEventListener("mousemove", handleMouseMove);
+        appState.canvas.addEventListener("mouseup", handleMouseUp);
+        appState.canvas.addEventListener("dblclick", handleDoubleClick);
+
+        appState.canvas.addEventListener("touchstart", handleTouchStart);
+        appState.canvas.addEventListener("touchmove", handleTouchMove);
+        appState.canvas.addEventListener("touchend", handleTouchEnd);
+
+        // Botones de control
+        document
+          .getElementById("clearButton")
+          .addEventListener("click", clearCanvas);
+        document
+          .getElementById("nextButton")
+          .addEventListener("click", nextPregunta);
+        document
+          .getElementById("prevButton")
+          .addEventListener("click", prevPregunta);
+
+        // Selectores de color
+        document.querySelectorAll(".color-button").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const color = btn.dataset.color;
+            appState.currentColor = color;
+            appState.ctx.strokeStyle = CONFIG.colors[color];
+            appState.ctx.fillStyle = CONFIG.colors[color];
+
+            document
+              .querySelectorAll(".color-button")
+              .forEach((b) => b.classList.remove("selected"));
+            btn.classList.add("selected");
+          });
+        });
+
+        // Herramientas de MoveObject
+        document.querySelectorAll(".tool-button").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const tool = btn.dataset.tool;
+            appState.herramientaActual = tool;
+            updateToolSelection(tool);
+            actualizarCursor();
+          });
+        });
+
+        // Resize
+        window.addEventListener("resize", resizeCanvas);
+      }
+
+      // Handlers de mouse
+      function handleMouseDown(e) {
+        const coords = getCanvasCoordinates(e.clientX, e.clientY);
+        handleStart(coords.x, coords.y);
+
+        //hacer un switch cases para cada caso de modoCanvas y funciones para moviles
+        appState.currentData.push(
+          "Draw",
+          appState.currentColor,
+          coords.x,
+          coords.y
+        );
+      }
+
+      function handleMouseMove(e) {
+        if (e.buttons !== 1 && appState.modoCanvas !== "Text") return;
+        const coords = getCanvasCoordinates(e.clientX, e.clientY);
+        handleMove(coords.x, coords.y);
+
+        //hacer switch y funcion para moviles
+        appState.currentData.push(coords.x, coords.y);
+      }
+
+      function handleMouseUp(e) {
+        handleEnd();
+
+        // Segun cases y hacer funcion para aadir tambien a moviles
+        appState.data.push([...appState.currentData]);
+        appState.currentData = [];
+      }
+
+      function handleDoubleClick(e) {
+        if (appState.modoCanvas === "Text") {
+          const coords = getCanvasCoordinates(e.clientX, e.clientY);
+          handleTextEdit(coords.x, coords.y);
+        }
+      }
+
+      // Handlers de touch
+      function handleTouchStart(e) {
+        e.preventDefault();
+        const touch = e.touches[0];
+        const coords = getCanvasCoordinates(touch.clientX, touch.clientY);
+
+        // Detectar doble tap
+        checkDoubleTap(coords.x, coords.y);
+
+        handleStart(coords.x, coords.y);
+      }
+
+      function handleTouchMove(e) {
+        e.preventDefault();
+        const touch = e.touches[0];
+        const coords = getCanvasCoordinates(touch.clientX, touch.clientY);
+        handleMove(coords.x, coords.y);
+      }
+
+      function handleTouchEnd(e) {
+        e.preventDefault();
+        handleEnd();
+      }
+
+      function checkDoubleTap(x, y) {
+        const now = Date.now();
+        const timeDiff = now - appState.lastTap.time;
+        const distX = Math.abs(x - appState.lastTap.x);
+        const distY = Math.abs(y - appState.lastTap.y);
+
+        if (
+          timeDiff < CONFIG.doubleTap.threshold &&
+          distX < CONFIG.doubleTap.distance &&
+          distY < CONFIG.doubleTap.distance
+        ) {
+          if (appState.modoCanvas === "Text") {
+            handleTextEdit(x, y);
+          }
+        }
+
+        appState.lastTap = { time: now, x, y };
+      }
+
+      // ==================== SOCKET.IO ====================
+      if (typeof io !== "undefined") {
+        const socket = io();
+
+        // Solicitar la planta actual cuando se conecta
+        socket.on("connect", () => {
+          console.log("Conectado al servidor, solicitando planta y estado corregido actual...");
+          socket.emit("solicitar-planta-actual");
+          socket.emit("solicitar-estado-corregido");
+        });
+
+        // Recibir la planta actual cuando el servidor responde
+        socket.on("planta-actual", (plantaObj) => {
+          console.log("Planta actual recibida:", plantaObj);
+          actualizarInterfaz(plantaObj);
+        });
+
+        // Recibir cambios en tiempo real
+        socket.on("imagen-cambiada", (plantaObj) => {
+          console.log("Cambio de imagen recibido:", plantaObj);
+          actualizarInterfaz(plantaObj);
+        });
+
+        // Recibir el estado de corregido actual
+        socket.on("estado-corregido-actual", (corregidoStatus) => {
+          console.log("Estado corregido actual recibido: ", corregidoStatus);
+          appState.corregido = corregidoStatus;
+        });
+
+        socket.on("corregido-cambiado", (corregidoStatus) => {
+          console.log("Cambio de estado de corregido:", corregidoStatus);
+          appState.corregido = corregidoStatus;
+        });
+
+        function actualizarInterfaz(plantaObj) {
+          appState.plantaActual = plantaObj;
+          document.getElementById("nombre_planta").textContent =
+            plantaObj.titulo;
+          document.querySelector(
+            ".planta_img"
+          ).style.backgroundImage = `url(${plantaObj.imagen})`;
+          clearCanvas();
+        }
+      }
+
+      // ==================== FLASK ====================
+
+      function getOrCreateUserId() {
+        let userId = localStorage.getItem("userId");
+        if (!userId) {
+          if (window.crypto && crypto.randomUUID) {
+            userId = crypto.randomUUID();
+          } else {
+            // Fallback simple
+            userId = "user_" + Math.random().toString(36).substr(2, 9);
+          }
+          localStorage.setItem("userId", userId);
+        }
+        return userId;
+      }
+
+      async function saveData() {
+        //Si hay algo dibujado se intenta guardar
+        try {
+          // La información que se envía al servidor
+          const jsonData = {
+            id: appState.user,
+            planta: appState.plantaActual.id,
+            pregunta: appState.preguntaIndex,
+            corregido: appState.corregido,
+            ancho: appState.container.clientWidth,
+            alto: appState.container.clientHeight,
+            datos: appState.data,
+            modoCanvas: "canvas",
+          };
+
+          console.log("Guardando datos:", jsonData);
+
+          const response = await fetch(`${CONFIG.IPhost}/guardar`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(jsonData),
+          });
+          console.log(response);
+        } catch (error) {
+          console.error("Error al guardar los datos:", error);
+        }
+      }
+      /*
+      async function loadData(planta) {
+        try {
+          const response = await fetch(
+            `${CONFIG.IPhost}/listar/${planta}`
+          );
+
+          if (response.ok) {
+            const result = await response.json();
+
+            document.getElementById("lista-datos").textContent =
+              result.datos.length > 0
+                ? result.datos.join("\n")
+                : "No hay datos guardados";
+          } else {
+            document.getElementById("lista-datos").textContent =
+              "❌ Error al cargar datos";
+          }
+        } catch (error) {
+          document.getElementById("lista-datos").textContent =
+            "❌ Error de conexión: ";
+        }
+      }
+*/
+      async function loadDataByQuestionByUser(planta, pregunta, user) {
+        try {
+          // Primero obtenemos la lista de archivos
+          const response = await fetch(`${CONFIG.IPhost}/listar/${planta}`);
+          if (!response.ok) {
+            console.log("Error al cargar la lista de datos");
+            return;
+          }
+
+          const result = await response.json();
+
+          // Verificamos si hay archivos
+          if (result.datos.length === 0) {
+            console.log("No hay datos disponibles");
+            return;
+          }
+
+          // Definimos el archivo por pregunta por user
+
+          //Si existe un corregido
+          let Archivo = result.datos.find((nombre) =>
+            nombre.startsWith(`${pregunta}_${user}_corregido`)
+          );
+          //Si no existe un corregido
+          if (Archivo === undefined) {
+            Archivo = result.datos.find((nombre) =>
+              nombre.startsWith(`${pregunta}_${user}`)
+            );
+          }
+
+          //Si no hay archivo
+          if (Archivo === undefined) {
+            console.log("No existe el archivo especificado");
+            return;
+          }
+
+          // Cargamos el contenido del archivo
+          const cargarResponse = await fetch(
+            `${CONFIG.IPhost}/cargar/datos/${planta}/${Archivo}`
+          );
+
+          if (cargarResponse.ok) {
+            const datos = await cargarResponse.json();
+            // Mostramos los datos formateados
+            const text = JSON.stringify(datos, null, 2);
+            console.log(text);
+          } else {
+            console.log("❌ Error al cargar el archivo");
+          }
+        } catch (error) {
+          console.log("❌ Error de conexión");
+        }
+      }
+
+      // ==================== INICIO ====================
+      document.addEventListener("DOMContentLoaded", initApp);
     </script>
   </body>
 </html>

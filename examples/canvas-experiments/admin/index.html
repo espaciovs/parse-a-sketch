@@ -1,90 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <script src="/socket.io/socket.io.js"></script>
-   
-</head><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Control de Plantas</title>
-    <script src="/socket.io/socket.io.js"></script>
-    <style>
+    <script src="/socket.io/socket.io.js"></script></head
+  ><!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Control de Plantas</title>
+      <script src="/socket.io/socket.io.js"></script>
+      <style>
+        .status {
+          width: 100%;
+          margin: 0;
+          font-family: "Courier New", Courier, monospace;
+          display: flex;
+          align-items: center;
+          justify-content: end;
+        }
         .control-plantas {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin: 10px 0;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin: 10px 0;
         }
         .control-plantas button {
-            padding: 12px 15px;
-            font-size: 16px;
-            cursor: pointer;
-            text-align: left;
+          padding: 12px 15px;
+          font-size: 16px;
+          cursor: pointer;
+          text-align: left;
         }
-    </style>
-</head>
-<body>
-    <p>Admin totalus</p>
+      </style>
+    </head>
+    <body>
+      <p>Admin totalus</p>
+      <p class="status">
+        <span id="statusText">Comprobando servidor...</span>
+        <span
+          id="statusIndicator"
+          style="width: 20px; height: 20px; margin-left: 10px"
+        ></span>
+      </p>
 
-    <div class="control-plantas">
+      <div class="control-plantas">
         <h3>Seleccionar Planta:</h3>
         <div id="lista-plantas">
-            <!-- Botones -->
+          <!-- Botones -->
         </div>
-    </div>
+        <div id="estado-preguntas">
+            <h3>Cambiar estado sin corregir/corregido</h3>
+            <button id="corregido" onclick="changeCorregido()">sin corregir</button>
+        </div>
+      </div>
 
-    <script>
+      <script>
         const socket = io();
         let plantas = [];
+        let corregido = false;
         
+        checkServerStatus();
 
         // Cargar las plantas
         async function cargarPlantas() {
-            try {
-                const response = await fetch('../json/plantas.json');
-                if (!response.ok) {
-                    throw new Error('Error al cargar el JSON');
-                }
-                const data = await response.json();
-                plantas = data.plantas;
-                generarListaPlantas();
-            } catch (error) {
-                console.error('Error:', error);
-   
+          try {
+            const response = await fetch("../json/plantas.json");
+            if (!response.ok) {
+              throw new Error("Error al cargar el JSON");
             }
+            const data = await response.json();
+            plantas = data.plantas;
+            generarListaPlantas();
+          } catch (error) {
+            console.error("Error:", error);
+          }
         }
-
-
 
         function generarListaPlantas() {
-            const contenedor = document.getElementById('lista-plantas');
-            contenedor.innerHTML = '';
-            
-            plantas.forEach((planta) => {
-                const boton = document.createElement('button');
-                boton.textContent = planta.titulo;
-                boton.onclick = () => cambiarImagen(planta);
-                contenedor.appendChild(boton);
-            });
+          const contenedor = document.getElementById("lista-plantas");
+          contenedor.innerHTML = "";
+
+          plantas.forEach((planta) => {
+            const boton = document.createElement("button");
+            boton.textContent = planta.titulo;
+            boton.onclick = () => enviarImagen(planta);
+            contenedor.appendChild(boton);
+          });
         }
 
-        function cambiarImagen(planta) {
-            console.log('Enviando cambio:', planta);
-            socket.emit('cambiar-imagen', {
-                id: planta.id,
-                imagen: planta.imagen,
-                titulo: planta.titulo,
+        function enviarImagen(planta) {
+          console.log("Enviando cambio:", planta);
+          socket.emit("cambiar-imagen", {
+            id: planta.id,
+            imagen: planta.imagen,
+            titulo: planta.titulo,
+          });
+          
+        }
+
+        function changeCorregido(){
+            const botonCorregido = document.getElementById("corregido");
+            if(!corregido){
+
+                corregido = true;
+                console.log("corregido es true");
+                botonCorregido.textContent = "corregido";
                 
-            });
+
+            }
+            else {
+                corregido = false;
+                console.log("corregido es false");
+                botonCorregido.textContent = "sin corregir";
+
+            }
+            socket.emit("cambiar-corregido", corregido)
+
         }
 
-        document.addEventListener('DOMContentLoaded', cargarPlantas);
-    </script>
-</body>
+
+
+        
+
+
+
+        async function checkServerStatus() {
+          try {
+            const response = await fetch("http://192.168.1.129:5000/");
+
+            if (response.ok) {
+              document.getElementById("statusText").textContent =
+                "Servidor activo";
+              document.getElementById("statusIndicator").style.backgroundColor =
+                "green";
+            } else {
+              document.getElementById("statusText").textContent =
+                "Error de conexión con el servidor";
+              document.getElementById("statusIndicator").style.backgroundColor =
+                "red";
+            }
+          } catch (error) {
+            document.getElementById("statusText").textContent =
+              "Servidor inactivo";
+            document.getElementById("statusIndicator").style.backgroundColor =
+              "red";
+          }
+        }
+
+        document.addEventListener("DOMContentLoaded", cargarPlantas);
+      </script>
+    </body>
+  </html>
 </html>

@@ -45,8 +45,8 @@
             </div>
             <div>
                 <div class="controls">
-                    <button type="button" onclick="loadData('0')">Cargar</button>
-                    <button type="button" onclick="loadPrimerDato('0')">Cargar primer dato</button>
+                    <button type="button" onclick="loadData('planta-3')">Cargar</button>
+                    <button type="button" onclick="loadPrimerDato('planta-3')">Cargar primer dato</button>
                 </div>
                 <pre id="lista-datos"></pre>
                 <pre id="primer-dato"></pre>
@@ -62,9 +62,9 @@
             let lineWidth = 3;
             let strokeStyle = "#FF0000";
             let id = "ipUsuario";
-            let planta = 0;
-            let pregunta = 0;
-            let corregido = true;
+            let planta = "planta-3";
+            let pregunta = 2;
+            let corregido = false;
 
             // Objeto vacio que se enviará al servidor
             let drawingData = {
@@ -171,6 +171,7 @@
                         ancho: canvas.width,
                         alto: canvas.height,
                         datos: drawingData.data,
+                        modoCanvas: "canvas",
                     };
 
                     const response = await fetch("http://127.0.0.1:5000/guardar", {

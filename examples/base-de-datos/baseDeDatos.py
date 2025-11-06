@@ -20,11 +20,12 @@ def guardar():
         # Datos principales
         ancho = data.get('ancho')
         alto = data.get('alto')
+        modoCanvas = data.get('modoCanvas')
         datos = data.get('datos')
     
         # Formato: ancho,alto|x1,y1,x2,y2|x3,y3,x4,y4|...
-        string_data = f"{ancho},{alto}"
-    
+        string_data = f"{ancho},{alto},{modoCanvas}"
+
         for dato in datos:
             string_data += "|"
             string_data += ",".join([str(elemento) for elemento in dato])
@@ -108,6 +109,7 @@ def cargar(ruta):
         metadata = partes[0].split(',')
         ancho = int(metadata[0])
         alto = int(metadata[1])
+        modoCanvas = metadata[2]
         
         # Las demás partes son los datos
         datos = []
@@ -129,7 +131,8 @@ def cargar(ruta):
             'corregido': corregido,
             'ancho': ancho,
             'alto': alto,
-            'datos': datos
+            'datos': datos,
+            'modoCanvas': modoCanvas
         }
         
         return jsonify(objeto), 200
