@@ -729,12 +729,13 @@
       }
 
       // ==================== DIBUJO ====================
-      function redrawAll(clearData) {
+      function redrawAll(clearAllData) {
         clearCanvas();
         drawTextObjects();
         drawMoveableObjects();
-        if (clearData) {
+        if (clearAllData) {
           clearData();
+          
         }
       }
 
@@ -768,6 +769,8 @@
       function clearData() {
         appState.textObjects = [];
         appState.moveableObjects = [];
+        appState.data = [];
+        appState.currentData = [];
       }
 
       // ==================== PREGUNTAS ====================
@@ -814,9 +817,9 @@
       }
 
       function nextPregunta() {
+        saveData();
         appState.preguntaIndex =
           (appState.preguntaIndex + 1) % appState.preguntas.length;
-        saveData();
         actualizarPregunta();
         loadDataByQuestionByUser(
           appState.plantaActual.id,
@@ -826,11 +829,17 @@
       }
 
       function prevPregunta() {
+        saveData();
         appState.preguntaIndex =
           (appState.preguntaIndex - 1 + appState.preguntas.length) %
           appState.preguntas.length;
 
         actualizarPregunta();
+         loadDataByQuestionByUser(
+          appState.plantaActual.id,
+          appState.preguntaIndex,
+          appState.user
+        );
       }
 
       function actualizarPregunta() {
@@ -839,7 +848,7 @@
 
         document.getElementById("pregunta").innerText = pregunta.texto;
         cambiarModo(pregunta.modoCanvas);
-        clearCanvas(true);
+        redrawAll(true);
       }
 
       // ==================== EVENT LISTENERS ====================
@@ -855,9 +864,10 @@
         appState.canvas.addEventListener("touchend", handleTouchEnd);
 
         // Botones de control
-        document
-          .getElementById("clearButton")
-          .addEventListener("click", clearCanvas);
+        document.getElementById("clearButton").addEventListener("click", () => {
+          redrawAll(true);
+        });
+
         document
           .getElementById("nextButton")
           .addEventListener("click", nextPregunta);
@@ -903,8 +913,8 @@
         appState.currentData.push(
           "Draw",
           appState.currentColor,
-          coords.x,
-          coords.y
+          coords.x.toFixed(2),
+          coords.y.toFixed(2)
         );
       }
 
@@ -914,7 +924,7 @@
         handleMove(coords.x, coords.y);
 
         //hacer switch y funcion para moviles
-        appState.currentData.push(coords.x, coords.y);
+        appState.currentData.push(coords.x.toFixed(2), coords.y.toFixed(2));
       }
 
       function handleMouseUp(e) {
@@ -981,7 +991,9 @@
 
         // Solicitar la planta actual cuando se conecta
         socket.on("connect", () => {
-          console.log("Conectado al servidor, solicitando planta y estado corregido actual...");
+          console.log(
+            "Conectado al servidor, solicitando planta y estado corregido actual..."
+          );
           socket.emit("solicitar-planta-actual");
           socket.emit("solicitar-estado-corregido");
         });
@@ -1038,6 +1050,7 @@
 
       async function saveData() {
         //Si hay algo dibujado se intenta guardar
+
         try {
           // La información que se envía al servidor
           const jsonData = {
@@ -1065,30 +1078,7 @@
           console.error("Error al guardar los datos:", error);
         }
       }
-      /*
-      async function loadData(planta) {
-        try {
-          const response = await fetch(
-            `${CONFIG.IPhost}/listar/${planta}`
-          );
 
-          if (response.ok) {
-            const result = await response.json();
-
-            document.getElementById("lista-datos").textContent =
-              result.datos.length > 0
-                ? result.datos.join("\n")
-                : "No hay datos guardados";
-          } else {
-            document.getElementById("lista-datos").textContent =
-              "❌ Error al cargar datos";
-          }
-        } catch (error) {
-          document.getElementById("lista-datos").textContent =
-            "❌ Error de conexión: ";
-        }
-      }
-*/
       async function loadDataByQuestionByUser(planta, pregunta, user) {
         try {
           // Primero obtenemos la lista de archivos
@@ -1125,16 +1115,22 @@
             return;
           }
 
+          
+
           // Cargamos el contenido del archivo
           const cargarResponse = await fetch(
             `${CONFIG.IPhost}/cargar/datos/${planta}/${Archivo}`
           );
 
+          
+
           if (cargarResponse.ok) {
             const datos = await cargarResponse.json();
             // Mostramos los datos formateados
             const text = JSON.stringify(datos, null, 2);
-            console.log(text);
+
+            console.log("Cargando Datos",datos);
+            
           } else {
             console.log("❌ Error al cargar el archivo");
           }
