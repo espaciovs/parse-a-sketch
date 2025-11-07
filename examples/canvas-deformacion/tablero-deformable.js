@@ -30,16 +30,16 @@ let corners = [
 // Configuraciones predefinidas
 const configurations = {
     pantalla1: [
-    { x: 524, y: -52 }, // Top-Left
-    { x: 1396, y: 48 }, // Top-Right
-    { x: 1396, y: 920 }, // Bottom-Right
-    { x: 524, y: 920 }  // Bottom-Left
+    { x: 387, y: 54 }, // Top-Left
+    { x: 2179, y: 94 }, // Top-Right
+    { x: 3019, y: 1216 }, // Bottom-Right
+    { x: 97, y: 1216 }  // Bottom-Left
 ],
 pantalla2: [
-    { x: 524, y: 48 }, // Top-Left
-    { x: 1396, y: -152 }, // Top-Right
-    { x: 1396, y: 920 }, // Bottom-Right
-    { x: 524, y: 920 }  // Bottom-Left
+    { x: -193, y: 64 }, // Top-Left
+    { x: 1579, y: 74 }, // Top-Right
+    { x: 1949, y: 1176 }, // Bottom-Right
+    { x: -853, y: 1216 }  // Bottom-Left
 ],
     centrado: [
         { x: window.innerWidth / 2 - canvasSize / 2, y: window.innerHeight / 2 - canvasSize / 2 },

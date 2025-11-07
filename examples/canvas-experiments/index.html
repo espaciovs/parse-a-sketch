@@ -616,6 +616,9 @@
             clickedText.width = appState.ctx.measureText(newText).width;
             clickedText.color = appState.currentColor;
             redrawAll(false);
+
+            // Guardar los cambios del texto editado
+            saveTextObject(clickedText);
           }
         }
       }
@@ -628,16 +631,44 @@
         const height = parseInt(CONFIG.canvas.textFont, 10) || 18;
         appState.ctx.restore();
 
-        appState.textObjects.push({
+        const textObj = {
           text,
           x,
           y,
           width,
           height,
-          color: appState.currentColor,
-        });
+          color: appState.currentColor, // ← Usar el color actual
+        };
 
+        appState.textObjects.push(textObj);
         redrawAll(false);
+
+        // Guardar inmediatamente el texto
+        saveTextObject(textObj);
+      }
+
+      function saveTextObject(textObj) {
+        // Eliminar cualquier texto anterior del mismo objeto (si existiera)
+        appState.data = appState.data.filter(
+          (data) =>
+            !(
+              data[0] === "Text" &&
+              data[3] === textObj.text &&
+              Math.abs(parseFloat(data[4]) - textObj.x) < 0.1 &&
+              Math.abs(parseFloat(data[5]) - textObj.y) < 0.1
+            )
+        );
+
+        // Guardar el texto con su estado actual
+        const textData = [
+          "Text",
+          textObj.color,
+          textObj.text,
+          textObj.x.toFixed(2),
+          textObj.y.toFixed(2),
+        ];
+
+        appState.data.push(textData);
       }
 
       function findTextAt(x, y) {
@@ -746,7 +777,7 @@
           x,
           y,
           radius: CONFIG.canvas.pointRadius,
-          color: "point"
+          color: "point",
         });
 
         // Agregar a datos para guardar
@@ -773,13 +804,12 @@
       // ==================== DIBUJO ====================
       function redrawAll(clearAllData) {
         clearCanvas();
-         if (clearAllData) {
+        if (clearAllData) {
           clearData();
         }
         drawTextObjects();
         drawMoveableObjects();
         drawPointObjects();
-       
       }
 
       function drawTextObjects() {
@@ -801,7 +831,7 @@
       }
 
       function drawPointObjects() {
-        appState.pointObjects.forEach(pointObj => {
+        appState.pointObjects.forEach((pointObj) => {
           drawPointObject(pointObj);
         });
       }
@@ -1188,19 +1218,31 @@
 
       //Parsear datos para su redibujado
       function parseDataString(dataString) {
-        const drawingSegments = dataString.split("|");
+  const drawingSegments = dataString.split("|");
 
+  return {
+    segments: drawingSegments.map((segment) => {
+      const parts = segment.split(",");
+      const type = parts[0];
+      
+      if (type === "Text") {
+        // Para Text: ["Text", "color", "texto", x, y]
         return {
-          segments: drawingSegments.map((segment) => {
-            const parts = segment.split(",");
-            return {
-              type: parts[0],
-              color: parts[1],
-              points: parts.slice(2).map((coord) => parseFloat(coord)),
-            };
-          }),
+          type: parts[0],
+          color: parts[1], // color del texto
+          points: [parts[2], parseFloat(parts[3]), parseFloat(parts[4])] // [texto, x, y]
+        };
+      } else {
+        // Para Draw y Point
+        return {
+          type: parts[0],
+          color: parts[1],
+          points: parts.slice(2).map((coord) => parseFloat(coord)),
         };
       }
+    }),
+  };
+}
 
       function drawFromData(parsedData) {
         const { segments } = parsedData;
@@ -1216,6 +1258,9 @@
               break;
             case "Point":
               drawAndStorePoint(segment);
+              break;
+            case "Text":
+              drawAndStoreText(segment);
               break;
             // Aquí agregarás más tipos cuando los implementes
           }
@@ -1233,7 +1278,7 @@
 
         // Configurar estilo para dibujar
         const colorToUse = CONFIG.colors[segment.color] || "#000";
-        
+
         ctx.strokeStyle = colorToUse;
         ctx.fillStyle = colorToUse;
         ctx.lineWidth = CONFIG.canvas.lineWidth;
@@ -1242,19 +1287,19 @@
         // Dibujar el segmento en el canvas
         ctx.beginPath();
         ctx.moveTo(points[0], points[1]);
-        
+
         for (let i = 2; i < points.length; i += 2) {
           if (i + 1 < points.length) {
             ctx.lineTo(points[i], points[i + 1]);
           }
         }
-        
+
         ctx.stroke();
         ctx.closePath();
 
         // Agregar los datos al estado para que se guarden
         const segmentData = [segment.type, segment.color];
-        
+
         // Agregar todos los puntos al array de datos
         for (let i = 0; i < points.length; i += 2) {
           if (i + 1 < points.length) {
@@ -1278,7 +1323,7 @@
           x,
           y,
           radius: CONFIG.canvas.pointRadius,
-          color: segment.color
+          color: segment.color,
         });
 
         // Agregar el punto a los objetos
@@ -1286,12 +1331,58 @@
           x,
           y,
           radius: CONFIG.canvas.pointRadius,
-          color: segment.color
+          color: segment.color,
         });
 
         // Agregar los datos al estado para que se guarden
-        const pointData = [segment.type, segment.color, x.toFixed(2), y.toFixed(2)];
+        const pointData = [
+          segment.type,
+          segment.color,
+          x.toFixed(2),
+          y.toFixed(2),
+        ];
         appState.data.push(pointData);
+      }
+
+      function drawAndStoreText(segment) {
+        // El formato es: ["Text", "color", "texto", x, y]
+        // Pero en parseDataString se convierte a: {type: "Text", color: "color", points: ["texto", x, y]}
+
+        if (segment.points.length < 3) return;
+
+        const text = segment.points[0]; // El texto está en el primer punto
+        const x = parseFloat(segment.points[1]);
+        const y = parseFloat(segment.points[2]);
+        const color = segment.color; // El color real del texto
+
+        // Crear el objeto de texto
+        const textObj = {
+          text: text,
+          x: x,
+          y: y,
+          width: appState.ctx.measureText(text).width,
+          height: parseInt(CONFIG.canvas.textFont, 10) || 18,
+          color: color, // ← Usar el color guardado
+        };
+
+        // Agregar el texto a los objetos
+        appState.textObjects.push(textObj);
+
+        // Dibujar el texto en el canvas
+        drawTextObject(textObj);
+
+        // Agregar los datos al estado para que se guarden
+        const textData = ["Text", color, text, x.toFixed(2), y.toFixed(2)];
+        appState.data.push(textData);
+      }
+
+      function drawTextObject(textObj) {
+        const ctx = appState.ctx;
+        ctx.save();
+        ctx.font = CONFIG.canvas.textFont;
+        ctx.fillStyle = CONFIG.colors[textObj.color] || CONFIG.colors.green;
+        ctx.fillText(textObj.text, textObj.x, textObj.y);
+        ctx.restore();
       }
 
       // ==================== INICIO ====================
