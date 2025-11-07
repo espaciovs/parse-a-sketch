@@ -11,7 +11,7 @@ const io = new Server(server);
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 let plantaActual;
-let corregidoStatusActual;
+let corregidoStatusActual = false;
 
 app.get('/admin', (req, res) => {
   res.sendFile(join(__dirname, 'admin','index.html'));
@@ -48,7 +48,7 @@ io.on('connection', (socket) => {
 socket.on('solicitar-estado-corregido',() =>{
 
   console.log('Cliente solicita estado corregido:', corregidoStatusActual);
-  if (corregidoStatusActual) {
+  if (corregidoStatusActual != undefined) {
     socket.emit('estado-corregido-actual', corregidoStatusActual);
   }
 });

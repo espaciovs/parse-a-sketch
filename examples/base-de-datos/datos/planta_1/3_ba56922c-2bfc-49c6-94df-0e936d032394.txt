@@ -1,0 +1,1 @@
+2870,719,prueba|Point,point,283.30,437.48||Point,point,406.30,360.48||Point,point,412.30,457.48|

@@ -299,7 +299,7 @@
     <script>
       // ==================== CONFIGURACIÓN Y CONSTANTES ====================
       const CONFIG = {
-        IPhost: `http://192.168.1.129:5000`,
+        IPhost: `http://10.7.41.233:5000`,
 
         colors: {
           red: "#ff548d",
@@ -341,6 +341,7 @@
         // Objetos dibujados
         textObjects: [],
         moveableObjects: [], // Para objetos que se pueden mover en MoveObject
+        pointObjects: [], // Para objetos de punto
 
         // Estado de interacción
         isDrawing: false,
@@ -522,6 +523,14 @@
             appState.isDrawing = true;
             ctx.beginPath();
             ctx.moveTo(x, y);
+
+            appState.currentData.push(
+              appState.modoCanvas,
+              appState.currentColor,
+              x.toFixed(2),
+              y.toFixed(2)
+            );
+
             break;
 
           case "Text":
@@ -546,6 +555,8 @@
             if (isDrawing) {
               ctx.lineTo(x, y);
               ctx.stroke();
+
+              appState.currentData.push(x.toFixed(2), y.toFixed(2));
             }
             break;
 
@@ -565,6 +576,9 @@
         appState.draggingText = null;
         appState.draggingObject = null;
         ctx.closePath();
+
+        appState.data.push([...appState.currentData]);
+        appState.currentData = [];
       }
 
       // ==================== MODO TEXT ====================
@@ -726,17 +740,46 @@
         ctx.fillStyle = CONFIG.colors.point;
         ctx.fill();
         ctx.closePath();
+
+        // Guardar el punto en el estado
+        appState.pointObjects.push({
+          x,
+          y,
+          radius: CONFIG.canvas.pointRadius,
+          color: "point"
+        });
+
+        // Agregar a datos para guardar
+        appState.currentData.push(
+          "Point",
+          "point", // Color específico para puntos
+          x.toFixed(2),
+          y.toFixed(2)
+        );
+
+        // Finalizar inmediatamente para guardar
+        handleEnd();
+      }
+
+      function drawPointObject(pointObj) {
+        const ctx = appState.ctx;
+        ctx.beginPath();
+        ctx.arc(pointObj.x, pointObj.y, pointObj.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = CONFIG.colors[pointObj.color] || CONFIG.colors.point;
+        ctx.fill();
+        ctx.closePath();
       }
 
       // ==================== DIBUJO ====================
       function redrawAll(clearAllData) {
         clearCanvas();
+         if (clearAllData) {
+          clearData();
+        }
         drawTextObjects();
         drawMoveableObjects();
-        if (clearAllData) {
-          clearData();
-          
-        }
+        drawPointObjects();
+       
       }
 
       function drawTextObjects() {
@@ -757,6 +800,12 @@
         // Por ahora, los textObjects también son movibles
       }
 
+      function drawPointObjects() {
+        appState.pointObjects.forEach(pointObj => {
+          drawPointObject(pointObj);
+        });
+      }
+
       function clearCanvas() {
         appState.ctx.clearRect(
           0,
@@ -769,6 +818,7 @@
       function clearData() {
         appState.textObjects = [];
         appState.moveableObjects = [];
+        appState.pointObjects = [];
         appState.data = [];
         appState.currentData = [];
       }
@@ -835,7 +885,7 @@
           appState.preguntas.length;
 
         actualizarPregunta();
-         loadDataByQuestionByUser(
+        loadDataByQuestionByUser(
           appState.plantaActual.id,
           appState.preguntaIndex,
           appState.user
@@ -908,31 +958,16 @@
       function handleMouseDown(e) {
         const coords = getCanvasCoordinates(e.clientX, e.clientY);
         handleStart(coords.x, coords.y);
-
-        //hacer un switch cases para cada caso de modoCanvas y funciones para moviles
-        appState.currentData.push(
-          "Draw",
-          appState.currentColor,
-          coords.x.toFixed(2),
-          coords.y.toFixed(2)
-        );
       }
 
       function handleMouseMove(e) {
         if (e.buttons !== 1 && appState.modoCanvas !== "Text") return;
         const coords = getCanvasCoordinates(e.clientX, e.clientY);
         handleMove(coords.x, coords.y);
-
-        //hacer switch y funcion para moviles
-        appState.currentData.push(coords.x.toFixed(2), coords.y.toFixed(2));
       }
 
       function handleMouseUp(e) {
         handleEnd();
-
-        // Segun cases y hacer funcion para aadir tambien a moviles
-        appState.data.push([...appState.currentData]);
-        appState.currentData = [];
       }
 
       function handleDoubleClick(e) {
@@ -1061,10 +1096,10 @@
             ancho: appState.container.clientWidth,
             alto: appState.container.clientHeight,
             datos: appState.data,
-            modoCanvas: "canvas",
+            modoCanvas: "prueba",
           };
 
-          console.log("Guardando datos:", jsonData);
+          console.log("Guardando datos");
 
           const response = await fetch(`${CONFIG.IPhost}/guardar`, {
             method: "POST",
@@ -1073,7 +1108,7 @@
             },
             body: JSON.stringify(jsonData),
           });
-          console.log(response);
+          //console.log(response);
         } catch (error) {
           console.error("Error al guardar los datos:", error);
         }
@@ -1115,28 +1150,148 @@
             return;
           }
 
-          
-
           // Cargamos el contenido del archivo
           const cargarResponse = await fetch(
             `${CONFIG.IPhost}/cargar/datos/${planta}/${Archivo}`
           );
 
-          
-
           if (cargarResponse.ok) {
             const datos = await cargarResponse.json();
-            // Mostramos los datos formateados
-            const text = JSON.stringify(datos, null, 2);
 
-            console.log("Cargando Datos",datos);
-            
+            if (datos.datos && datos.datos.length > 0) {
+              // NO limpiar el canvas ni los datos - mantener lo existente
+              // Solo limpiar el canvas visualmente, pero mantener los datos en memoria
+              clearCanvas(); // Solo limpia visualmente
+              // Redibujar los objetos de texto y movibles si los hay
+              drawTextObjects();
+              drawMoveableObjects();
+              drawPointObjects();
+
+              // Procesar cada conjunto de datos
+              datos.datos.forEach((dataArray) => {
+                if (dataArray.length > 0 && typeof dataArray[0] === "string") {
+                  const dataString = dataArray.join(",");
+                  const parsedData = parseDataString(dataString);
+                  drawFromData(parsedData);
+                }
+              });
+
+              console.log("Datos redibujados correctamente");
+            }
           } else {
             console.log("❌ Error al cargar el archivo");
           }
         } catch (error) {
           console.log("❌ Error de conexión");
         }
+      }
+
+      //Parsear datos para su redibujado
+      function parseDataString(dataString) {
+        const drawingSegments = dataString.split("|");
+
+        return {
+          segments: drawingSegments.map((segment) => {
+            const parts = segment.split(",");
+            return {
+              type: parts[0],
+              color: parts[1],
+              points: parts.slice(2).map((coord) => parseFloat(coord)),
+            };
+          }),
+        };
+      }
+
+      function drawFromData(parsedData) {
+        const { segments } = parsedData;
+        const ctx = appState.ctx;
+
+        // Guardar estado actual del contexto
+        ctx.save();
+
+        segments.forEach((segment) => {
+          switch (segment.type) {
+            case "Draw":
+              drawAndStoreSegment(segment);
+              break;
+            case "Point":
+              drawAndStorePoint(segment);
+              break;
+            // Aquí agregarás más tipos cuando los implementes
+          }
+        });
+
+        // Restaurar estado del contexto
+        ctx.restore();
+      }
+
+      function drawAndStoreSegment(segment) {
+        const ctx = appState.ctx;
+        const points = segment.points;
+
+        if (points.length < 2) return;
+
+        // Configurar estilo para dibujar
+        const colorToUse = CONFIG.colors[segment.color] || "#000";
+        
+        ctx.strokeStyle = colorToUse;
+        ctx.fillStyle = colorToUse;
+        ctx.lineWidth = CONFIG.canvas.lineWidth;
+        ctx.lineCap = "round";
+
+        // Dibujar el segmento en el canvas
+        ctx.beginPath();
+        ctx.moveTo(points[0], points[1]);
+        
+        for (let i = 2; i < points.length; i += 2) {
+          if (i + 1 < points.length) {
+            ctx.lineTo(points[i], points[i + 1]);
+          }
+        }
+        
+        ctx.stroke();
+        ctx.closePath();
+
+        // Agregar los datos al estado para que se guarden
+        const segmentData = [segment.type, segment.color];
+        
+        // Agregar todos los puntos al array de datos
+        for (let i = 0; i < points.length; i += 2) {
+          if (i + 1 < points.length) {
+            segmentData.push(points[i].toFixed(2), points[i + 1].toFixed(2));
+          }
+        }
+
+        appState.data.push(segmentData);
+      }
+
+      function drawAndStorePoint(segment) {
+        const points = segment.points;
+
+        if (points.length < 2) return;
+
+        const x = points[0];
+        const y = points[1];
+
+        // Dibujar el punto en el canvas
+        drawPointObject({
+          x,
+          y,
+          radius: CONFIG.canvas.pointRadius,
+          color: segment.color
+        });
+
+        // Agregar el punto a los objetos
+        appState.pointObjects.push({
+          x,
+          y,
+          radius: CONFIG.canvas.pointRadius,
+          color: segment.color
+        });
+
+        // Agregar los datos al estado para que se guarden
+        const pointData = [segment.type, segment.color, x.toFixed(2), y.toFixed(2)];
+        appState.data.push(pointData);
       }
 
       // ==================== INICIO ====================
