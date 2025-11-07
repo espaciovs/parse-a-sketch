@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tablero Deformable</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #0051ff;
+                font-family: Arial, sans-serif;
+            }
+
+            #canvas {
+                position: absolute;
+            }
+
+            #menuBtn {
+                position: fixed;
+                bottom: 0px;
+                left: 0px;
+                padding: 5px 5px;
+                background: #ffffff;
+                color: rgb(0, 0, 0);
+                border: none;
+                cursor: pointer;
+                z-index: 100;
+                width: fit-content;
+                margin: 0;
+            }
+
+            #menuBtn:hover {
+                background: #00ff0d;
+            }
+
+            #menu {
+                position: fixed;
+                left: -300px;
+                bottom: 0;
+                width: 280px;
+                height: fit-content;
+                background: #222;
+                color: white;
+                padding: 20px;
+                transition: left 0.3s;
+                z-index: 99;
+                overflow-y: auto;
+            }
+
+            #menu.visible {
+                left: 0;
+            }
+
+            .control-group {
+                margin-bottom: 20px;
+            }
+
+            .control-group h3 {
+                margin-bottom: 10px;
+                font-size: 14px;
+            }
+
+            select,
+            button {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 10px;
+                border: none;
+                border-radius: 3px;
+            }
+
+            .cruceta {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 5px;
+                max-width: 150px;
+                margin: 0 auto;
+            }
+
+            .cruceta button {
+                width: 100%;
+                height: 40px;
+                background: #555;
+                color: white;
+                cursor: pointer;
+            }
+
+            .cruceta button:hover {
+                background: #666;
+            }
+
+            .cruceta .center {
+                background: #4caf50;
+            }
+
+            #cornerIndicator {
+                position: fixed;
+                width: 20px;
+                height: 20px;
+                background: red;
+                border: 2px solid white;
+                border-radius: 50%;
+                pointer-events: none;
+                display: none;
+                z-index: 98;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+        <div id="cornerIndicator"></div>
+
+        <button id="menuBtn">Configuración</button>
+
+        <div id="menu">
+            <div class="control-group">
+                <h3>Configuración</h3>
+                <select id="configSelect">
+                    <option value="custom">Custom</option>
+                    <option value="pantalla1">Pantalla 1</option>
+                    <option value="pantalla2">Pantalla 2</option>
+                    <option value="centrado">Centrado</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <h3>Esquina actual: <span id="cornerName">Superior Izquierda</span></h3>
+                <button id="changeCorner">Cambiar Esquina</button>
+            </div>
+
+            <div class="control-group">
+                <button id="copyValues">📋 Copiar Valores</button>
+            </div>
+
+            <div class="control-group">
+                <h3>Mover Esquina</h3>
+                <div class="cruceta">
+                    <div></div>
+                    <button data-dir="up">▲</button>
+                    <div></div>
+                    <button data-dir="left">◄</button>
+                    <button class="center" id="resetCorner">Reset</button>
+                    <button data-dir="right">►</button>
+                    <div></div>
+                    <button data-dir="down">▼</button>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <p style="font-size: 12px; color: #aaa">
+                    Usa los botones para mover la esquina seleccionada. El punto rojo muestra qué esquina estás controlando.
+                </p>
+            </div>
+        </div>
+
+        <script>
+            // Dibujar el tablero de ajedrez
+            // Estas variables serán globales para que el JS externo pueda acceder a ellas
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            var canvasSize = Math.min(window.innerHeight * 0.9, window.innerWidth * 0.9);
+
+            canvas.width = canvasSize;
+            canvas.height = canvasSize;
+
+            // Función para dibujar el grid de ajedrez 10x10
+            function drawChessboard() {
+                var squareSize = canvasSize / 10;
+                for (var row = 0; row < 10; row++) {
+                    for (var col = 0; col < 10; col++) {
+                        ctx.fillStyle = (row + col) % 2 === 0 ? "white" : "black";
+                        ctx.fillRect(col * squareSize, row * squareSize, squareSize, squareSize);
+                    }
+                }
+            }
+
+            // Dibujar el tablero
+            drawChessboard();
+        </script>
+
+        <!-- Cargar la lógica de deformación -->
+        <script src="tablero-deformable.js"></script>
+    </body>
+</html>
