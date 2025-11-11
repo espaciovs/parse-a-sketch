@@ -3,27 +3,72 @@
     {
       "id": "planta_1",
       "titulo": "Grupo 1",
-      "imagen": "img/P_001.jpg"
-      
+      "imagen": "img/P_001.png"
     },
     {
       "id": "planta_2", 
       "titulo": "Grupo 2",
-      "imagen": "img/P_002.jpg"
-      
+      "imagen": "img/P_002.png"
     },
     {
       "id": "planta_3",
       "titulo": "Grupo 3", 
-      "imagen": "img/P_003.jpg"
-      
+      "imagen": "img/P_003.png"
     },
     {
       "id": "planta_4",
       "titulo": "Grupo 4",
-      "imagen": "img/P_004.jpg"
-      
+      "imagen": "img/P_004.png"
+    },
+    {
+      "id": "planta_5",
+      "titulo": "Grupo 5",
+      "imagen": "img/P_005.png"
+    },
+    {
+      "id": "planta_6",
+      "titulo": "Grupo 6",
+      "imagen": "img/P_006.png"
+    },
+    {
+      "id": "planta_7",
+      "titulo": "Grupo 7",
+      "imagen": "img/P_007.png"
+    },
+    {
+      "id": "planta_8",
+      "titulo": "Grupo 8",
+      "imagen": "img/P_008.png"
+    },
+    {
+      "id": "planta_9",
+      "titulo": "Grupo 9",
+      "imagen": "img/P_009.png"
+    },
+    {
+      "id": "planta_10",
+      "titulo": "Grupo 10",
+      "imagen": "img/P_010.png"
+    },
+    {
+      "id": "planta_11",
+      "titulo": "Grupo 11",
+      "imagen": "img/P_011.png"
+    },
+    {
+      "id": "planta_12",
+      "titulo": "Grupo 12",
+      "imagen": "img/P_012.png"
+    },
+    {
+      "id": "planta_13",
+      "titulo": "Grupo 13",
+      "imagen": "img/P_013.png"
+    },
+    {
+      "id": "planta_20",
+      "titulo": "TEST",
+      "imagen": "img/P_020.png"
     }
-
   ]
 }

@@ -1,1 +1,0 @@
-1378,709,prueba|Text,green,HOLA,334.65,354.23|Text,red,COMO ESTAMOS?,262.65,230.23

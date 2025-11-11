@@ -3,155 +3,540 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Admin - Control Panel</title>
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+    <script src="/socket.io/socket.io.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    <script src="/socket.io/socket.io.js"></script></head
-  ><!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Control de Plantas</title>
-      <script src="/socket.io/socket.io.js"></script>
-      <style>
-        .status {
-          width: 100%;
-          margin: 0;
-          font-family: "Courier New", Courier, monospace;
-          display: flex;
-          align-items: center;
-          justify-content: end;
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #1a1a1a;
+        color: #fff;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin-bottom: 30px;
+        font-size: 32px;
+        text-align: center;
+      }
+
+      .status {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+        padding: 10px;
+        background: #2a2a2a;
+        border-radius: 8px;
+      }
+
+      .status-indicator {
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+        border-radius: 50%;
+        background: red;
+        animation: pulse 2s infinite;
+      }
+
+      .status-indicator.online {
+        background: #4caf50;
+        animation: none;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
         }
-        .control-plantas {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          margin: 10px 0;
+        50% {
+          opacity: 0.5;
         }
-        .control-plantas button {
-          padding: 12px 15px;
-          font-size: 16px;
-          cursor: pointer;
-          text-align: left;
-        }
-      </style>
-    </head>
-    <body>
-      <p>Admin totalus</p>
-      <p class="status">
+      }
+
+      .section {
+        background: #2a2a2a;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      .section h3 {
+        margin-bottom: 15px;
+        color: #4caf50;
+        font-size: 20px;
+        border-bottom: 2px solid #4caf50;
+        padding-bottom: 10px;
+      }
+
+      .button-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+      }
+
+      button {
+        padding: 12px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 8px;
+        background: #444;
+        color: white;
+        transition: all 0.3s;
+      }
+
+      button:hover {
+        background: #555;
+        transform: translateY(-2px);
+      }
+
+      button.active {
+        background: #4caf50;
+      }
+
+      .toggle-button {
+        background: #f44336;
+      }
+
+      .toggle-button.active {
+        background: #4caf50;
+      }
+
+      .slider-container {
+        margin-top: 15px;
+      }
+
+      .slider-container label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      input[type="range"] {
+        width: 100%;
+        height: 8px;
+        border-radius: 5px;
+        background: #444;
+        outline: none;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #4caf50;
+        cursor: pointer;
+      }
+
+      input[type="range"]::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #4caf50;
+        cursor: pointer;
+      }
+
+      .filter-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .filter-buttons button {
+        flex: 1;
+      }
+
+      .info-box {
+        background: #1a1a1a;
+        padding: 10px;
+        border-radius: 6px;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #aaa;
+      }
+
+      select {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        background: #444;
+        color: white;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      select:hover {
+        background: #555;
+      }
+
+      .pregunta-selector {
+        margin-top: 20px;
+      }
+
+      .pregunta-selector label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎛️ Admin - Control Total</h1>
+
+      <div class="status">
         <span id="statusText">Comprobando servidor...</span>
-        <span
-          id="statusIndicator"
-          style="width: 20px; height: 20px; margin-left: 10px"
-        ></span>
-      </p>
+        <div id="statusIndicator" class="status-indicator"></div>
+      </div>
 
-      <div class="control-plantas">
-        <h3>Seleccionar Planta:</h3>
-        <div id="lista-plantas">
-          <!-- Botones -->
-        </div>
-        <div id="estado-preguntas">
-            <h3>Cambiar estado sin corregir/corregido</h3>
-            <button id="corregido" onclick="changeCorregido()">sin corregir</button>
+      <!-- CONTROL DE PLANTAS -->
+      <div class="section">
+        <h3>🌿 Seleccionar Planta</h3>
+        <div id="lista-plantas" class="button-grid">
+          <!-- Botones generados dinámicamente -->
         </div>
       </div>
 
-      <script>
-        const socket = io();
-        let plantas = [];
-        let corregido = false;
-        
-        checkServerStatus();
+      <!-- CONTROL DE ESTADO CORREGIDO -->
+      <div class="section">
+        <h3>✏️ Estado de Corrección</h3>
+        <button
+          id="corregido"
+          class="toggle-button"
+          onclick="changeCorregido()"
+        >
+          Sin Corregir
+        </button>
+        <div class="info-box">
+          Este estado afecta a cómo se guardan las respuestas de los usuarios.
+        </div>
+      </div>
 
-        // Cargar las plantas
-        async function cargarPlantas() {
-          try {
-            const response = await fetch("../json/plantas.json");
-            if (!response.ok) {
-              throw new Error("Error al cargar el JSON");
-            }
-            const data = await response.json();
-            plantas = data.plantas;
-            generarListaPlantas();
-          } catch (error) {
-            console.error("Error:", error);
+      <!-- CONTROL DE NAVEGACIÓN -->
+      <div class="section">
+        <h3>🚀 Control de Navegación</h3>
+        <button
+          id="toggleNavegacion"
+          class="toggle-button"
+          onclick="toggleNavegacion()"
+        >
+          Navegación: BLOQUEADA
+        </button>
+        <div class="info-box">
+          Controla si los usuarios pueden cambiar de pregunta usando las
+          flechas.
+        </div>
+      </div>
+
+      <!-- CONTROL DEL PROYECTOR -->
+      <div class="section">
+        <h3>🎥 Control del Proyector</h3>
+
+        <!-- Toggle mostrar respuestas -->
+        <div style="margin-bottom: 20px">
+          <button
+            id="toggleRespuestas"
+            class="toggle-button"
+            onclick="toggleMostrarRespuestas()"
+          >
+            Mostrar Respuestas: OFF
+          </button>
+        </div>
+
+        <!-- Selector de pregunta -->
+        <div class="pregunta-selector">
+          <label>Pregunta a mostrar en el proyector:</label>
+          <select id="preguntaSelect" onchange="cambiarPreguntaProyector()">
+            <option value="todas">Todas las preguntas</option>
+            <!-- Opciones generadas dinámicamente -->
+          </select>
+        </div>
+
+        <!-- Slider de opacidad -->
+        <div class="slider-container">
+          <label>
+            Opacidad de las respuestas: <span id="opacidadValue">50%</span>
+          </label>
+          <input
+            type="range"
+            id="opacidadSlider"
+            min="0"
+            max="100"
+            value="50"
+            oninput="cambiarOpacidad(this.value)"
+          />
+        </div>
+
+        <!-- Filtro de respuestas -->
+        <div style="margin-top: 20px">
+          <label>Filtrar respuestas por estado:</label>
+          <div class="filter-buttons">
+            <button
+              id="filterTodos"
+              class="active"
+              onclick="cambiarFiltro('todos')"
+            >
+              Todas
+            </button>
+            <button
+              id="filterSinCorregir"
+              onclick="cambiarFiltro('sinCorregir')"
+            >
+              Sin Corregir
+            </button>
+            <button id="filterCorregido" onclick="cambiarFiltro('corregido')">
+              Corregidas
+            </button>
+          </div>
+        </div>
+
+        <div class="info-box">
+          Estos controles solo afectan al proyector. Los usuarios siguen viendo
+          solo sus propias respuestas y pueden estar en diferentes preguntas.
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const socket = io();
+      let plantas = [];
+      let preguntas = [];
+      let corregido = false;
+
+      // Estado del proyector
+      let proyectorState = {
+        mostrarRespuestas: false,
+        opacidad: 50,
+        filtroCorregido: "todos",
+        preguntaSeleccionada: null,
+      };
+
+      checkServerStatus();
+
+      // ========== FUNCIONES DE PLANTAS ==========
+
+      async function cargarPlantas() {
+        try {
+          const response = await fetch("../json/plantas.json");
+          if (!response.ok) {
+            throw new Error("Error al cargar el JSON");
           }
+          const data = await response.json();
+          plantas = data.plantas;
+          generarListaPlantas();
+        } catch (error) {
+          console.error("Error:", error);
         }
+      }
 
-        function generarListaPlantas() {
-          const contenedor = document.getElementById("lista-plantas");
-          contenedor.innerHTML = "";
+      function generarListaPlantas() {
+        const contenedor = document.getElementById("lista-plantas");
+        contenedor.innerHTML = "";
 
-          plantas.forEach((planta) => {
-            const boton = document.createElement("button");
-            boton.textContent = planta.titulo;
-            boton.onclick = () => enviarImagen(planta);
-            contenedor.appendChild(boton);
-          });
+        plantas.forEach((planta) => {
+          const boton = document.createElement("button");
+          boton.textContent = planta.titulo;
+          boton.onclick = () => enviarImagen(planta);
+          contenedor.appendChild(boton);
+        });
+      }
+
+      function enviarImagen(planta) {
+        console.log("Enviando cambio:", planta);
+        socket.emit("cambiar-imagen", {
+          id: planta.id,
+          imagen: planta.imagen,
+          titulo: planta.titulo,
+        });
+      }
+
+      // ========== FUNCIONES DE PREGUNTAS ==========
+
+      async function cargarPreguntas() {
+        try {
+          const response = await fetch("../json/preguntas.json");
+          if (!response.ok) {
+            throw new Error("Error al cargar preguntas");
+          }
+          const data = await response.json();
+          preguntas = data.preguntas;
+          generarSelectorPreguntas();
+        } catch (error) {
+          console.error("Error cargando preguntas:", error);
         }
+      }
 
-        function enviarImagen(planta) {
-          console.log("Enviando cambio:", planta);
-          socket.emit("cambiar-imagen", {
-            id: planta.id,
-            imagen: planta.imagen,
-            titulo: planta.titulo,
-          });
-          
+      function generarSelectorPreguntas() {
+        const selector = document.getElementById("preguntaSelect");
+
+        // Mantener la opción "Todas"
+        selector.innerHTML =
+          '<option value="todas">Todas las preguntas</option>';
+
+        // Añadir cada pregunta
+        preguntas.forEach((pregunta, index) => {
+          const option = document.createElement("option");
+          option.value = index;
+          option.textContent = `${index}. ${pregunta.texto}`;
+          selector.appendChild(option);
+        });
+      }
+
+      function cambiarPreguntaProyector() {
+        const selector = document.getElementById("preguntaSelect");
+        const valor = selector.value;
+
+        // Si es "todas", enviar null, si no, enviar el número
+        const preguntaNum = valor === "todas" ? null : parseInt(valor);
+
+        proyectorState.preguntaSeleccionada = preguntaNum;
+        socket.emit("cambiar-pregunta-proyector", preguntaNum);
+
+        console.log(
+          "Pregunta proyector cambiada a:",
+          preguntaNum === null ? "Todas" : preguntaNum
+        );
+      }
+
+      // ========== CONTROL DE NAVEGACIÓN ==========
+      let navegacionHabilitada = false;
+
+      function toggleNavegacion() {
+        navegacionHabilitada = !navegacionHabilitada;
+
+        const boton = document.getElementById("toggleNavegacion");
+        boton.textContent = `Navegación: ${
+          navegacionHabilitada ? "HABILITADA" : "BLOQUEADA"
+        }`;
+        boton.classList.toggle("active", navegacionHabilitada);
+
+        socket.emit("cambiar-estado-navegacion", navegacionHabilitada);
+        console.log(
+          "Navegación:",
+          navegacionHabilitada ? "Habilitada" : "Bloqueada"
+        );
+      }
+
+      // Solicitar estado actual al conectar
+      socket.on("connect", () => {
+        socket.emit("solicitar-estado-navegacion");
+      });
+
+      // Recibir estado actual de navegación
+      socket.on("estado-navegacion-actual", (estado) => {
+        navegacionHabilitada = estado;
+        const boton = document.getElementById("toggleNavegacion");
+        if (boton) {
+          boton.textContent = `Navegación: ${
+            estado ? "HABILITADA" : "BLOQUEADA"
+          }`;
+          boton.classList.toggle("active", estado);
         }
+      });
 
-        function changeCorregido(){
-            const botonCorregido = document.getElementById("corregido");
-            if(!corregido){
+      // ========== FUNCIÓN DE ESTADO CORREGIDO ==========
 
-                corregido = true;
-                console.log("corregido es true");
-                botonCorregido.textContent = "corregido";
-                
+      function changeCorregido() {
+        const botonCorregido = document.getElementById("corregido");
+        corregido = !corregido;
 
-            }
-            else {
-                corregido = false;
-                console.log("corregido es false");
-                botonCorregido.textContent = "sin corregir";
+        botonCorregido.textContent = corregido ? "Corregido" : "Sin Corregir";
+        botonCorregido.classList.toggle("active", corregido);
 
-            }
-            socket.emit("cambiar-corregido", corregido)
+        socket.emit("cambiar-corregido", corregido);
+        console.log("Estado corregido:", corregido);
+      }
 
-        }
+      // ========== FUNCIONES DEL PROYECTOR ==========
 
+      function toggleMostrarRespuestas() {
+        proyectorState.mostrarRespuestas = !proyectorState.mostrarRespuestas;
 
+        const boton = document.getElementById("toggleRespuestas");
+        boton.textContent = `Mostrar Respuestas: ${
+          proyectorState.mostrarRespuestas ? "ON" : "OFF"
+        }`;
+        boton.classList.toggle("active", proyectorState.mostrarRespuestas);
 
-        
+        socket.emit(
+          "cambiar-mostrar-respuestas",
+          proyectorState.mostrarRespuestas
+        );
+        console.log("Mostrar respuestas:", proyectorState.mostrarRespuestas);
+      }
 
+      function cambiarOpacidad(valor) {
+        proyectorState.opacidad = parseInt(valor);
+        document.getElementById("opacidadValue").textContent = `${valor}%`;
 
+        socket.emit(
+          "cambiar-opacidad-proyector",
+          proyectorState.opacidad / 100
+        );
+        console.log("Opacidad:", proyectorState.opacidad);
+      }
 
-        async function checkServerStatus() {
-          try {
-            const response = await fetch("http://10.7.41.233:5000/");
+      function cambiarFiltro(filtro) {
+        proyectorState.filtroCorregido = filtro;
 
-            if (response.ok) {
-              document.getElementById("statusText").textContent =
-                "Servidor activo";
-              document.getElementById("statusIndicator").style.backgroundColor =
-                "green";
-            } else {
-              document.getElementById("statusText").textContent =
-                "Error de conexión con el servidor";
-              document.getElementById("statusIndicator").style.backgroundColor =
-                "red";
-            }
-          } catch (error) {
+        // Actualizar botones
+        document.querySelectorAll(".filter-buttons button").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+        document
+          .getElementById(
+            `filter${filtro.charAt(0).toUpperCase() + filtro.slice(1)}`
+          )
+          .classList.add("active");
+
+        socket.emit("cambiar-filtro-corregido", filtro);
+        console.log("Filtro corregido:", filtro);
+      }
+
+      // ========== CHECK SERVER STATUS ==========
+
+      async function checkServerStatus() {
+        try {
+          const response = await fetch("http://192.168.1.129:5000");
+
+          if (response.ok) {
             document.getElementById("statusText").textContent =
-              "Servidor inactivo";
-            document.getElementById("statusIndicator").style.backgroundColor =
-              "red";
+              "Servidor activo";
+            document.getElementById("statusIndicator").classList.add("online");
+          } else {
+            document.getElementById("statusText").textContent =
+              "Error de conexión";
           }
+        } catch (error) {
+          document.getElementById("statusText").textContent =
+            "Servidor inactivo";
         }
+      }
 
-        document.addEventListener("DOMContentLoaded", cargarPlantas);
-      </script>
-    </body>
-  </html>
+      // ========== INICIALIZACIÓN ==========
+
+      document.addEventListener("DOMContentLoaded", () => {
+        cargarPlantas();
+        cargarPreguntas();
+      });
+    </script>
+  </body>
 </html>

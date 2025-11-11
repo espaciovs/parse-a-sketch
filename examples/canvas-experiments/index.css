@@ -1,0 +1,301 @@
+* {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        font-family: "Ubuntu", sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100dvh;
+        width: 100vw;
+        background-color: #ffffff;
+        color: #333;
+        overflow: hidden;
+        position: fixed;
+
+
+        touch-action: pan-x pan-y;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      .header {
+        font-family: "Ubuntu", sans-serif;
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 7dvh;
+        padding: 0 20px;
+        background-color: #ffffff;
+        border-bottom: 1px solid #ff6cb3;
+        z-index: 100;
+      }
+
+      .header h1 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: 500;
+        color: #ff84c0;
+      }
+
+      .header h2 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 400;
+        color: #777;
+      }
+
+      .planta {
+        display: flex;
+        max-width: 100dvw;
+        height: 86dvh;
+        margin-top: 7dvh;
+        justify-content: center;
+        align-items: center;
+        
+      }
+
+      #instrucciones{
+        display: flex;
+        position: fixed;
+        top:7dvh;
+        margin: 0;
+        height:  calc((86dvh - 100dvw) / 2);
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #888;
+        z-index: 1000;
+        transition: opacity 5s linear;
+      }
+
+      
+
+      .planta_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 1/1;
+        width: min(100dvw, 86dvh); 
+        height: min(100dvw, 86dvh);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 0;
+      }
+
+      #myCanvas {
+        aspect-ratio: 1 / 1;
+        box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
+        border: 1px rgb(231, 231, 231) solid;
+      }
+
+      .canvas-controls {
+        position: fixed;
+        bottom: 8dvh;
+        left: 20px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        z-index: 1000;
+        align-items: center;
+      }
+
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 7dvh;
+        padding: 0 20px;
+        background-color: #ffffff;
+        border-top: 1px solid #ff6cb3;
+        z-index: 100;
+      }
+
+      button {
+        font-family: "Ubuntu", sans-serif;
+        background-color: #ff6cb3;
+        color: white;
+        border: none;
+        border-radius: 0;
+        padding: 12px 24px;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        position: relative;
+        z-index: 10;
+      }
+
+      button:hover {
+        background-color: #fa7bb8;
+      }
+
+      button:active {
+        background-color: #d20467;
+      }
+
+      button:disabled {
+        background-color: #cccccc !important;
+        cursor: not-allowed !important;
+        transform: none !important;
+      }
+      
+      button:disabled:hover {
+        background-color: #cccccc !important;
+        transform: none !important;
+      }
+      
+      .navegacion-bloqueada {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
+      
+      .navegacion-bloqueada:hover {
+        transform: none;
+      }
+
+      .canvas-controls button {
+        padding: 8px 16px;
+        font-size: 13px;
+      }
+
+      .tool-group {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        transform-origin: left center;
+        transition: transform 0.3s ease;
+      }
+
+      .tool-group.hidden {
+        transform: scaleX(0);
+        width: 0;
+        overflow: hidden;
+      }
+
+      .color-button,
+      .tool-button {
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        border: 2px solid #e0e0e0;
+        cursor: pointer;
+        transition: transform 0.1s ease;
+      }
+
+      .color-button.selected,
+      .tool-button.selected {
+        border: 4px solid #fff !important;
+        box-shadow: 0 0 9px #777;
+      }
+
+      .color-button.red {
+        background-color: #ff548d;
+      }
+
+      .color-button.green {
+        background-color: #55ffad;
+      }
+
+      .color-button:hover,
+      .tool-button:hover {
+        transform: scale(1.1);
+      }
+
+      .tool-button {
+        font-size: 11px;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #pregunta {
+        margin: 0;
+        text-align: center;
+        font-size: clamp(14px, 2.5vw, 18px);
+        font-weight: 400;
+        color: #777;
+        flex: 1;
+        padding: 0 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      #prevButton,
+      #nextButton {
+        font-size: 20px;
+        padding: 5px 30px;
+      }
+
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          padding: 5px 10px;
+          gap: 4px;
+        }
+
+        .header h1 {
+          font-size: 20px;
+        }
+
+        .header h2 {
+          font-size: 14px;
+        }
+
+        .canvas-controls {
+          flex-wrap: wrap;
+        }
+
+        .canvas-controls button {
+          padding: 6px 12px;
+          font-size: 12px;
+        }
+
+        .color-button,
+        .tool-button {
+          width: 30px;
+          height: 30px;
+        }
+
+        .footer {
+          padding: 0 20px;
+        }
+
+        #prevButton,
+        #nextButton {
+          font-size: 18px;
+          padding: 4px 25px;
+        }
+
+        #pregunta {
+          font-size: clamp(12px, 3vw, 16px);
+          padding: 0 10px;
+        }
+      }
+
+
+      .color-button.borrador { background-color: #ffffff; border: 1px solid #ccc; }
+.color-button.pared { background-color: #000000; }
+.color-button.asientos { background-color: #0000FF; }
+.color-button.plantas { background-color: #00ff00; }
+.color-button.iluminacion { background-color: #ff0000; }
+.color-button.textil { background-color: #ffff00; }
+.color-button.resto { background-color: #00ffff; }
+.color-button.ventana { background-color: #ff00ff; }

@@ -1,1 +1,0 @@
-1378,709,prueba|Point,point,256.65,414.23|Point,point,487.65,371.23|Point,point,494.65,450.23|Point,point,338.65,256.23

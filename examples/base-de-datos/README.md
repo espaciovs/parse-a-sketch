@@ -20,7 +20,7 @@
 
 flask --app baseDeDatos run --host=0.0.0.0
 
-- cambiar IP en admin y cliente
+- cambiar IP en admin, cliente y projector
 
 
 Todos los días hacer lo que tiene ##

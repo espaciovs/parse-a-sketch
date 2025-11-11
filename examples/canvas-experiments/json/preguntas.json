@@ -2,9 +2,9 @@
     "preguntas" : [
         {
             "id": "pregunta_0",
-            "texto": "Default",
+            "texto": "Espera a recibir instrucciones...",
             "modoCanvas": "Draw",
-            "colorSelector": "true",
+            "colorSelector": "false",
             "moveObject": "false"
         },
         {
@@ -31,9 +31,9 @@
         {
             "id": "pregunta_4",
             "texto": "¿Qué muebles cambiarías?",
-            "modoCanvas": "MoveObject",
+            "modoCanvas": "Redraw",
             "colorSelector": "true",
-            "moveObject": "true"
+            "moveObject": "false"
 
         }
     ]
