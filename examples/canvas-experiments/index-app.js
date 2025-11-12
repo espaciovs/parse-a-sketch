@@ -141,7 +141,7 @@ function cambiarModo(nuevoModo, herramienta = null) {
 
   actualizarCursor();
   actualizarToolset();
-  mostrarInstrucciones();
+  
 
   console.log(
     `Modo cambiado a: ${nuevoModo}${herramienta ? ` (${herramienta})` : ""}`
@@ -149,37 +149,36 @@ function cambiarModo(nuevoModo, herramienta = null) {
 }
 
 function mostrarInstrucciones() {
-  let textObj = document.getElementById("instrucciones");
+  const textObj = document.getElementById("instrucciones");
   let text = "";
   const modoActual = appState.modoCanvas;
 
   switch (modoActual) {
     case "Draw":
     case "Redraw":
-      text =
-        "Elige un color para dibujar sobre la planta, clic en 'clear canvas' para borrar todo el contenido";
+      text = "MODO DIBUJO: Elige un color para dibujar sobre la planta, clic en 'clear canvas' para borrar todo el contenido";
       break;
-
     case "Text":
-      text =
-        "Elige un color, haz clic en el canvas para introducir el texto, arrastra para moverlo, doble clic para editarlo";
+      text = "MODO TEXTO: Elige un color, haz clic en el canvas para introducir el texto, arrastra para moverlo, doble clic para editarlo";
       break;
-
     case "Point":
-      text =
-        "Haz clic en el canvas para situar un marcador, clic en 'clear canvas' para borrar todo el contenido";
+      text = "MODO MARCADOR: Haz clic en el canvas para situar un marcador, clic en 'clear canvas' para borrar todo el contenido";
       break;
   }
 
+  // Cancelar cualquier animación anterior
+  textObj.style.transition = 'none';
+  textObj.style.opacity = '1';
   textObj.textContent = text;
-  textObj.style.opacity = "1";
 
-  setTimeout(() => {
-    textObj.style.opacity = "0";
-  }, 300);
+  // Forzar reflow para reiniciar la animación
+  void textObj.offsetWidth;
 
+  // Iniciar nueva animación
+  textObj.style.transition = 'opacity 5s ease-in-out';
+  
   setTimeout(() => {
-    textObj.textContent = "";
+    textObj.style.opacity = '0';
   }, 5000);
 }
 
@@ -729,6 +728,7 @@ function actualizarPregunta() {
   document.getElementById("pregunta").innerText = pregunta.texto;
   cambiarModo(pregunta.modoCanvas);
   redrawAll(true);
+  mostrarInstrucciones();
 }
 
 //Apagarlas si el admin lo indica

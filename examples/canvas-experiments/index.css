@@ -75,7 +75,8 @@
         text-align: center;
         color: #888;
         z-index: 1000;
-        transition: opacity 5s linear;
+        transition: opacity 5s ease-in-out;
+        opacity: 0;
       }
 
       
