@@ -19,7 +19,9 @@ let proyectorState = {
   mostrarRespuestas: false,
   opacidad: 0.5,
   filtroCorregido: 'todos', // 'todos', 'sinCorregir', 'corregido'
-  preguntaSeleccionada: null // null = todas, número = pregunta específica
+  preguntaSeleccionada: null, // null = todas, número = pregunta específica
+  mostrarSoloUnaRespuesta: false, 
+  indexUsuario: 0
 };
 
 app.get('/admin', (req, res) => {
@@ -112,12 +114,42 @@ io.on('connection', (socket) => {
   console.log('Cambiando pregunta proyector a:', pregunta);
   proyectorState.preguntaSeleccionada = pregunta;
   io.emit('proyector-pregunta-cambiado', pregunta);
+
+  
+});
+
+// Cambiar mostrar solo una respuesta
+socket.on('cambiar-mostrar-solo-una-respuesta', (mostrar) => {
+  console.log('Cambiando mostrar solo una respuesta a:', mostrar);
+  proyectorState.mostrarSoloUnaRespuesta = mostrar;
+  io.emit('proyector-mostrar-solo-una-respuesta-cambiado', mostrar);
+});
+
+// Cambiar índice de usuario
+socket.on('cambiar-index-usuario', (index) => {
+  console.log('Cambiando índice usuario a:', index);
+  proyectorState.indexUsuario = index;
+  io.emit('proyector-index-usuario-cambiado', index);
+});
+
+// Solicitar estado actual del proyector (actualizar para incluir nuevas variables)
+socket.on('solicitar-estado-proyector', () => {
+  console.log('Proyector solicita estado:', proyectorState);
+  // Asegurarse de que el estado incluya las nuevas propiedades
+  socket.emit('estado-proyector-actual', {
+    ...proyectorState,
+    mostrarSoloUnaRespuesta: proyectorState.mostrarSoloUnaRespuesta || false,
+    indexUsuario: proyectorState.indexUsuario || 0
+  });
 });
 
   socket.on('disconnect', () => {
     console.log('Une usuarie se ha desconectado');
   });
+
 });
+
+
 
 server.listen(3000, () => {
   console.log('server running at http://localhost:3000');

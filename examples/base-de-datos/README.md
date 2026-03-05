@@ -20,6 +20,11 @@
 
 flask --app baseDeDatos run --host=0.0.0.0
 
+
+## iniciar servidor node
+- entrar en una terminal nueva, entrar a la carpeta canvas-experiments
+- node index.js
+
 - cambiar IP en admin, cliente y projector
 
 

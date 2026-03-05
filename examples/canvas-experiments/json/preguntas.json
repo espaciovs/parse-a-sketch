@@ -1,5 +1,5 @@
 {
-    "preguntas" : [
+    "preguntas": [
         {
             "id": "pregunta_0",
             "texto": "Espera a recibir instrucciones...",
@@ -9,32 +9,143 @@
         },
         {
             "id": "pregunta_1",
-            "texto": "¿En qué sitio dormiría tu gato?",
+            "texto": "Dibuja la circulación de un gato",
             "modoCanvas": "Draw",
             "colorSelector": "true",
             "moveObject": "false"
         },
         {
             "id": "pregunta_2",
-            "texto": "¿Qué te sugiere cada espacio?",
-            "modoCanvas": "Text",
+            "texto": "Modifica el módulo como si fuera una pecera y tú fueras un pez",
+            "modoCanvas": "Redraw",
             "colorSelector": "true",
             "moveObject": "false"
         },
         {
             "id": "pregunta_3",
-            "texto": "¿Qué lugar es el indicado para descansar?",
+            "texto": "Señala dónde pondrías el router wifi" ,
             "modoCanvas": "Point",
             "colorSelector": "false",
             "moveObject": "false"
         },
         {
             "id": "pregunta_4",
-            "texto": "¿Qué muebles cambiarías?",
+            "texto": "Escribe qué texturas o acabados elegirías para este diseño",
+            "modoCanvas": "Text",
+            "colorSelector": "true",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_5",
+            "texto": "Señala dónde te echarías la siesta",
+            "modoCanvas": "Point",
+            "colorSelector": "false",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_6",
+            "texto": "Dibuja elementos que añadan naturaleza al diseño",
+            "modoCanvas": "Draw",
+            "colorSelector": "true",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_7",
+            "texto": "Modifica la planta para una persona con discapacidad visual",
             "modoCanvas": "Redraw",
             "colorSelector": "true",
             "moveObject": "false"
-
+        },
+        {
+            "id": "pregunta_8",
+            "texto": "Escribe una palabra que describa lo que te transmite cada espacio de la planta",
+            "modoCanvas": "Text",
+            "colorSelector": "true",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_9",
+            "texto": "Señala dónde se acumularía la suciedad",
+            "modoCanvas": "Draw",
+            "colorSelector": "true",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_10",
+            "texto": "Marca el lugar donde te gustaría estar cuando llueve",
+            "modoCanvas": "Point",
+            "colorSelector": "false",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_11",
+            "texto": "Corrige la planta para que sea más Feng Shui",
+            "modoCanvas": "Draw",
+            "colorSelector": "true",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_12",
+            "texto": "Señala qué rincón te parece más íntimo",
+            "modoCanvas": "Point",
+            "colorSelector": "false",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_13",
+            "texto": "Modifica el diseño para una persona con movilidad reducida",
+            "modoCanvas": "Redraw",
+            "colorSelector": "true",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_14",
+            "texto": "Escribe qué actividad realizarías en cada estancia si estuvieses en una fiesta",
+            "modoCanvas": "Text",
+            "colorSelector": "true",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_15",
+            "texto": "Dibuja la circulación de una persona",
+            "modoCanvas": "Draw",
+            "colorSelector": "true",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_16",
+            "texto": "Señala dónde pondrías la radio",
+            "modoCanvas": "Point",
+            "colorSelector": "false",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_17",
+            "texto": "Modifica el módulo como si estuviera bajo tierra",
+            "modoCanvas": "Redraw",
+            "colorSelector": "true",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_18",
+            "texto": "Escribe qué harías en el espacio que más te guste",
+            "modoCanvas": "Text",
+            "colorSelector": "true",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_19",
+            "texto": "Dibuja la obra de arte que decoraría este espacio",
+            "modoCanvas": "Draw",
+            "colorSelector": "true",
+            "moveObject": "false"
+        },
+        {
+            "id": "pregunta_20",
+            "texto": "Señala dónde pasarías más tiempo durante el día",
+            "modoCanvas": "Point",
+            "colorSelector": "false",
+            "moveObject": "false"
         }
     ]
 }

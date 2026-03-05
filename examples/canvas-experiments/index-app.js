@@ -1,6 +1,6 @@
 // ==================== CONFIGURACIÓN Y CONSTANTES ====================
 const CONFIG = {
-  IPhost: `http://192.168.1.129:5000`,
+  IPhost: `http://192.168.1.130:5000`,
 
   colors: {
     //===== COLORES DRAW =====//
@@ -721,6 +721,17 @@ function prevPregunta() {
   );
 }
 
+function salaDeEspera(){
+  saveAllTextObjects();
+  saveData();
+  appState.preguntaIndex = 0;
+  actualizarPregunta();
+  loadDataByQuestionByUser(appState.plantaActual.id,
+    appState.preguntaIndex,
+    appState.user
+  );
+}
+
 function actualizarPregunta() {
   const pregunta = appState.preguntas[appState.preguntaIndex];
   if (!pregunta) return;
@@ -750,7 +761,10 @@ function actualizarEstadoNavegacion() {
     nextButton.style.cursor = "not-allowed";
     prevButton.disabled = true;
     nextButton.disabled = true;
+    salaDeEspera();
   }
+
+  
 }
 
 // ==================== EVENT LISTENERS ====================
@@ -772,6 +786,7 @@ function initEventListeners() {
 
   document.getElementById("nextButton").addEventListener("click", nextPregunta);
   document.getElementById("prevButton").addEventListener("click", prevPregunta);
+  
 
   // Herramientas de MoveObject
   document.querySelectorAll(".tool-button").forEach((btn) => {

@@ -171,7 +171,9 @@
         </button>
 
         <h3>🎨 Color de Fondo</h3>
-        <button id="toggleBackground" onclick="toggleBackground()">🔵 Cambiar a Negro</button>
+        <button id="toggleBackground" onclick="toggleBackground()">
+          🔵 Cambiar a Negro
+        </button>
       </div>
 
       <div class="control-group">
@@ -230,664 +232,722 @@
     </div>
 
     <script>
-      // ============================================
-      // CONFIGURACIÓN
-      // ============================================
-      const CONFIG = {
-        IPhost: `http://192.168.1.129:5000`,
-        colors: {
-          red: "#ff548d",
-          green: "#55ffad",
-          point: "#fa7bb8",
-          //COLORES REDRAW
-          borrador: "#000000",
-          pared: "#ffffff",
-          asientos: "#0000ff",
-          plantas: "#00ff00",
-          iluminacion: "#ff0000",
-          textil: "#ffff00",
-          resto: "#00ffff",
-          ventana: "#ff00ff",
-        },
-        canvas: {
-          lineWidth: 6,
-          pointRadius: 7,
-          textFont: "18px Ubuntu, sans-serif",
-        },
-      };
+            // ============================================
+            // CONFIGURACIÓN
+            // ============================================
+            const CONFIG = {
+              IPhost: `http://192.168.1.130:5000`,
+              colors: {
+                red: "#ff548d",
+                green: "#55ffad",
+                point: "#fa7bb8",
+                //COLORES REDRAW
+                borrador: "#000000",
+                pared: "#ffffff",
+                asientos: "#0000ff",
+                plantas: "#00ff00",
+                iluminacion: "#ff0000",
+                textil: "#ffff00",
+                resto: "#00ffff",
+                ventana: "#ff00ff",
+              },
+              canvas: {
+                lineWidth: 6,
+                pointRadius: 7,
+                textFont: "18px Ubuntu, sans-serif",
+              },
+            };
 
-      // ============================================
-      // VARIABLES GLOBALES
-      // ============================================
-      var canvas = document.getElementById("canvas");
-      var ctx = canvas.getContext("2d");
-      var canvasSize = Math.min(
-        window.innerHeight * 0.9,
-        window.innerWidth * 0.9
-      );
-
-      canvas.width = canvasSize;
-      canvas.height = canvasSize;
-
-      // Estado del proyector
-      const proyectorState = {
-        plantaActual: null,
-        mostrarRespuestas: false,
-        opacidad: 0.5,
-        filtroCorregido: "todos",
-        preguntaSeleccionada: null, // null = todas, número = pregunta específica
-        showGrid: false,
-        fondoAzul: true, // false = negro, true = azul
-      };
-
-      // ============================================
-      // FUNCIÓN PARA DIBUJAR GRID DE CALIBRACIÓN
-      // ============================================
-
-      function drawChessboard() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        var squareSize = canvasSize / 7;
-        for (var row = 0; row < 7; row++) {
-          for (var col = 0; col < 7; col++) {
-            ctx.fillStyle = (row + col) % 2 === 0 ? "black" : "black";
-            ctx.fillRect(
-              col * squareSize,
-              row * squareSize,
-              squareSize,
-              squareSize
+            // ============================================
+            // VARIABLES GLOBALES
+            // ============================================
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            var canvasSize = Math.min(
+              window.innerHeight * 0.9,
+              window.innerWidth * 0.9
             );
-          }
-        }
-      }
 
-      function toggleGridPattern() {
-        proyectorState.showGrid = !proyectorState.showGrid;
-        const btn = document.getElementById("toggleGrid");
+            canvas.width = canvasSize;
+            canvas.height = canvasSize;
+            let indexUsuario = 0;
 
-        if (proyectorState.showGrid) {
-          btn.textContent = "🖼️ Mostrar Planta";
-          btn.style.background = "#f44336";
-          drawChessboard();
-        } else {
-          btn.textContent = "🔲 Mostrar Grid de Calibración";
-          btn.style.background = "#4CAF50";
-          actualizarInterfaz();
-        }
-      }
+            // Estado del proyector
+            const proyectorState = {
+              plantaActual: null,
+              mostrarRespuestas: false,
+              mostrarSoloUnaRespuesta: true,
 
-      function toggleBackground() {
-        proyectorState.fondoAzul = !proyectorState.fondoAzul;
+              opacidad: 0.5,
+              filtroCorregido: "todos",
+              preguntaSeleccionada: null, // null = todas, número = pregunta específica
+              showGrid: false,
+              fondoAzul: true, // false = negro, true = azul
+            };
 
-        if (proyectorState.fondoAzul) {
-          document.body.style.background = "#0051ff";
-          document.getElementById("toggleBackground").textContent =
-            "🔵 Cambiar a Negro";
-        } else {
-          document.body.style.background = "#000000";
-          document.getElementById("toggleBackground").textContent =
-            "⚫ Cambiar a Azul";
-        }
-      }
+            // ============================================
+            // FUNCIÓN PARA DIBUJAR GRID DE CALIBRACIÓN
+            // ============================================
 
-      // ============================================
-      // SOCKET.IO - COMUNICACIÓN (VERSIÓN CORREGIDA)
-      // ============================================
-      const socket = io();
+            function drawChessboard() {
+              ctx.clearRect(0, 0, canvas.width, canvas.height);
+              var squareSize = canvasSize / 7;
+              for (var row = 0; row < 7; row++) {
+                for (var col = 0; col < 7; col++) {
+                  ctx.fillStyle = (row + col) % 2 === 0 ? "black" : "black";
+                  ctx.fillRect(
+                    col * squareSize,
+                    row * squareSize,
+                    squareSize,
+                    squareSize
+                  );
+                }
+              }
+            }
 
-      // Función para debug de conexión
-      socket.on("connect", () => {
-        console.log("✅ PROYECTOR - Conectado al servidor");
-        console.log("✅ PROYECTOR - ID del socket:", socket.id);
+            function toggleGridPattern() {
+              proyectorState.showGrid = !proyectorState.showGrid;
+              const btn = document.getElementById("toggleGrid");
 
-        // Solicitar estados iniciales
-        socket.emit("solicitar-planta-actual");
-        socket.emit("solicitar-estado-proyector");
-      });
+              if (proyectorState.showGrid) {
+                btn.textContent = "🖼️ Mostrar Planta";
+                btn.style.background = "#f44336";
+                drawChessboard();
+              } else {
+                btn.textContent = "🔲 Mostrar Grid de Calibración";
+                btn.style.background = "#4CAF50";
+                actualizarInterfaz();
+              }
+            }
 
-      // Debug para desconexión
-      socket.on("disconnect", (reason) => {
-        console.log("❌ PROYECTOR - Desconectado:", reason);
-      });
+            function toggleBackground() {
+              proyectorState.fondoAzul = !proyectorState.fondoAzul;
 
-      // Debug para errores
-      socket.on("connect_error", (error) => {
-        console.log("❌ PROYECTOR - Error de conexión:", error);
-      });
+              if (proyectorState.fondoAzul) {
+                document.body.style.background = "#0051ff";
+                document.getElementById("toggleBackground").textContent =
+                  "🔵 Cambiar a Negro";
+              } else {
+                document.body.style.background = "#000000";
+                document.getElementById("toggleBackground").textContent =
+                  "⚫ Cambiar a Azul";
+              }
+            }
 
-      // ============================================
-      // HANDLERS DE EVENTOS - TODOS LOS EVENTOS JUNTOS
-      // ============================================
+            // ============================================
+            // SOCKET.IO - COMUNICACIÓN (VERSIÓN CORREGIDA)
+            // ============================================
+            const socket = io();
 
-      // 1. Eventos de planta
-      socket.on("planta-actual", (plantaObj) => {
-        console.log("🌿 PROYECTOR - Planta recibida:", plantaObj);
-        proyectorState.plantaActual = plantaObj;
-        if (!proyectorState.showGrid) {
-          actualizarInterfaz();
-        }
-      });
+            // Función para debug de conexión
+            socket.on("connect", () => {
+              console.log("✅ PROYECTOR - Conectado al servidor");
+              console.log("✅ PROYECTOR - ID del socket:", socket.id);
 
-      socket.on("imagen-cambiada", (plantaObj) => {
-        console.log("🔄 PROYECTOR - Cambio de planta:", plantaObj);
-        proyectorState.plantaActual = plantaObj;
-        if (!proyectorState.showGrid) {
-          actualizarInterfaz();
-        }
-      });
-
-      // 2. Eventos de estado del proyector (¡ESTE ES EL IMPORTANTE!)
-      socket.on("estado-proyector-actual", (estado) => {
-        console.log("🎮 PROYECTOR - Estado completo recibido:", estado);
-        console.log(
-          "🎮 PROYECTOR - preguntaSeleccionada en estado:",
-          estado.preguntaSeleccionada
-        );
-
-        // Actualizar TODO el estado, no solo partes
-        proyectorState.mostrarRespuestas = estado.mostrarRespuestas;
-        proyectorState.opacidad = estado.opacidad;
-        proyectorState.filtroCorregido = estado.filtroCorregido;
-        proyectorState.preguntaSeleccionada = estado.preguntaSeleccionada; // ← ¡ESTA LÍNEA FALTABA!
-
-        actualizarInfoPanel();
-        if (!proyectorState.showGrid) {
-          actualizarInterfaz();
-        }
-      });
-
-      // 3. Eventos individuales de cambios (AGREGA ESTE QUE FALTABA)
-      socket.on("proyector-pregunta-cambiado", (pregunta) => {
-        console.log(
-          "❓ PROYECTOR - EVENTO RECIBIDO: proyector-pregunta-cambiado",
-          pregunta
-        );
-        console.log("❓ PROYECTOR - Tipo de pregunta:", typeof pregunta);
-
-        proyectorState.preguntaSeleccionada = pregunta;
-
-        console.log("❓ PROYECTOR - Estado actualizado:", proyectorState);
-
-        actualizarInfoPanel();
-        if (!proyectorState.showGrid) {
-          actualizarInterfaz();
-        }
-      });
-
-      // 4. Los otros eventos que ya tenías (mantenerlos)
-      socket.on("proyector-mostrar-respuestas-cambiado", (mostrar) => {
-        console.log("👁️ PROYECTOR - Mostrar respuestas:", mostrar);
-        proyectorState.mostrarRespuestas = mostrar;
-        actualizarInfoPanel();
-        if (!proyectorState.showGrid) {
-          actualizarInterfaz();
-        }
-      });
-
-      socket.on("proyector-opacidad-cambiada", (opacidad) => {
-        console.log("🎨 PROYECTOR - Opacidad:", opacidad);
-        proyectorState.opacidad = opacidad;
-        actualizarInfoPanel();
-        if (!proyectorState.showGrid) {
-          actualizarInterfaz();
-        }
-      });
-
-      socket.on("proyector-filtro-corregido-cambiado", (filtro) => {
-        console.log("📊 PROYECTOR - Filtro:", filtro);
-        proyectorState.filtroCorregido = filtro;
-        actualizarInfoPanel();
-        if (!proyectorState.showGrid) {
-          actualizarInterfaz();
-        }
-      });
-
-      // ============================================
-      // FUNCIONES DE VISUALIZACIÓN
-      // ============================================
-
-      function actualizarInfoPanel() {
-        const statusBadge = document.getElementById("statusBadge");
-        statusBadge.textContent = proyectorState.mostrarRespuestas
-          ? "ON"
-          : "OFF";
-        statusBadge.className = `status-badge ${
-          proyectorState.mostrarRespuestas ? "on" : "off"
-        }`;
-
-        document.getElementById("plantaInfo").textContent =
-          proyectorState.plantaActual
-            ? proyectorState.plantaActual.titulo
-            : "-";
-
-        const filtroTexto = {
-          todos: "Todas",
-          sinCorregir: "Sin Corregir",
-          corregido: "Corregidas",
-        };
-        document.getElementById("filtroInfo").textContent =
-          filtroTexto[proyectorState.filtroCorregido];
-        document.getElementById("opacidadInfo").textContent = `${Math.round(
-          proyectorState.opacidad * 100
-        )}%`;
-
-        // MOSTRAR LA PREGUNTA SELECCIONADA
-        const preguntaTexto =
-          proyectorState.preguntaSeleccionada === null
-            ? "Todas"
-            : `Pregunta ${proyectorState.preguntaSeleccionada + 1}`;
-
-        console.log(
-          "📝 PROYECTOR - Actualizando panel - Pregunta:",
-          preguntaTexto
-        );
-
-        // Si no existe el elemento, créalo
-        let preguntaElement = document.getElementById("preguntaInfo");
-        if (!preguntaElement) {
-          // Agregar al HTML si no existe
-          const infoDiv = document.querySelector(".info-text");
-          const preguntaLine = document.createElement("div");
-          preguntaLine.innerHTML = `<strong>Pregunta:</strong> <span id="preguntaInfo">${preguntaTexto}</span>`;
-          infoDiv.insertBefore(preguntaLine, infoDiv.firstChild.nextSibling);
-          preguntaElement = document.getElementById("preguntaInfo");
-        } else {
-          preguntaElement.textContent = preguntaTexto;
-        }
-      }
-      async function actualizarInterfaz() {
-        if (!proyectorState.plantaActual) {
-          dibujarMensajeEspera();
-          return;
-        }
-
-        console.log(
-          "Actualizando interfaz con planta:",
-          proyectorState.plantaActual
-        );
-
-        // Cargar imagen de fondo
-        await cargarImagenFondo(
-          proyectorState.plantaActual.imagen.replace(".png", "p.png")
-        );
-
-        // Si debe mostrar respuestas, cargarlas
-        if (proyectorState.mostrarRespuestas) {
-          console.log("Cargando respuestas...");
-          await cargarYDibujarRespuestas();
-        }
-      }
-
-      function dibujarMensajeEspera() {
-        ctx.fillStyle = "#0051ff";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        ctx.fillStyle = "white";
-        ctx.font = "24px Arial";
-        ctx.textAlign = "center";
-        ctx.fillText(
-          "Esperando planta desde Admin...",
-          canvas.width / 2,
-          canvas.height / 2
-        );
-      }
-
-      async function cargarImagenFondo(url) {
-        return new Promise((resolve, reject) => {
-          const img = new Image();
-          img.onload = () => {
-            console.log("Imagen cargada correctamente:", url);
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-            resolve();
-          };
-          img.onerror = (error) => {
-            console.error("Error cargando imagen:", error);
-            reject(error);
-          };
-          img.src =
-            url.startsWith("http") || url.startsWith("/") ? url : `/${url}`;
-        });
-      }
-
-      async function cargarYDibujarRespuestas() {
-        if (!proyectorState.plantaActual) return;
-
-        try {
-          console.log(
-            "Solicitando lista de archivos para planta:",
-            proyectorState.plantaActual.id
-          );
-
-          // Obtener lista de archivos
-          const response = await fetch(
-            `${CONFIG.IPhost}/listar/${proyectorState.plantaActual.id}`
-          );
-          if (!response.ok) {
-            console.log("Error al obtener lista de archivos");
-            return;
-          }
-
-          const result = await response.json();
-          console.log("Archivos disponibles:", result.datos);
-
-          if (result.datos.length === 0) {
-            console.log("No hay archivos disponibles");
-            return;
-          }
-
-          // Filtrar archivos según el filtro seleccionado
-          let archivos = result.datos;
-
-          console.log(
-            "Pregunta seleccionada:",
-            proyectorState.preguntaSeleccionada
-          );
-
-          // Filtrar por pregunta si está especificada
-          if (proyectorState.preguntaSeleccionada !== null) {
-            const preguntaNum = proyectorState.preguntaSeleccionada;
-            console.log(`Filtrando por pregunta: ${preguntaNum}`);
-
-            // Los archivos se guardan con formato: "preguntaIndex_userId" o "preguntaIndex_userId_corregido"
-            archivos = archivos.filter((nombre) => {
-              // Extraer el número de pregunta del nombre del archivo
-              // Formato esperado: "0_userId", "1_userId_corregido", etc.
-              const partes = nombre.split("_");
-              if (partes.length < 2) return false;
-
-              const preguntaEnArchivo = parseInt(partes[0]);
-              console.log(
-                `Archivo: ${nombre}, Pregunta en archivo: ${preguntaEnArchivo}`
-              );
-
-              return preguntaEnArchivo === preguntaNum;
+              // Solicitar estados iniciales
+              socket.emit("solicitar-planta-actual");
+              socket.emit("solicitar-estado-proyector");
             });
 
-            console.log(`Archivos de pregunta ${preguntaNum}:`, archivos);
-          }
+            // Debug para desconexión
+            socket.on("disconnect", (reason) => {
+              console.log("❌ PROYECTOR - Desconectado:", reason);
+            });
 
-          // Filtrar por estado de corrección
-          if (proyectorState.filtroCorregido === "sinCorregir") {
-            archivos = archivos.filter(
-              (nombre) => !nombre.includes("_corregido")
-            );
-            console.log("Archivos sin corregir:", archivos);
-          } else if (proyectorState.filtroCorregido === "corregido") {
-            archivos = archivos.filter((nombre) =>
-              nombre.includes("_corregido")
-            );
-            console.log("Archivos corregidos:", archivos);
-          }
+            // Debug para errores
+            socket.on("connect_error", (error) => {
+              console.log("❌ PROYECTOR - Error de conexión:", error);
+            });
 
-          console.log(
-            `Dibujando ${archivos.length} archivos con opacidad ${proyectorState.opacidad}`
-          );
+            // ============================================
+            // HANDLERS DE EVENTOS - TODOS LOS EVENTOS JUNTOS
+            // ============================================
 
-          // Cargar y dibujar cada archivo
-          for (const archivo of archivos) {
-            await cargarYDibujarArchivo(archivo);
-          }
-        } catch (error) {
-          console.error("Error cargando respuestas:", error);
-        }
-      }
+            // 1. Eventos de planta
+            socket.on("planta-actual", (plantaObj) => {
+              console.log("🌿 PROYECTOR - Planta recibida:", plantaObj);
+              proyectorState.plantaActual = plantaObj;
+              if (!proyectorState.showGrid) {
+                actualizarInterfaz();
+              }
+            });
 
-      async function cargarYDibujarArchivo(archivo) {
-        try {
-          const response = await fetch(
-            `${CONFIG.IPhost}/cargar/datos/${proyectorState.plantaActual.id}/${archivo}`
-          );
-          if (!response.ok) {
-            console.log("Error cargando archivo:", archivo);
-            return;
-          }
+            socket.on("imagen-cambiada", (plantaObj) => {
+              console.log("🔄 PROYECTOR - Cambio de planta:", plantaObj);
+              proyectorState.plantaActual = plantaObj;
+              if (!proyectorState.showGrid) {
+                actualizarInterfaz();
+              }
+            });
 
-          const datos = await response.json();
-          if (!datos.datos || datos.datos.length === 0) {
-            console.log("Archivo sin datos:", archivo);
-            return;
-          }
+            // 2. Eventos de estado del proyector
+            socket.on("estado-proyector-actual", (estado) => {
+              console.log("🎮 PROYECTOR - Estado completo recibido:", estado);
+              console.log(
+                "🎮 PROYECTOR - preguntaSeleccionada en estado:",
+                estado.preguntaSeleccionada
+              );
 
-          console.log(
-            "Dibujando archivo:",
-            archivo,
-            "con",
-            datos.datos.length,
-            "segmentos"
-          );
+              // Actualizar TODO el estado, no solo partes
+              proyectorState.mostrarRespuestas = estado.mostrarRespuestas;
+              proyectorState.opacidad = estado.opacidad;
+              proyectorState.filtroCorregido = estado.filtroCorregido;
+              proyectorState.preguntaSeleccionada = estado.preguntaSeleccionada; // ← ¡ESTA LÍNEA FALTABA!
+              proyectorState.mostrarSoloUnaRespuesta = estado.mostrarSoloUnaRespuesta || false;
+              indexUsuario = estado.indexUsuario || 0;
 
-          // OBTENER DIMENSIONES ORIGINALES DEL CLIENTE
-          const anchoOriginal = datos.ancho || canvasSize;
-          const altoOriginal = datos.alto || canvasSize;
 
-          // NUEVO: Obtener información del contenedor si está disponible
-          const contenedorAncho = datos.contenedorAncho || anchoOriginal;
-          const contenedorAlto = datos.contenedorAlto || altoOriginal;
-          const backgroundSize = datos.backgroundSize || "contain";
-          const backgroundPosition = datos.backgroundPosition || "center";
+              actualizarInfoPanel();
+              if (!proyectorState.showGrid) {
+                actualizarInterfaz();
+              }
+            });
 
-          console.log(
-            `📏 Cliente - Canvas: ${anchoOriginal}x${altoOriginal}, Contenedor: ${contenedorAncho}x${contenedorAlto}`
-          );
-          console.log(
-            `📏 Cliente - Background: ${backgroundSize}, ${backgroundPosition}`
-          );
+            // 3. Eventos individuales de cambios (AGREGA ESTE QUE FALTABA)
+            socket.on("proyector-pregunta-cambiado", (pregunta) => {
+              console.log(
+                "❓ PROYECTOR - EVENTO RECIBIDO: proyector-pregunta-cambiado",
+                pregunta
+              );
+              console.log("❓ PROYECTOR - Tipo de pregunta:", typeof pregunta);
 
-          // CALCULAR FACTORES DE ESCALA MEJORADOS
-          let scaleX, scaleY;
+              proyectorState.preguntaSeleccionada = pregunta;
 
-          if (backgroundSize === "contain") {
-            // Para 'contain', la imagen se escala manteniendo aspect ratio
-            const scaleWidth = canvasSize / contenedorAncho;
-            const scaleHeight = canvasSize / contenedorAlto;
-            const scale = Math.min(scaleWidth, scaleHeight);
+              console.log("❓ PROYECTOR - Estado actualizado:", proyectorState);
 
-            scaleX = scale;
-            scaleY = scale;
+              actualizarInfoPanel();
+              if (!proyectorState.showGrid) {
+                actualizarInterfaz();
+              }
+            });
 
-            console.log(`📏 Escalado 'contain': factor=${scale.toFixed(3)}`);
-          } else if (backgroundSize === "cover") {
-            // Para 'cover', la imagen cubre todo el contenedor
-            const scaleWidth = canvasSize / contenedorAncho;
-            const scaleHeight = canvasSize / contenedorAlto;
-            const scale = Math.max(scaleWidth, scaleHeight);
+            // 4. Los otros eventos que ya tenías (mantenerlos)
+            socket.on("proyector-mostrar-respuestas-cambiado", (mostrar) => {
+              console.log("👁️ PROYECTOR - Mostrar respuestas:", mostrar);
+              proyectorState.mostrarRespuestas = mostrar;
+              actualizarInfoPanel();
+              if (!proyectorState.showGrid) {
+                actualizarInterfaz();
+              }
+            });
 
-            scaleX = scale;
-            scaleY = scale;
+            socket.on("proyector-opacidad-cambiada", (opacidad) => {
+              console.log("🎨 PROYECTOR - Opacidad:", opacidad);
+              proyectorState.opacidad = opacidad;
+              actualizarInfoPanel();
+              if (!proyectorState.showGrid) {
+                actualizarInterfaz();
+              }
+            });
 
-            console.log(`📏 Escalado 'cover': factor=${scale.toFixed(3)}`);
-          } else {
-            // Para valores específicos o 'auto'
-            scaleX = canvasSize / anchoOriginal;
-            scaleY = canvasSize / altoOriginal;
-            console.log(
-              `📏 Escalado directo: scaleX=${scaleX.toFixed(
-                3
-              )}, scaleY=${scaleY.toFixed(3)}`
-            );
-          }
+            socket.on("proyector-filtro-corregido-cambiado", (filtro) => {
+              console.log("📊 PROYECTOR - Filtro:", filtro);
+              proyectorState.filtroCorregido = filtro;
+              actualizarInfoPanel();
+              if (!proyectorState.showGrid) {
+                actualizarInterfaz();
+              }
+            });
 
-          // Aplicar corrección de posición si es necesario
-          let offsetX = 0;
-          let offsetY = 0;
-
-          if (backgroundSize === "contain") {
-            // Calcular offset para centrar la imagen
-            const scaledWidth = contenedorAncho * scaleX;
-            const scaledHeight = contenedorAlto * scaleY;
-
-            offsetX = (canvasSize - scaledWidth) / 2;
-            offsetY = (canvasSize - scaledHeight) / 2;
-
-            console.log(
-              `📏 Offset de centrado: X=${offsetX.toFixed(
-                1
-              )}, Y=${offsetY.toFixed(1)}`
-            );
-          }
-
-          // Dibujar cada conjunto de datos CON ESCALADO MEJORADO
-          datos.datos.forEach((dataArray) => {
-            if (dataArray.length > 0 && typeof dataArray[0] === "string") {
-              const dataString = dataArray.join(",");
-              const parsedData = parseDataString(dataString);
-              drawFromData(parsedData, scaleX, scaleY, offsetX, offsetY);
-            }
-          });
-        } catch (error) {
-          console.error("Error cargando archivo:", archivo, error);
-        }
-      }
-      // ============================================
-      // PARSEO Y DIBUJADO DE DATOS
-      // ============================================
-
-      function parseDataString(dataString) {
-        const drawingSegments = dataString.split("|");
-
-        return {
-          segments: drawingSegments.map((segment) => {
-            const parts = segment.split(",");
-            const type = parts[0];
-
-            if (type === "Text") {
-              return {
-                type: parts[0],
-                color: parts[1],
-                points: [
-                  parts[2],
-                  parseFloat(parts[3]),
-                  parseFloat(parts[4]),
-                  parts[5] || null,
-                ],
-              };
-            } else {
-              return {
-                type: parts[0],
-                color: parts[1],
-                points: parts.slice(2).map((coord) => parseFloat(coord)),
-              };
-            }
-          }),
-        };
-      }
-
-      function drawFromData(
-        parsedData,
-        scaleX = 1,
-        scaleY = 1,
-        offsetX = 0,
-        offsetY = 0
-      ) {
-        const { segments } = parsedData;
-
-        ctx.save();
-        ctx.globalAlpha = proyectorState.opacidad;
-
-        segments.forEach((segment) => {
-          switch (segment.type) {
-            case "Draw":
-              drawSegment(segment, scaleX, scaleY, offsetX, offsetY);
-              break;
-            case "Point":
-              drawPoint(segment, scaleX, scaleY, offsetX, offsetY);
-              break;
-            case "Text":
-              drawText(segment, scaleX, scaleY, offsetX, offsetY);
-              break;
-          }
-        });
-
-        ctx.restore();
-      }
-
-      function drawSegment(
-        segment,
-        scaleX = 1,
-        scaleY = 1,
-        offsetX = 0,
-        offsetY = 0
-      ) {
-        const points = segment.points;
-        if (points.length < 2) return;
-
-        const colorToUse = CONFIG.colors[segment.color] || "#000";
-
-        ctx.strokeStyle = colorToUse;
-        ctx.lineWidth = CONFIG.canvas.lineWidth;
-        ctx.lineCap = "round";
-
-        ctx.beginPath();
-        ctx.moveTo(points[0] * scaleX + offsetX, points[1] * scaleY + offsetY);
-
-        for (let i = 2; i < points.length; i += 2) {
-          if (i + 1 < points.length) {
-            ctx.lineTo(
-              points[i] * scaleX + offsetX,
-              points[i + 1] * scaleY + offsetY
-            );
-          }
-        }
-
-        ctx.stroke();
-      }
-
-      function drawPoint(
-        segment,
-        scaleX = 1,
-        scaleY = 1,
-        offsetX = 0,
-        offsetY = 0
-      ) {
-        const points = segment.points;
-        if (points.length < 2) return;
-
-        ctx.beginPath();
-        ctx.arc(
-          points[0] * scaleX + offsetX,
-          points[1] * scaleY + offsetY,
-          CONFIG.canvas.pointRadius,
-          0,
-          2 * Math.PI
-        );
-        ctx.fillStyle = CONFIG.colors.point;
-        ctx.fill();
-      }
-
-      function drawText(
-        segment,
-        scaleX = 1,
-        scaleY = 1,
-        offsetX = 0,
-        offsetY = 0
-      ) {
-        if (segment.points.length < 3) return;
-
-        const text = segment.points[0];
-        const x = parseFloat(segment.points[1]) * scaleX + offsetX;
-        const y = parseFloat(segment.points[2]) * scaleY + offsetY;
-        const color = segment.color;
-
-        // Usar la misma font que en la aplicación principal
-        const font = segment.points[5] || CONFIG.canvas.textFont; // El font está en la posición 5 si se guardó
-
-        ctx.save();
-        ctx.font = font; // ← USAR EL FONT GUARDADO
-        ctx.fillStyle = CONFIG.colors[color] || CONFIG.colors.green;
-        ctx.textAlign = "left"; // ← FORZAR ALINEACIÓN IZQUIERDA
-        ctx.textBaseline = "alphabetic"; // ← FORZAR BASELINE CONSISTENTE
-        ctx.fillText(text, x, y);
-        ctx.restore();
-      }
-      // ============================================
-      // INICIALIZACIÓN
-      // ============================================
-
-      window.addEventListener("load", () => {
-        // Iniciar con grid de calibración
-        drawChessboard();
+            // 5. Eventos para control de usuario único (NUEVOS)
+      socket.on('proyector-mostrar-solo-una-respuesta-cambiado', (mostrar) => {
+        console.log('👤 PROYECTOR - Mostrar solo una respuesta:', mostrar);
+        proyectorState.mostrarSoloUnaRespuesta = mostrar;
         actualizarInfoPanel();
+        if (!proyectorState.showGrid) {
+          actualizarInterfaz();
+        }
       });
+
+      socket.on('proyector-index-usuario-cambiado', (index) => {
+        console.log('👤 PROYECTOR - Índice usuario cambiado:', index);
+        indexUsuario = index; // ← Usar la variable global indexUsuario que ya tienes
+        actualizarInfoPanel();
+        if (!proyectorState.showGrid) {
+          actualizarInterfaz();
+        }
+      });
+
+
+            // ============================================
+            // FUNCIONES DE VISUALIZACIÓN
+            // ============================================
+
+            function actualizarInfoPanel() {
+              const statusBadge = document.getElementById("statusBadge");
+              statusBadge.textContent = proyectorState.mostrarRespuestas
+                ? "ON"
+                : "OFF";
+              statusBadge.className = `status-badge ${
+                proyectorState.mostrarRespuestas ? "on" : "off"
+              }`;
+
+              document.getElementById("plantaInfo").textContent =
+                proyectorState.plantaActual
+                  ? proyectorState.plantaActual.titulo
+                  : "-";
+
+              const filtroTexto = {
+                todos: "Todas",
+                sinCorregir: "Sin Corregir",
+                corregido: "Corregidas",
+              };
+              document.getElementById("filtroInfo").textContent =
+                filtroTexto[proyectorState.filtroCorregido];
+              document.getElementById("opacidadInfo").textContent = `${Math.round(
+                proyectorState.opacidad * 100
+              )}%`;
+
+              // MOSTRAR LA PREGUNTA SELECCIONADA
+              const preguntaTexto =
+                proyectorState.preguntaSeleccionada === null
+                  ? "Todas"
+                  : `Pregunta ${proyectorState.preguntaSeleccionada + 1}`;
+
+              console.log(
+                "📝 PROYECTOR - Actualizando panel - Pregunta:",
+                preguntaTexto
+              );
+
+              // Si no existe el elemento, créalo
+              let preguntaElement = document.getElementById("preguntaInfo");
+              if (!preguntaElement) {
+                // Agregar al HTML si no existe
+                const infoDiv = document.querySelector(".info-text");
+                const preguntaLine = document.createElement("div");
+                preguntaLine.innerHTML = `<strong>Pregunta:</strong> <span id="preguntaInfo">${preguntaTexto}</span>`;
+                infoDiv.insertBefore(preguntaLine, infoDiv.firstChild.nextSibling);
+                preguntaElement = document.getElementById("preguntaInfo");
+              } else {
+                preguntaElement.textContent = preguntaTexto;
+              }
+
+              const usuarioUnicoTexto = proyectorState.mostrarSoloUnaRespuesta 
+    ? `Usuario ${indexUsuario + 1}` 
+    : "Todos los usuarios";
+  
+  // Busca o crea el elemento para mostrar esta información
+  let usuarioElement = document.getElementById("usuarioInfo");
+  if (!usuarioElement) {
+    const infoDiv = document.querySelector(".info-text");
+    const usuarioLine = document.createElement("div");
+    usuarioLine.innerHTML = `<strong>Modo:</strong> <span id="usuarioInfo">${usuarioUnicoTexto}</span>`;
+    infoDiv.appendChild(usuarioLine);
+    usuarioElement = document.getElementById("usuarioInfo");
+  } else {
+    usuarioElement.textContent = usuarioUnicoTexto;
+  }
+            }
+
+
+
+            async function actualizarInterfaz() {
+              if (!proyectorState.plantaActual) {
+                dibujarMensajeEspera();
+                return;
+              }
+
+              console.log(
+                "Actualizando interfaz con planta:",
+                proyectorState.plantaActual
+              );
+
+              // Cargar imagen de fondo
+              await cargarImagenFondo(
+                proyectorState.plantaActual.imagen.replace(".png", "p.png")
+              );
+
+              // Si debe mostrar respuestas, cargarlas
+              if (proyectorState.mostrarRespuestas) {
+                console.log("Cargando respuestas...");
+                await cargarYDibujarRespuestas();
+              }
+            }
+
+            function dibujarMensajeEspera() {
+              ctx.fillStyle = "#0051ff";
+              ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+              ctx.fillStyle = "white";
+              ctx.font = "24px Arial";
+              ctx.textAlign = "center";
+              ctx.fillText(
+                "Esperando planta desde Admin...",
+                canvas.width / 2,
+                canvas.height / 2
+              );
+            }
+
+            async function cargarImagenFondo(url) {
+              return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = () => {
+                  console.log("Imagen cargada correctamente:", url);
+                  ctx.clearRect(0, 0, canvas.width, canvas.height);
+                  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                  resolve();
+                };
+                img.onerror = (error) => {
+                  console.error("Error cargando imagen:", error);
+                  reject(error);
+                };
+                img.src =
+                  url.startsWith("http") || url.startsWith("/") ? url : `/${url}`;
+              });
+            }
+
+            async function cargarYDibujarRespuestas() {
+              if (!proyectorState.plantaActual) return;
+
+              try {
+                console.log(
+                  "Solicitando lista de archivos para planta:",
+                  proyectorState.plantaActual.id
+                );
+
+                // Obtener lista de archivos
+                const response = await fetch(
+                  `${CONFIG.IPhost}/listar/${proyectorState.plantaActual.id}`
+                );
+                if (!response.ok) {
+                  console.log("Error al obtener lista de archivos");
+                  return;
+                }
+
+                const result = await response.json();
+                console.log("Archivos disponibles:", result.datos);
+
+                if (result.datos.length === 0) {
+                  console.log("No hay archivos disponibles");
+                  return;
+                }
+
+                // Filtrar archivos según el filtro seleccionado
+                let archivos = result.datos;
+                console.log("Archivos antes de filtrar:", archivos);
+
+                console.log(
+                  "Pregunta seleccionada:",
+                  proyectorState.preguntaSeleccionada
+                );
+
+                // Filtrar por pregunta si está especificada
+                if (proyectorState.preguntaSeleccionada !== null) {
+                  const preguntaNum = proyectorState.preguntaSeleccionada;
+                  console.log(`Filtrando por pregunta: ${preguntaNum}`);
+
+                  // Los archivos se guardan con formato: "preguntaIndex_userId" o "preguntaIndex_userId_corregido"
+                  archivos = archivos.filter((nombre) => {
+                    // Extraer el número de pregunta del nombre del archivo
+                    // Formato esperado: "0_userId", "1_userId_corregido", etc.
+                    const partes = nombre.split("_");
+                    if (partes.length < 2) return false;
+
+                    const preguntaEnArchivo = parseInt(partes[0]);
+                    console.log(
+                      `Archivo: ${nombre}, Pregunta en archivo: ${preguntaEnArchivo}`
+                    );
+
+                    return preguntaEnArchivo === preguntaNum;
+                  });
+
+                  //console.log(`Archivos de pregunta ${preguntaNum}:`, archivos);
+                }
+
+                // Filtrar por estado de corrección
+                if (proyectorState.filtroCorregido === "sinCorregir") {
+                  archivos = archivos.filter(
+                    (nombre) => !nombre.includes("_corregido")
+                  );
+                  console.log("Archivos sin corregir:", archivos);
+                } else if (proyectorState.filtroCorregido === "corregido") {
+                  archivos = archivos.filter((nombre) =>
+                    nombre.includes("_corregido")
+                  );
+                  //console.log("Archivos corregidos:", archivos);
+                }
+
+                if(proyectorState.mostrarSoloUnaRespuesta){
+                  const totalArchivos = archivos.length;
+
+                indexUsuario = indexUsuario % totalArchivos;
+                archivos = [archivos[indexUsuario]];
+
+                console.log(`dibujando respuesta del usuario ${indexUsuario}: `, archivos);
+
+
+              }
+
+
+                console.log(
+                  `Dibujando ${archivos.length} archivos con opacidad ${proyectorState.opacidad}`
+                );
+
+                // Cargar y dibujar cada archivo
+                for (const archivo of archivos) {
+                  await cargarYDibujarArchivo(archivo);
+                }
+              } catch (error) {
+                console.error("Error cargando respuestas:", error);
+              }
+            }
+
+            async function cargarYDibujarArchivo(archivo) {
+              try {
+                const response = await fetch(
+                  `${CONFIG.IPhost}/cargar/datos/${proyectorState.plantaActual.id}/${archivo}`
+                );
+                if (!response.ok) {
+                  console.log("Error cargando archivo:", archivo);
+                  return;
+                }
+
+                const datos = await response.json();
+                if (!datos.datos || datos.datos.length === 0) {
+                  console.log("Archivo sin datos:", archivo);
+                  return;
+                }
+
+                console.log(
+                  "Dibujando archivo:",
+                  archivo,
+                  "con",
+                  datos.datos.length,
+                  "segmentos"
+                );
+
+                // OBTENER DIMENSIONES ORIGINALES DEL CLIENTE
+                const anchoOriginal = datos.ancho || canvasSize;
+                const altoOriginal = datos.alto || canvasSize;
+
+                // NUEVO: Obtener información del contenedor si está disponible
+                const contenedorAncho = datos.contenedorAncho || anchoOriginal;
+                const contenedorAlto = datos.contenedorAlto || altoOriginal;
+                const backgroundSize = datos.backgroundSize || "contain";
+                const backgroundPosition = datos.backgroundPosition || "center";
+
+                console.log(
+                  `📏 Cliente - Canvas: ${anchoOriginal}x${altoOriginal}, Contenedor: ${contenedorAncho}x${contenedorAlto}`
+                );
+                console.log(
+                  `📏 Cliente - Background: ${backgroundSize}, ${backgroundPosition}`
+                );
+
+                // CALCULAR FACTORES DE ESCALA MEJORADOS
+                let scaleX, scaleY;
+
+                if (backgroundSize === "contain") {
+                  // Para 'contain', la imagen se escala manteniendo aspect ratio
+                  const scaleWidth = canvasSize / contenedorAncho;
+                  const scaleHeight = canvasSize / contenedorAlto;
+                  const scale = Math.min(scaleWidth, scaleHeight);
+
+                  scaleX = scale;
+                  scaleY = scale;
+
+                  console.log(`📏 Escalado 'contain': factor=${scale.toFixed(3)}`);
+                } else if (backgroundSize === "cover") {
+                  // Para 'cover', la imagen cubre todo el contenedor
+                  const scaleWidth = canvasSize / contenedorAncho;
+                  const scaleHeight = canvasSize / contenedorAlto;
+                  const scale = Math.max(scaleWidth, scaleHeight);
+
+                  scaleX = scale;
+                  scaleY = scale;
+
+                  console.log(`📏 Escalado 'cover': factor=${scale.toFixed(3)}`);
+                } else {
+                  // Para valores específicos o 'auto'
+                  scaleX = canvasSize / anchoOriginal;
+                  scaleY = canvasSize / altoOriginal;
+                  console.log(
+                    `📏 Escalado directo: scaleX=${scaleX.toFixed(
+                      3
+                    )}, scaleY=${scaleY.toFixed(3)}`
+                  );
+                }
+
+                // Aplicar corrección de posición si es necesario
+                let offsetX = 0;
+                let offsetY = 0;
+
+                if (backgroundSize === "contain") {
+                  // Calcular offset para centrar la imagen
+                  const scaledWidth = contenedorAncho * scaleX;
+                  const scaledHeight = contenedorAlto * scaleY;
+
+                  offsetX = (canvasSize - scaledWidth) / 2;
+                  offsetY = (canvasSize - scaledHeight) / 2;
+
+                  console.log(
+                    `📏 Offset de centrado: X=${offsetX.toFixed(
+                      1
+                    )}, Y=${offsetY.toFixed(1)}`
+                  );
+                }
+
+                // Dibujar cada conjunto de datos CON ESCALADO MEJORADO
+                datos.datos.forEach((dataArray) => {
+                  if (dataArray.length > 0 && typeof dataArray[0] === "string") {
+                    const dataString = dataArray.join(",");
+                    const parsedData = parseDataString(dataString);
+                    drawFromData(parsedData, scaleX, scaleY, offsetX, offsetY);
+                  }
+                });
+              } catch (error) {
+                console.error("Error cargando archivo:", archivo, error);
+              }
+            }
+            // ============================================
+            // PARSEO Y DIBUJADO DE DATOS
+            // ============================================
+
+            function parseDataString(dataString) {
+              const drawingSegments = dataString.split("|");
+
+              return {
+                segments: drawingSegments.map((segment) => {
+                  const parts = segment.split(",");
+                  const type = parts[0];
+
+                  if (type === "Text") {
+                    return {
+                      type: parts[0],
+                      color: parts[1],
+                      points: [
+                        parts[2],
+                        parseFloat(parts[3]),
+                        parseFloat(parts[4]),
+                        parts[5] || null,
+                      ],
+                    };
+                  } else {
+                    return {
+                      type: parts[0],
+                      color: parts[1],
+                      points: parts.slice(2).map((coord) => parseFloat(coord)),
+                    };
+                  }
+                }),
+              };
+            }
+
+            function drawFromData(
+              parsedData,
+              scaleX = 1,
+              scaleY = 1,
+              offsetX = 0,
+              offsetY = 0
+            ) {
+              const { segments } = parsedData;
+
+              ctx.save();
+              ctx.globalAlpha = proyectorState.opacidad;
+
+              segments.forEach((segment) => {
+                switch (segment.type) {
+                  case "Draw":
+                    drawSegment(segment, scaleX, scaleY, offsetX, offsetY);
+                    break;
+                  case "Point":
+                    drawPoint(segment, scaleX, scaleY, offsetX, offsetY);
+                    break;
+                  case "Text":
+                    drawText(segment, scaleX, scaleY, offsetX, offsetY);
+                    break;
+                }
+              });
+
+              ctx.restore();
+            }
+
+            function drawSegment(
+              segment,
+              scaleX = 1,
+              scaleY = 1,
+              offsetX = 0,
+              offsetY = 0
+            ) {
+              const points = segment.points;
+              if (points.length < 2) return;
+
+              const colorToUse = CONFIG.colors[segment.color] || "#000";
+
+              ctx.strokeStyle = colorToUse;
+              ctx.lineWidth = CONFIG.canvas.lineWidth;
+              ctx.lineCap = "round";
+
+              ctx.beginPath();
+              ctx.moveTo(points[0] * scaleX + offsetX, points[1] * scaleY + offsetY);
+
+              for (let i = 2; i < points.length; i += 2) {
+                if (i + 1 < points.length) {
+                  ctx.lineTo(
+                    points[i] * scaleX + offsetX,
+                    points[i + 1] * scaleY + offsetY
+                  );
+                }
+              }
+
+              ctx.stroke();
+            }
+
+            function drawPoint(
+              segment,
+              scaleX = 1,
+              scaleY = 1,
+              offsetX = 0,
+              offsetY = 0
+            ) {
+              const points = segment.points;
+              if (points.length < 2) return;
+
+              ctx.beginPath();
+              ctx.arc(
+                points[0] * scaleX + offsetX,
+                points[1] * scaleY + offsetY,
+                CONFIG.canvas.pointRadius,
+                0,
+                2 * Math.PI
+              );
+              ctx.fillStyle = CONFIG.colors.point;
+              ctx.fill();
+            }
+
+            function drawText(
+              segment,
+              scaleX = 1,
+              scaleY = 1,
+              offsetX = 0,
+              offsetY = 0
+            ) {
+              if (segment.points.length < 3) return;
+
+              const text = segment.points[0];
+              const x = parseFloat(segment.points[1]) * scaleX + offsetX;
+              const y = parseFloat(segment.points[2]) * scaleY + offsetY;
+              const color = segment.color;
+
+              // Usar la misma font que en la aplicación principal
+              const font = segment.points[5] || CONFIG.canvas.textFont; // El font está en la posición 5 si se guardó
+
+              ctx.save();
+              ctx.font = font; // ← USAR EL FONT GUARDADO
+              ctx.fillStyle = CONFIG.colors[color] || CONFIG.colors.green;
+              ctx.textAlign = "left"; // ← FORZAR ALINEACIÓN IZQUIERDA
+              ctx.textBaseline = "alphabetic"; // ← FORZAR BASELINE CONSISTENTE
+              ctx.fillText(text, x, y);
+              ctx.restore();
+            }
+            // ============================================
+            // INICIALIZACIÓN
+            // ============================================
+
+            window.addEventListener("load", () => {
+              // Iniciar con grid de calibración
+              drawChessboard();
+              actualizarInfoPanel();
+            });
     </script>
 
     <!-- Lógica de deformación (tu código existente) -->

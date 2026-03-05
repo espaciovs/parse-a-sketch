@@ -308,6 +308,28 @@
           </div>
         </div>
 
+        <div style="margin-top: 20px">
+          <label>Filtrar respuestas por usuarie:</label>
+          <div class="filter-buttons">
+            <button
+            id="toggleSoloUnaRespuesta"
+            class="toggle-button"
+            onclick="toggleSoloUnaRespuesta()"
+          >
+            Una
+          </button>
+            <button
+              id="restarIndexUser"
+              onclick="RestarIndexUser()"
+            >
+              &lt;
+            </button>
+            <button id="sumarIndexUser" onclick="SumarIndexUser()">
+              >
+            </button>
+          </div>
+        </div>
+
         <div class="info-box">
           Estos controles solo afectan al proyector. Los usuarios siguen viendo
           solo sus propias respuestas y pueden estar en diferentes preguntas.
@@ -327,6 +349,8 @@
         opacidad: 50,
         filtroCorregido: "todos",
         preguntaSeleccionada: null,
+        mostrarSoloUnaRespuesta: true,
+        indexUsuario: 0,
       };
 
       checkServerStatus();
@@ -509,6 +533,44 @@
 
         socket.emit("cambiar-filtro-corregido", filtro);
         console.log("Filtro corregido:", filtro);
+      }
+
+      function toggleSoloUnaRespuesta(){
+        proyectorState.mostrarSoloUnaRespuesta = !proyectorState.mostrarSoloUnaRespuesta;
+
+        const boton = document.getElementById("toggleSoloUnaRespuesta");
+        boton.textContent = ` ${
+          proyectorState.mostrarSoloUnaRespuesta ? "Una" : "Todas"
+        }`;
+        boton.classList.toggle("active", proyectorState.mostrarSoloUnaRespuesta);
+
+        socket.emit(
+          "cambiar-mostrar-solo-una-respuesta",
+          proyectorState.mostrarSoloUnaRespuesta
+        );
+        console.log("Mostrar solo una respuesta:", proyectorState.mostrarSoloUnaRespuesta);
+      }
+
+      function SumarIndexUser(){
+        if( proyectorState.mostrarSoloUnaRespuesta === false ) return;
+        proyectorState.indexUsuario +=1;
+
+        socket.emit(
+          "cambiar-index-usuario",
+          proyectorState.indexUsuario
+        );
+        console.log("Index usuario aumentado a:", proyectorState.indexUsuario);
+      }
+
+      function RestarIndexUser(){
+        if( proyectorState.mostrarSoloUnaRespuesta === false ) return;
+        proyectorState.indexUsuario -=1;
+
+        socket.emit(
+          "cambiar-index-usuario",
+          proyectorState.indexUsuario
+        );
+        console.log("Index usuario disminuido a:", proyectorState.indexUsuario);
       }
 
       // ========== CHECK SERVER STATUS ==========

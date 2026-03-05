@@ -255,7 +255,7 @@
 
             async function checkServerStatus() {
                 try {
-                    const response = await fetch("http://127.0.0.1:5000/");
+                    const response = await fetch("http://192.168.1.130:5000/");
 
                     if (response.ok) {
                         document.getElementById("statusText").textContent = "Servidor activo";
