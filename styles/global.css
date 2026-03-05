@@ -2,6 +2,7 @@
 
 * {
     margin: 0;
+    padding: 0;
     font-size: medium;
     font-family: NeueHaasDisplay-Roman, Arial, Helvetica, sans-serif;
 }
@@ -16,6 +17,9 @@ html {
 
 body{
     display:flex; 
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
 }
 
 h1{
@@ -33,7 +37,8 @@ h2{
 nav{
     border-right: 1px solid black;
     width: 500px;
-    height: 100svh;
+    height: 100vh;
+    max-height: 100vh;
     padding: var(--unidad);
     overflow: auto;
 }
@@ -82,7 +87,8 @@ nav > div {
 
 main{
     flex: 1;
-    height: 100svh;
+    height: 100vh;
+    max-height: 100vh;
     position: relative;
 }
 
