@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Visualizador de datos</title>
+    <link rel="stylesheet" href="styles/global.css">
+
+    <script src="js/line-styles.js"></script>
+    <script src="js/svg-loader.js"></script>
+    <script src="js/canvas-renderer.js"></script>
+    <script src="js/configuracion.js"></script>
+    <script src="js/respuestas.js"></script>
+    <script src="js/visualizacion.js"></script>
+
 </head>
+
+
 <body>
-    <h1>Hola</h1>
+    <nav>
+        <h1>Visualizador de datos</h1>
+        <div>
+            <h2>Plantas</h2>
+            <div class="grid-plantas">
+            </div>
+        </div>
+        <div>
+            <h2>Pregunta</h2>
+            <select class="preguntas" name="preguntas">
+            </select>
+        </div>
+        <div>
+            <h2>Respuestas</h2>
+            <div class="grid-respuestas">
+                <button data-id="todas">Todas</button>
+            </div>
+        </div>
+        <div>
+            <h2>Configuración de la visualización</h2>
+            <div class="config-visual">
+                <p>Cuadrícula de plantas</p>
+                <button class="config-visual-grid">Una</button>
+                <button class="config-visual-grid activo">Varias</button>
+            </div>
+        </div>
+    </nav>
+    <main class="bg-dot-grid">
+        <div class="info">
+            <h1 id="planta"></h1>
+            <h2 id="pregunta"></h2>
+        </div>
+
+        <canvas></canvas>
+
+        <pre>
+
+        </pre>
+    </main>
 </body>
+
 </html>

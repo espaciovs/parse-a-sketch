@@ -1,0 +1,141 @@
+/*--------------GENERAL--------------*/
+
+* {
+    margin: 0;
+    font-size: medium;
+    font-family: NeueHaasDisplay-Roman, Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --unidad: 10px
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    display:flex; 
+}
+
+h1{
+    font-size: x-large;
+    margin-bottom: calc(var(--unidad) * 2);
+}
+
+h2{
+    font-size: large;
+    margin-bottom: var(--unidad);
+}
+
+/*--------------CONFIGURACIÓN--------------*/
+
+nav{
+    border-right: 1px solid black;
+    width: 500px;
+    height: 100svh;
+    padding: var(--unidad);
+    overflow: auto;
+}
+
+nav > div {
+  margin-bottom: calc(var(--unidad) * 2);
+  border-top: 1px dashed rgb(0, 0, 0);
+  padding-top: var(--unidad);
+}
+
+.grid-plantas, .grid-respuestas, .config-visual{
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-gap: calc(var(--unidad) / 2);
+}
+
+.planta, .respuesta{
+    aspect-ratio: 1;
+    cursor: pointer;
+
+}
+
+.grid-respuestas [data-id="todas"], .config-visual button {
+  grid-column: span 2;
+}
+
+.config-visual button{
+    padding: calc(var(--unidad) / 2);
+}
+
+.preguntas{
+    padding: calc(var(--unidad) / 2);
+    max-width: 100%;
+}
+
+.planta.activo,
+.respuesta.activo, .config-visual button.activo {
+  background-color: rgb(224, 171, 255);
+  border: 1px solid rgb(97, 97, 97);
+  border-radius: 4px;
+}
+
+
+
+/*--------------VISUALIZACIÓN--------------*/
+
+main{
+    flex: 1;
+    height: 100svh;
+    position: relative;
+}
+
+.bg-grid {
+    background-image: linear-gradient(to right, #80808012 1px, transparent 1px), linear-gradient(to bottom, #80808012 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+.bg-dot-grid {
+    background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+    background-size: 16px 16px;
+}
+
+main pre {
+    position: absolute;
+    top: var(--unidad);
+    right: var(--unidad);
+    pointer-events: none;
+    width: 300px;
+    overflow: hidden;
+    white-space: pre-wrap;
+}
+
+main .info {
+    position: absolute;
+    top: var(--unidad);
+    left: var(--unidad);
+    pointer-events: none;
+    z-index: 100;
+}
+
+main canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/*--------------FUENTES--------------*/
+
+
+.neueHaas-medium {
+    font-family: NeueHaasDisplay-Mediu, Arial, Helvetica, sans-serif;
+}
+
+.neueHaas-roman {
+    font-family: NeueHaasDisplay-Roman, Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: "NeueHaasDisplay-Mediu";
+    src: url("/fonts/neue-haas-display/NeueHaasDisplay-Mediu.ttf");
+}
+
+@font-face {
+    font-family: "NeueHaasDisplay-Roman";
+    src: url("/fonts/neue-haas-display/NeueHaasDisplay-Roman.ttf");
+}
