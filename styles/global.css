@@ -36,7 +36,7 @@ h2{
 
 nav{
     border-right: 1px solid black;
-    width: 500px;
+    width: 200px;
     height: 100vh;
     max-height: 100vh;
     padding: var(--unidad);
@@ -51,7 +51,7 @@ nav > div {
 
 .grid-plantas, .grid-respuestas, .config-visual{
     display: grid;
-    grid-template-columns: repeat(13, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: calc(var(--unidad) / 2);
 }
 
@@ -118,6 +118,14 @@ main .info {
     left: var(--unidad);
     pointer-events: none;
     z-index: 100;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info h1, h2{
+    margin: 0;
 }
 
 main canvas {
