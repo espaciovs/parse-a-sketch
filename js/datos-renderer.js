@@ -116,10 +116,12 @@ function pintarTexto(ctx, trazo, color, escala) {
 
 // Pinta todos los trazos de una respuesta dentro de una celda del canvas de datos.
 //
-// respuesta: un elemento del array "plantas" del JSON
-//   { tamañoCanvas: ["393","393"], trazos: [ { herramienta, color, coordenadas, ... } ] }
-// celda: { x, y, w, h } en coordenadas del canvas de visualización
-function pintarRespuestaEnCelda(ctx, celda, respuesta) {
+// respuesta:         un elemento del array "plantas" del JSON
+//                    { tamañoCanvas: ["393","393"], trazos: [ { herramienta, color, coordenadas, ... } ] }
+// celda:             { x, y, w, h } en coordenadas del canvas de visualización
+// filtroHerramienta: array de herramientas a incluir (p.ej. ['Draw','Text']).
+//                    Si es null, se pintan todas.
+function pintarRespuestaEnCelda(ctx, celda, respuesta, filtroHerramienta = null) {
   if (!respuesta || !respuesta.trazos) return;
 
   const { offsetX, offsetY, escala } = calcularTransformDatos(celda, respuesta.tamañoCanvas);
@@ -131,6 +133,9 @@ function pintarRespuestaEnCelda(ctx, celda, respuesta) {
   ctx.scale(escala, escala);
 
   respuesta.trazos.forEach(trazo => {
+    // Si hay filtro activo, ignorar las herramientas que no están en la lista
+    if (filtroHerramienta && !filtroHerramienta.includes(trazo.herramienta)) return;
+
     const color = COLORES_DATOS[trazo.color] || '#000000';
 
     switch (trazo.herramienta) {
@@ -158,15 +163,18 @@ function pintarRespuestaEnCelda(ctx, celda, respuesta) {
 // Las respuestas se superponen en el orden en que aparecen en el array.
 //
 // ctx:               contexto 2D del canvas de datos
-// canvas:            el canvas de datos (para clearRect y dimensiones)
+// canvas:            el canvas de datos (para dimensiones)
 // respuestasActivas: array de elementos del JSON que se deben pintar
-function pintarDatosEnUna(ctx, canvas, respuestasActivas) {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+// filtroHerramienta: ver pintarRespuestaEnCelda — null = todas
+//
+// NOTA: el clearRect lo hace el llamador (visualizacion.js) para poder
+//       componer el heatmap y los datos en el orden correcto.
+function pintarDatosEnUna(ctx, canvas, respuestasActivas, filtroHerramienta = null) {
   if (!respuestasActivas.length) return;
 
   const celda = { x: 0, y: 0, w: canvas.width, h: canvas.height };
   respuestasActivas.forEach(respuesta => {
-    pintarRespuestaEnCelda(ctx, celda, respuesta);
+    pintarRespuestaEnCelda(ctx, celda, respuesta, filtroHerramienta);
   });
 }
 
@@ -179,8 +187,10 @@ function pintarDatosEnUna(ctx, canvas, respuestasActivas) {
 // ctx:               contexto 2D del canvas de datos
 // canvas:            el canvas de datos
 // respuestasActivas: array de elementos del JSON que se deben pintar
-function pintarDatosEnGrid(ctx, canvas, respuestasActivas) {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+// filtroHerramienta: ver pintarRespuestaEnCelda — null = todas
+//
+// NOTA: igual que pintarDatosEnUna, el clearRect lo gestiona el llamador.
+function pintarDatosEnGrid(ctx, canvas, respuestasActivas, filtroHerramienta = null) {
   if (!respuestasActivas.length) return;
 
   // calcularGrid está definida en canvas-renderer.js (mismo scope de scripts)
@@ -192,6 +202,6 @@ function pintarDatosEnGrid(ctx, canvas, respuestasActivas) {
     const col   = i % cols;
     const fila  = Math.floor(i / cols);
     const celda = { x: col * celdaW, y: fila * celdaH, w: celdaW, h: celdaH };
-    pintarRespuestaEnCelda(ctx, celda, respuesta);
+    pintarRespuestaEnCelda(ctx, celda, respuesta, filtroHerramienta);
   });
 }

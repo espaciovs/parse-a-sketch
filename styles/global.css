@@ -29,7 +29,7 @@ h1{
 
 h2{
     font-size: large;
-    margin-bottom: var(--unidad);
+    padding-bottom: var(--unidad);
 }
 
 /*--------------CONFIGURACIÓN--------------*/
@@ -75,10 +75,46 @@ nav > div {
 }
 
 .planta.activo,
-.respuesta.activo, .config-visual button.activo {
+.respuesta.activo,
+.config-visual button.activo,
+.config-heatmap-btn.activo {
   background-color: rgb(224, 171, 255);
   border: 1px solid rgb(97, 97, 97);
   border-radius: 4px;
+}
+
+.config-heatmap-btn {
+  grid-column: span 2;
+  padding: calc(var(--unidad) / 2);
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.slider-fila {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--unidad) / 2);
+  margin-top: calc(var(--unidad) / 2);
+}
+
+.slider-fila label {
+  flex-shrink: 0;
+  font-size: small;
+}
+
+.slider-fila input[type="range"] {
+  flex: 1;
+  min-width: 0;
+}
+
+.config-sub {
+  font-size: small;
+  margin-top: var(--unidad);
+  margin-bottom: calc(var(--unidad) / 2);
+  color: #444;
 }
 
 

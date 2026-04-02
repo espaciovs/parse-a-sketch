@@ -10,6 +10,8 @@
     <script src="js/svg-loader.js"></script>
     <script src="js/canvas-renderer.js"></script>
     <script src="js/datos-renderer.js"></script>
+    <script src="js/heatmap-renderer.js"></script>
+    <script src="js/lineas-renderer.js"></script>
     <script src="js/configuracion.js"></script>
     <script src="js/respuestas.js"></script>
     <script src="js/visualizacion.js"></script>
@@ -42,6 +44,46 @@
                 <p>Cuadrícula de plantas</p>
                 <button class="config-visual-grid activo">Una</button>
                 <button class="config-visual-grid">Varias</button>
+            </div>
+        </div>
+        <!-- Solo visible cuando la pregunta activa es de tipo Draw/Redraw -->
+        <div id="seccion-lineas" class="hidden">
+            <h2>Modo líneas</h2>
+            <div class="config-visual">
+                <button class="config-lineas-btn activo">Normal</button>
+                <button class="config-lineas-btn">Mono</button>
+            </div>
+            <div id="mono-extra" class="hidden">
+                <div class="slider-fila">
+                    <label>Grosor</label>
+                    <input type="range" id="slider-grosor" min="0.5" max="8" step="0.5" value="2">
+                </div>
+                <div class="slider-fila">
+                    <label>Opacidad</label>
+                    <input type="range" id="slider-opacidad" min="0.05" max="1" step="0.05" value="0.6">
+                </div>
+                <div class="config-sub">Suavizado</div>
+                <div class="config-visual">
+                    <button class="config-suavizado-btn activo">Off</button>
+                    <button class="config-suavizado-btn">On</button>
+                </div>
+                <div id="suavizado-extra" class="hidden slider-fila">
+                    <label>Intensidad</label>
+                    <input type="range" id="slider-suavizado" min="1" max="20" step="1" value="5">
+                </div>
+                <div class="config-sub">Edge bundling</div>
+                <div class="config-visual">
+                    <button class="config-bundling-btn activo">Off</button>
+                    <button class="config-bundling-btn">On</button>
+                </div>
+            </div>
+        </div>
+        <!-- Solo visible cuando la pregunta activa es de tipo Point -->
+        <div id="seccion-heatmap" class="hidden">
+            <h2>Modo puntos</h2>
+            <div class="config-visual">
+                <button class="config-heatmap-btn activo">Puntos</button>
+                <button class="config-heatmap-btn">Heatmap</button>
             </div>
         </div>
         <div>
