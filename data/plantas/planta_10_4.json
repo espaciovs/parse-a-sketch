@@ -1,0 +1,712 @@
+{
+  "plantas": [
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_0qrcf1mff",
+      "corregido": false,
+      "tamañoCanvas": [
+        "360",
+        "360"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_0qrcf1mff",
+      "corregido": true,
+      "tamañoCanvas": [
+        "360",
+        "360"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "gotel� y parqu�",
+          "identificador": "1763052726697_qk2a1awe8",
+          "coordenadas": [
+            [
+              209.83,
+              208.6
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_2s1lontzm",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_2s1lontzm",
+      "corregido": true,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_4wtu02kro",
+      "corregido": false,
+      "tamañoCanvas": [
+        "427",
+        "427"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Superficies: Madera",
+          "identificador": "1763051321414_qddhpa9kz",
+          "coordenadas": [
+            [
+              153.55,
+              180.66
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Suelo: Madera",
+          "identificador": "1763051331131_6tk637ixv",
+          "coordenadas": [
+            [
+              173.69,
+              318.65
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_4wtu02kro",
+      "corregido": true,
+      "tamañoCanvas": [
+        "427",
+        "427"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Superficies: Madera",
+          "identificador": "1763051321414_qddhpa9kz",
+          "coordenadas": [
+            [
+              153.55,
+              180.66
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Suelo: Madera",
+          "identificador": "1763051331131_6tk637ixv",
+          "coordenadas": [
+            [
+              173.69,
+              318.65
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_52wv6tnax",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Madera",
+          "identificador": "1763051356363_4yssp01j3",
+          "coordenadas": [
+            [
+              73.66,
+              180.67
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Madera",
+          "identificador": "1763051362542_7vmkat207",
+          "coordenadas": [
+            [
+              220.97,
+              185.65
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Cer�mica",
+          "identificador": "1763051375893_7k9zmhgv3",
+          "coordenadas": [
+            [
+              107.5,
+              109.01
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_8fgvheatl",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_b7navsg1z",
+      "corregido": false,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Porcelanico",
+          "identificador": "1763051327076_tiajxwvse",
+          "coordenadas": [
+            [
+              129.31,
+              201.44
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Vidrio",
+          "identificador": "1763051337365_idvi4y5qf",
+          "coordenadas": [
+            [
+              117.37,
+              135.79
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_b7navsg1z",
+      "corregido": true,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              60.68,
+              148.72
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              57.69,
+              168.62
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Porcelanico",
+          "identificador": "1763051327076_tiajxwvse",
+          "coordenadas": [
+            [
+              129.31,
+              201.44
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Vidrio",
+          "identificador": "1763051337365_idvi4y5qf",
+          "coordenadas": [
+            [
+              117.37,
+              135.79
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_bja9dppen",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "tarima madera",
+          "identificador": "1763051316765_9mymrenkb",
+          "coordenadas": [
+            [
+              154.21,
+              252.22
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_e6v0asxj5",
+      "corregido": false,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Acabados claros",
+          "identificador": "1763051319375_3mj28yi8g",
+          "coordenadas": [
+            [
+              131.37,
+              92.55
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "elementos naturales",
+          "identificador": "1763051377275_ogvej3qg8",
+          "coordenadas": [
+            [
+              138.28,
+              274.45
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_e6v0asxj5",
+      "corregido": true,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Acabados claros",
+          "identificador": "1763051319375_3mj28yi8g",
+          "coordenadas": [
+            [
+              131.37,
+              92.55
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "elementos naturales",
+          "identificador": "1763051377275_ogvej3qg8",
+          "coordenadas": [
+            [
+              138.28,
+              274.45
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_extnembq9",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Maderas y papeles",
+          "identificador": "1763051314261_hxspbcyzu",
+          "coordenadas": [
+            [
+              163.26,
+              294.68
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_extnembq9",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Maderas y papeles",
+          "identificador": "1763051314261_hxspbcyzu",
+          "coordenadas": [
+            [
+              163.26,
+              294.68
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_fhxa8sj8w",
+      "corregido": false,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Micro cemento pulido",
+          "identificador": "1763051382607_9sycb1c2a",
+          "coordenadas": [
+            [
+              141.34,
+              276.23
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_hflyzvj5q",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_hrk6mg965",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_hrk6mg965",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_ka66bkqfx",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Madera",
+          "identificador": "1763051307615_la5z6raz8",
+          "coordenadas": [
+            [
+              72.67,
+              200.11
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Azulejos",
+          "identificador": "1763051316996_wku7xlqja",
+          "coordenadas": [
+            [
+              138.37,
+              101.55
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_ka66bkqfx",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Madera",
+          "identificador": "1763051307615_la5z6raz8",
+          "coordenadas": [
+            [
+              72.67,
+              200.11
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Azulejos",
+          "identificador": "1763051316996_wku7xlqja",
+          "coordenadas": [
+            [
+              138.37,
+              101.55
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_lmhb06zgx",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_o0049ttm3",
+      "corregido": false,
+      "tamañoCanvas": [
+        "834",
+        "834"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "textura suave",
+          "identificador": "1763051370003_jk8vdgbwm",
+          "coordenadas": [
+            [
+              506.78,
+              414.02
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "acabado de piedra natural",
+          "identificador": "1763051419588_ag1iknz20",
+          "coordenadas": [
+            [
+              331.21,
+              497.82
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_o0049ttm3",
+      "corregido": true,
+      "tamañoCanvas": [
+        "834",
+        "834"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "textura suave",
+          "identificador": "1763051370003_jk8vdgbwm",
+          "coordenadas": [
+            [
+              506.78,
+              414.02
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "acabado de piedra natural",
+          "identificador": "1763051419588_ag1iknz20",
+          "coordenadas": [
+            [
+              331.21,
+              497.82
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_rx58y19ec",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "porcelanico",
+          "identificador": "1763051309894_p3zmmqesb",
+          "coordenadas": [
+            [
+              173.12,
+              264.67
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_tm9939w6v",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "todo lacado blanco",
+          "identificador": "1763051315061_jw8vr6a0x",
+          "coordenadas": [
+            [
+              124.43,
+              299.65
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "4",
+      "usuario": "user_tm9939w6v",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "todo lacado blanco",
+          "identificador": "1763051315061_jw8vr6a0x",
+          "coordenadas": [
+            [
+              124.43,
+              299.65
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

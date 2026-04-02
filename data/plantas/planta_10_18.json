@@ -1,0 +1,443 @@
+{
+  "plantas": [
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_2s1lontzm",
+      "corregido": true,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_4wtu02kro",
+      "corregido": false,
+      "tamañoCanvas": [
+        "427",
+        "427"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Estanterias/libreria",
+          "identificador": "1763051570227_f8sqbrdi3",
+          "coordenadas": [
+            [
+              97.38,
+              298.54
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_4wtu02kro",
+      "corregido": true,
+      "tamañoCanvas": [
+        "427",
+        "427"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Estanterias/libreria",
+          "identificador": "1763051570227_f8sqbrdi3",
+          "coordenadas": [
+            [
+              97.38,
+              298.54
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_52wv6tnax",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Bailar",
+          "identificador": "1763051700887_06jpsanzj",
+          "coordenadas": [
+            [
+              214.0,
+              292.15
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_8fgvheatl",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Skincare",
+          "identificador": "1763051379377_hcamru6aw",
+          "coordenadas": [
+            [
+              253.71,
+              119.41
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_b7navsg1z",
+      "corregido": false,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "asientos",
+          "contenido": "Dormir",
+          "identificador": "1763051714278_8ovja1bet",
+          "coordenadas": [
+            [
+              74.6,
+              280.02
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_b7navsg1z",
+      "corregido": true,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "asientos",
+          "contenido": "Dormir",
+          "identificador": "1763051714278_8ovja1bet",
+          "coordenadas": [
+            [
+              74.6,
+              280.02
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_bja9dppen",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "charlar",
+          "identificador": "1763051415917_z1uzxtdr0",
+          "coordenadas": [
+            [
+              286.53,
+              238.29
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_e6v0asxj5",
+      "corregido": false,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "descansar",
+          "identificador": "1763051667599_gf22p8u2p",
+          "coordenadas": [
+            [
+              82.44,
+              248.39
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_e6v0asxj5",
+      "corregido": true,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "descansar",
+          "identificador": "1763051667599_gf22p8u2p",
+          "coordenadas": [
+            [
+              82.44,
+              248.39
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_extnembq9",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Bailar",
+          "identificador": "1763051468301_tzxwdgwvs",
+          "coordenadas": [
+            [
+              151.31,
+              294.68
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_extnembq9",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Bailar",
+          "identificador": "1763051468301_tzxwdgwvs",
+          "coordenadas": [
+            [
+              151.31,
+              294.68
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_fhxa8sj8w",
+      "corregido": false,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Escuchar m�sica",
+          "identificador": "1763051545189_z0oct6q2l",
+          "coordenadas": [
+            [
+              107.5,
+              295.14
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_hflyzvj5q",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "textil",
+          "contenido": "Poner una cama visible",
+          "identificador": "1763051462020_n2g3hun9g",
+          "coordenadas": [
+            [
+              169.21,
+              288.17
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_hrk6mg965",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_hrk6mg965",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_ka66bkqfx",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Leer",
+          "identificador": "1763051479199_yfcc0g4ht",
+          "coordenadas": [
+            [
+              63.71,
+              209.07
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_o0049ttm3",
+      "corregido": true,
+      "tamañoCanvas": [
+        "834",
+        "834"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_rx58y19ec",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_tm9939w6v",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "asientos",
+          "contenido": "leer",
+          "identificador": "1763051442577_okeoawd0s",
+          "coordenadas": [
+            [
+              78.64,
+              316.58
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_10",
+      "pregunta": "18",
+      "usuario": "user_tm9939w6v",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "asientos",
+          "contenido": "leer",
+          "identificador": "1763051442577_okeoawd0s",
+          "coordenadas": [
+            [
+              78.64,
+              316.58
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

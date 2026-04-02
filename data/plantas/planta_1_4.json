@@ -1,0 +1,1059 @@
+{
+  "plantas": [
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_1yohuz28e",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "Cer�mico",
+          "identificador": "1762961857621_8dcwe1jj0",
+          "coordenadas": [
+            [
+              106.46,
+              51.75
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "Cer�mico",
+          "identificador": "1762961862880_pd6clfevh",
+          "coordenadas": [
+            [
+              81.58,
+              329.34
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "Pintura-pared",
+          "identificador": "1762961878554_tpq7fbp5v",
+          "coordenadas": [
+            [
+              339.27,
+              177.11
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "Suelo laminado",
+          "identificador": "1762961905045_tl3x5hwso",
+          "coordenadas": [
+            [
+              238.78,
+              292.53
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_21gt1ok1h",
+      "corregido": true,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Madera Clarita y telas azules marino",
+          "identificador": "1762961574547_6ku0b5dmi",
+          "coordenadas": [
+            [
+              67.64,
+              87.55
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_42qhkogul",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "texturas suaves",
+          "identificador": "1762961729827_zixf50gwg",
+          "coordenadas": [
+            [
+              216.02,
+              112.5
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "acabado de m�rmol",
+          "identificador": "1762961756159_v8iks5fc9",
+          "coordenadas": [
+            [
+              42.81,
+              182.19
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "acabados de madera",
+          "identificador": "1762961789129_tqw6pgdrm",
+          "coordenadas": [
+            [
+              147.33,
+              349.43
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_5squzdixh",
+      "corregido": true,
+      "tamañoCanvas": [
+        "820",
+        "820"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Madera clara y pintura beige y as� da amplitud",
+          "identificador": "1762961545022_ebat2xltr",
+          "coordenadas": [
+            [
+              486.91,
+              489.4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_86dngz7r4",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_b9jc1avex",
+      "corregido": true,
+      "tamañoCanvas": [
+        "414",
+        "414"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Textura de seda en la cama",
+          "identificador": "1762961793558_ugecytdqg",
+          "coordenadas": [
+            [
+              143.31,
+              109.49
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Azulejo en la cocina",
+          "identificador": "1762961801951_fx2vkvfrx",
+          "coordenadas": [
+            [
+              40.8,
+              167.21
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Madera en los muebles",
+          "identificador": "1762961838239_710o7r2f7",
+          "coordenadas": [
+            [
+              105.49,
+              265.73
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_cofkwhhpl",
+      "corregido": true,
+      "tamañoCanvas": [
+        "402",
+        "402"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Madera; baldosas de piedra sintetica; lana; vegetaci�n y vidrio tintado amarillo",
+          "identificador": "1762961585646_av30eq2k6",
+          "coordenadas": [
+            [
+              208.96,
+              214.95
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "terrazo",
+          "identificador": "1762962969045_2c1ko8vii",
+          "coordenadas": [
+            [
+              208.96,
+              274.65
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "plastic",
+          "identificador": "1762962977379_lhk6wtsnw",
+          "coordenadas": [
+            [
+              288.56,
+              284.6
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_cwybhfv68",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "madera y piedra",
+          "identificador": "1762961542669_lb5hcvciz",
+          "coordenadas": [
+            [
+              159.18,
+              201.48
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_fgi2a66cp",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "resto",
+          "contenido": "Madera; telas",
+          "identificador": "1762961763356_gjgi1yw23",
+          "coordenadas": [
+            [
+              142.27,
+              274.11
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_h287nzq6j",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Madera",
+          "identificador": "1762961509721_q8nowmrtd",
+          "coordenadas": [
+            [
+              276.58,
+              249.24
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Textil",
+          "identificador": "1762961533619_z3tu1x7l0",
+          "coordenadas": [
+            [
+              234.8,
+              102.99
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "M�rmol",
+          "identificador": "1762961554531_w59spiquu",
+          "coordenadas": [
+            [
+              122.37,
+              241.28
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Parquet",
+          "identificador": "1762961566729_qvutuxvvd",
+          "coordenadas": [
+            [
+              153.21,
+              166.66
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_ij00m8rin",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Madera",
+          "identificador": "1762961628002_rdpe1oadd",
+          "coordenadas": [
+            [
+              312.4,
+              257.2
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Madera",
+          "identificador": "1762961665969_mtm2jftmr",
+          "coordenadas": [
+            [
+              124.36,
+              242.27
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Cristal",
+          "identificador": "1762961834948_7dothkxtv",
+          "coordenadas": [
+            [
+              50.74,
+              171.64
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Hierro",
+          "identificador": "1762961839963_c6dwa6oux",
+          "coordenadas": [
+            [
+              253.7,
+              320.87
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_j4gqnp21l",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "madera",
+          "identificador": "1762961424624_h6juc8wbx",
+          "coordenadas": [
+            [
+              302.46,
+              276.61
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "madera",
+          "identificador": "1762961444729_0uguiqc2u",
+          "coordenadas": [
+            [
+              86.56,
+              314.42
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "m�rmol",
+          "identificador": "1762961465860_x66l7fn0t",
+          "coordenadas": [
+            [
+              79.59,
+              202.98
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "madera",
+          "identificador": "1762961489026_x4hicmj28",
+          "coordenadas": [
+            [
+              137.3,
+              89.56
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "madera",
+          "identificador": "1762961500156_knhuowio1",
+          "coordenadas": [
+            [
+              215.9,
+              256.71
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_luuquimif",
+      "corregido": true,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "asientos",
+          "contenido": "Azulejo y madera",
+          "identificador": "1762961597458_00wf0gwtx",
+          "coordenadas": [
+            [
+              192.97,
+              419.28
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Azulejo y madera",
+          "identificador": "1762961636665_w8p9xkp7a",
+          "coordenadas": [
+            [
+              118.37,
+              151.71
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_q25z8y6i8",
+      "corregido": true,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "textil",
+          "contenido": "Madera Clara",
+          "identificador": "1762961531075_h3adntjgc",
+          "coordenadas": [
+            [
+              308.56,
+              254.33
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "textil",
+          "contenido": "Azulejos",
+          "identificador": "1762961587335_896ugcnpp",
+          "coordenadas": [
+            [
+              52.75,
+              110.0
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "textil",
+          "contenido": "Encimera porcelanica",
+          "identificador": "1762961704634_byl8vfykx",
+          "coordenadas": [
+            [
+              71.67,
+              226.46
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "textil",
+          "contenido": "Madera",
+          "identificador": "1762961712291_aun7ze6ql",
+          "coordenadas": [
+            [
+              140.35,
+              284.19
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_rztuntjuc",
+      "corregido": true,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "pavimento madera",
+          "identificador": "1762961552867_xdsviorkn",
+          "coordenadas": [
+            [
+              191.91,
+              291.28
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "pared azulejo porcelana",
+          "identificador": "1762961576872_dxefpacdq",
+          "coordenadas": [
+            [
+              81.5,
+              79.77
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "silla tejido peludito",
+          "identificador": "1762961615150_bhjxoex2d",
+          "coordenadas": [
+            [
+              266.16,
+              167.99
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_sr7gbhit6",
+      "corregido": true,
+      "tamañoCanvas": [
+        "402",
+        "402"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Suelo cer�mico",
+          "identificador": "1762961811657_bucbc3a15",
+          "coordenadas": [
+            [
+              125.38,
+              316.44
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "aluminio",
+          "identificador": "1762961883542_9v3xc84ay",
+          "coordenadas": [
+            [
+              60.7,
+              214.95
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "toques azul cielo en ciertos elementos",
+          "identificador": "1762961901469_8s1ipgaj5",
+          "coordenadas": [
+            [
+              35.82,
+              382.11
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_tjmz1ky87",
+      "corregido": true,
+      "tamañoCanvas": [
+        "642",
+        "642"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Madera",
+          "identificador": "1762961526995_x6chlkxx2",
+          "coordenadas": [
+            [
+              525.36,
+              470.53
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Marmol",
+          "identificador": "1762961538776_fuf2enxvs",
+          "coordenadas": [
+            [
+              123.61,
+              342.93
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Madera",
+          "identificador": "1762961550026_g4fifh28j",
+          "coordenadas": [
+            [
+              233.27,
+              407.73
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Madera",
+          "identificador": "1762961562010_2b43t81ha",
+          "coordenadas": [
+            [
+              227.29,
+              167.48
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_ue9s9967n",
+      "corregido": true,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "Madera",
+          "identificador": "1762961606106_81bibwa0r",
+          "coordenadas": [
+            [
+              177.17,
+              171.22
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "Tiles",
+          "identificador": "1762961618829_sxavnjm0v",
+          "coordenadas": [
+            [
+              93.56,
+              119.46
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "M�rmol",
+          "identificador": "1762961647497_7o8um8ek8",
+          "coordenadas": [
+            [
+              353.35,
+              306.58
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_vko3zk45v",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "asientos",
+          "contenido": "Madera",
+          "identificador": "1762961618635_a6bmzxsbq",
+          "coordenadas": [
+            [
+              190.02,
+              220.39
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "asientos",
+          "contenido": "Baldosas",
+          "identificador": "1762961634253_qojgv9gms",
+          "coordenadas": [
+            [
+              54.72,
+              128.85
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "asientos",
+          "contenido": "Baldosas",
+          "identificador": "1762961645671_n5tvzcu04",
+          "coordenadas": [
+            [
+              166.15,
+              296.99
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_wc5m0x3g5",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Hormig�n",
+          "identificador": "1762961610362_hijtro9fr",
+          "coordenadas": [
+            [
+              207.93,
+              251.23
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Hormig�n",
+          "identificador": "1762961620926_73q97p97w",
+          "coordenadas": [
+            [
+              109.44,
+              308.93
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Hormig�n",
+          "identificador": "1762961626810_tzkufcpwg",
+          "coordenadas": [
+            [
+              108.44,
+              164.67
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Madera",
+          "identificador": "1762961637681_t5uuacih7",
+          "coordenadas": [
+            [
+              259.67,
+              314.9
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Madera",
+          "identificador": "1762961656496_anp3fld3r",
+          "coordenadas": [
+            [
+              107.45,
+              243.27
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Tela",
+          "identificador": "1762961665334_935eug0vd",
+          "coordenadas": [
+            [
+              260.66,
+              90.05
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_zoo2oabg3",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Madera",
+          "identificador": "1762961747282_o6kpk9z3l",
+          "coordenadas": [
+            [
+              200.97,
+              250.23
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Madera",
+          "identificador": "1762961757301_z4dxsdk9d",
+          "coordenadas": [
+            [
+              302.45,
+              252.22
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Madera",
+          "identificador": "1762961765269_9urrkvfie",
+          "coordenadas": [
+            [
+              116.4,
+              165.67
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Algod�n; loneta color",
+          "identificador": "1762961775523_3cksl6p1g",
+          "coordenadas": [
+            [
+              152.22,
+              102.99
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Acero inox",
+          "identificador": "1762961787928_zwgzejlfh",
+          "coordenadas": [
+            [
+              66.66,
+              206.46
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "4",
+      "usuario": "user_zxnws81xz",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "azulejos",
+          "identificador": "1762961514967_f2izza2uw",
+          "coordenadas": [
+            [
+              57.7,
+              135.82
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "madera",
+          "identificador": "1762961553664_jdfwiyujs",
+          "coordenadas": [
+            [
+              192.02,
+              296.0
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "textil",
+          "contenido": "acolchado",
+          "identificador": "1762961676731_h1hkuf0ec",
+          "coordenadas": [
+            [
+              237.78,
+              206.46
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -128,7 +128,17 @@ main .info {
     margin: 0;
 }
 
-main canvas {
+/* Wrapper que contiene los dos canvas apilados */
+.canvas-wrapper {
+    position: absolute;
+    inset: 0; /* ocupa todo el main */
+}
+
+/* Los dos canvas comparten el mismo espacio; el de datos queda encima */
+.canvas-wrapper canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }

@@ -1,0 +1,527 @@
+{
+  "plantas": [
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_174doc9da",
+      "corregido": false,
+      "tamañoCanvas": [
+        "414",
+        "414"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_1yohuz28e",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_1yohuz28e",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Madera",
+          "identificador": "1762967775782_sihd1kdfo",
+          "coordenadas": [
+            [
+              133.32,
+              242.78
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Cer�mico",
+          "identificador": "1762967785101_n12idbfud",
+          "coordenadas": [
+            [
+              243.76,
+              116.42
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_86dngz7r4",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "madera",
+          "identificador": "1762967291935_lrdkkbopq",
+          "coordenadas": [
+            [
+              196.99,
+              194.52
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_86dngz7r4",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "madera",
+          "identificador": "1762967291935_lrdkkbopq",
+          "coordenadas": [
+            [
+              196.99,
+              194.52
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_b9jc1avex",
+      "corregido": false,
+      "tamañoCanvas": [
+        "414",
+        "414"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_cofkwhhpl",
+      "corregido": false,
+      "tamañoCanvas": [
+        "402",
+        "402"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "piedra",
+          "identificador": "1762967184666_pk2c8tbwz",
+          "coordenadas": [
+            [
+              252.74,
+              301.52
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "madera",
+          "identificador": "1762967190466_9m9f7mx70",
+          "coordenadas": [
+            [
+              205.98,
+              314.45
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_cofkwhhpl",
+      "corregido": true,
+      "tamañoCanvas": [
+        "402",
+        "402"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "piedra",
+          "identificador": "1762967184666_pk2c8tbwz",
+          "coordenadas": [
+            [
+              252.74,
+              301.52
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "madera",
+          "identificador": "1762967190466_9m9f7mx70",
+          "coordenadas": [
+            [
+              205.98,
+              314.45
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_ifujns4rl",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "resto",
+          "contenido": "hormig�n",
+          "identificador": "1762967381662_06timt7cn",
+          "coordenadas": [
+            [
+              239.78,
+              307.45
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_ifujns4rl",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "resto",
+          "contenido": "hormig�n",
+          "identificador": "1762967381662_06timt7cn",
+          "coordenadas": [
+            [
+              239.78,
+              307.45
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_j4gqnp21l",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "madera",
+          "identificador": "1762967142314_3anwq47u8",
+          "coordenadas": [
+            [
+              195.01,
+              188.06
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_kx30ukw20",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Azulejos de colores",
+          "identificador": "1762967312726_tcheqa920",
+          "coordenadas": [
+            [
+              113.42,
+              287.04
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_mjzsh6756",
+      "corregido": false,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Material ligero",
+          "identificador": "1762967216938_75sx3070r",
+          "coordenadas": [
+            [
+              146.22,
+              305.88
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_rvm7cpg1b",
+      "corregido": false,
+      "tamañoCanvas": [
+        "613",
+        "613"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Panelado lacado mate",
+          "identificador": "1762967286193_rdr0un1va",
+          "coordenadas": [
+            [
+              219.78,
+              319.96
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Suelo madera cuaerterones",
+          "identificador": "1762967305476_6civlp7c0",
+          "coordenadas": [
+            [
+              209.82,
+              491.4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_rztuntjuc",
+      "corregido": false,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "borrador",
+          "contenido": "madera",
+          "identificador": "1762967268090_xnxk3dpyh",
+          "coordenadas": [
+            [
+              187.42,
+              163.21
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "madera",
+          "identificador": "1762967277308_gs6gp90c0",
+          "coordenadas": [
+            [
+              182.19,
+              165.29
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_rztuntjuc",
+      "corregido": true,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "borrador",
+          "contenido": "madera",
+          "identificador": "1762967268090_xnxk3dpyh",
+          "coordenadas": [
+            [
+              187.42,
+              163.21
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "madera",
+          "identificador": "1762967277308_gs6gp90c0",
+          "coordenadas": [
+            [
+              182.19,
+              165.29
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_sr7gbhit6",
+      "corregido": false,
+      "tamañoCanvas": [
+        "402",
+        "402"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_tjmz1ky87",
+      "corregido": false,
+      "tamañoCanvas": [
+        "642",
+        "642"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Moqueta",
+          "identificador": "1762967209085_wce86u4ig",
+          "coordenadas": [
+            [
+              454.58,
+              481.5
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Madera",
+          "identificador": "1762967218183_5158wwuvx",
+          "coordenadas": [
+            [
+              139.57,
+              294.08
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_vko3zk45v",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_zoo2oabg3",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "Madera todo",
+          "identificador": "1762967259346_86e7g3b1m",
+          "coordenadas": [
+            [
+              139.29,
+              324.85
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_6",
+      "pregunta": "4",
+      "usuario": "user_zoo2oabg3",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "Madera todo",
+          "identificador": "1762967259346_86e7g3b1m",
+          "coordenadas": [
+            [
+              139.29,
+              324.85
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

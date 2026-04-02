@@ -1,0 +1,500 @@
+{
+  "plantas": [
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_2s1lontzm",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_52wv6tnax",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Dormir",
+          "identificador": "1763050546149_o27oeqvad",
+          "coordenadas": [
+            [
+              195.09,
+              112.99
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Meditar",
+          "identificador": "1763050551328_zxqny69gg",
+          "coordenadas": [
+            [
+              194.09,
+              154.79
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Trabajar",
+          "identificador": "1763050556711_4bzn02aw9",
+          "coordenadas": [
+            [
+              91.57,
+              95.07
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_8fgvheatl",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_b7navsg1z",
+      "corregido": false,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_b7navsg1z",
+      "corregido": true,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Dormir",
+          "identificador": "1763051083939_nnxhvew5u",
+          "coordenadas": [
+            [
+              74.6,
+              103.96
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_bja9dppen",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "pintar",
+          "identificador": "1763050652329_uh1qa025y",
+          "coordenadas": [
+            [
+              216.89,
+              296.99
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_fhxa8sj8w",
+      "corregido": false,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Escuchar m�sica y ver pel�culas",
+          "identificador": "1763050332208_xe3ezoj8f",
+          "coordenadas": [
+            [
+              99.54,
+              102.04
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_hflyzvj5q",
+      "corregido": true,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_hrk6mg965",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_hrk6mg965",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "ducha relajante",
+          "identificador": "1763051125960_ieppqjxt6",
+          "coordenadas": [
+            [
+              113.42,
+              205.46
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_j7hldomc8",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "dormir",
+          "identificador": "1763050308383_fqhubu1iz",
+          "coordenadas": [
+            [
+              182.07,
+              110.95
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_j7hldomc8",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "dormir",
+          "identificador": "1763050308383_fqhubu1iz",
+          "coordenadas": [
+            [
+              182.07,
+              110.95
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_ka66bkqfx",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Maquillarme",
+          "identificador": "1763050421884_0kqu8etuh",
+          "coordenadas": [
+            [
+              143.35,
+              314.59
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Leer",
+          "identificador": "1763050426134_m8z3fuoys",
+          "coordenadas": [
+            [
+              218.01,
+              98.57
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_ka66bkqfx",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Maquillarme",
+          "identificador": "1763050421884_0kqu8etuh",
+          "coordenadas": [
+            [
+              143.35,
+              314.59
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Leer",
+          "identificador": "1763050426134_m8z3fuoys",
+          "coordenadas": [
+            [
+              218.01,
+              98.57
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_kczcahoks",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Maquillarme",
+          "identificador": "1763050392565_fgsx5dg78",
+          "coordenadas": [
+            [
+              78.6,
+              296.99
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_o0049ttm3",
+      "corregido": false,
+      "tamañoCanvas": [
+        "834",
+        "834"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_pf8ag1cjm",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "lampara grande",
+          "identificador": "1763050461308_dinj1pdon",
+          "coordenadas": [
+            [
+              113.21,
+              107.08
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_rx58y19ec",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_rx58y19ec",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_tm9939w6v",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "asientos",
+          "contenido": "leer",
+          "identificador": "1763050559817_m1467hbra",
+          "coordenadas": [
+            [
+              218.01,
+              100.56
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_tm9939w6v",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "asientos",
+          "contenido": "leer",
+          "identificador": "1763050559817_m1467hbra",
+          "coordenadas": [
+            [
+              218.01,
+              100.56
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_w5605xsqc",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Ducharme en el ba�o",
+          "identificador": "1763050416583_4lsz1t6bn",
+          "coordenadas": [
+            [
+              268.62,
+              315.9
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_9",
+      "pregunta": "18",
+      "usuario": "user_w5605xsqc",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Ducharme en el ba�o",
+          "identificador": "1763050416583_4lsz1t6bn",
+          "coordenadas": [
+            [
+              268.62,
+              315.9
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

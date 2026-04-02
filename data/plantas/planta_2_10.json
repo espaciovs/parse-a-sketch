@@ -1,0 +1,794 @@
+{
+  "plantas": [
+    {
+      "planta": "planta_2",
+      "pregunta": "10",
+      "usuario": "user_174doc9da",
+      "corregido": true,
+      "tamañoCanvas": [
+        "414",
+        "414"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_2",
+      "pregunta": "10",
+      "usuario": "user_1yohuz28e",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              304.45,
+              132.34
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_2",
+      "pregunta": "10",
+      "usuario": "user_1yohuz28e",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              304.45,
+              132.34
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_2",
+      "pregunta": "10",
+      "usuario": "user_5squzdixh",
+      "corregido": false,
+      "tamañoCanvas": [
+        "820",
+        "820"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              606.52,
+              296.79
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_2",
+      "pregunta": "10",
+      "usuario": "user_86dngz7r4",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              307.42,
+              85.08
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_2",
+      "pregunta": "10",
+      "usuario": "user_b9jc1avex",
+      "corregido": false,
+      "tamañoCanvas": [
+        "414",
+        "414"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              309.5,
+              131.38
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_2",
+      "pregunta": "10",
+      "usuario": "user_ifujns4rl",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              293.51,
+              161.2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_2",
+      "pregunta": "10",
+      "usuario": "user_kx30ukw20",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              298.47,
+              138.8
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_2",
+      "pregunta": "10",
+      "usuario": "user_kx30ukw20",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              296.48,
+              133.83
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_2",
+      "pregunta": "10",
+      "usuario": "user_rvm7cpg1b",
+      "corregido": true,
+      "tamañoCanvas": [
+        "613",
+        "613"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_2",
+      "pregunta": "10",
+      "usuario": "user_rztuntjuc",
+      "corregido": false,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              307.17,
+              124.19
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_2",
+      "pregunta": "10",
+      "usuario": "user_rztuntjuc",
+      "corregido": true,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              307.17,
+              124.19
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_2",
+      "pregunta": "10",
+      "usuario": "user_tjmz1ky87",
+      "corregido": false,
+      "tamañoCanvas": [
+        "642",
+        "642"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              481.5,
+              195.39
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_2",
+      "pregunta": "10",
+      "usuario": "user_ue9s9967n",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              334.44,
+              141.36
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_2",
+      "pregunta": "10",
+      "usuario": "user_vko3zk45v",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              299.46,
+              104.98
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_2",
+      "pregunta": "10",
+      "usuario": "user_vko3zk45v",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Draw",
+          "color": "iluminacion",
+          "coordenadas": [
+            [
+              327.32,
+              219.39
+            ],
+            [
+              327.32,
+              222.38
+            ],
+            [
+              327.32,
+              228.34
+            ],
+            [
+              327.32,
+              238.29
+            ],
+            [
+              328.32,
+              246.25
+            ],
+            [
+              328.32,
+              252.22
+            ],
+            [
+              329.31,
+              254.21
+            ],
+            [
+              329.31,
+              255.21
+            ],
+            [
+              330.31,
+              255.21
+            ],
+            [
+              330.31,
+              250.23
+            ],
+            [
+              330.31,
+              244.26
+            ],
+            [
+              330.31,
+              237.3
+            ],
+            [
+              330.31,
+              230.33
+            ],
+            [
+              329.31,
+              225.36
+            ],
+            [
+              328.32,
+              222.38
+            ],
+            [
+              327.32,
+              221.38
+            ],
+            [
+              327.32,
+              225.36
+            ],
+            [
+              327.32,
+              232.32
+            ],
+            [
+              328.32,
+              238.29
+            ],
+            [
+              330.31,
+              242.27
+            ],
+            [
+              331.3,
+              243.27
+            ],
+            [
+              332.3,
+              243.27
+            ],
+            [
+              333.29,
+              242.27
+            ],
+            [
+              334.29,
+              237.3
+            ],
+            [
+              335.28,
+              232.32
+            ],
+            [
+              335.28,
+              227.35
+            ],
+            [
+              335.28,
+              225.36
+            ],
+            [
+              335.28,
+              224.37
+            ],
+            [
+              336.28,
+              224.37
+            ],
+            [
+              337.27,
+              230.33
+            ],
+            [
+              337.27,
+              234.31
+            ],
+            [
+              337.27,
+              236.3
+            ],
+            [
+              337.27,
+              237.3
+            ],
+            [
+              337.27,
+              235.31
+            ],
+            [
+              337.27,
+              232.32
+            ],
+            [
+              337.27,
+              231.33
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "iluminacion",
+          "coordenadas": [
+            [
+              61.68,
+              113.93
+            ],
+            [
+              60.69,
+              121.89
+            ],
+            [
+              60.69,
+              125.87
+            ],
+            [
+              60.69,
+              128.85
+            ],
+            [
+              60.69,
+              130.84
+            ],
+            [
+              61.68,
+              125.87
+            ],
+            [
+              61.68,
+              118.91
+            ],
+            [
+              61.68,
+              113.93
+            ],
+            [
+              61.68,
+              111.94
+            ],
+            [
+              59.69,
+              111.94
+            ],
+            [
+              58.7,
+              115.92
+            ],
+            [
+              58.7,
+              117.91
+            ],
+            [
+              57.7,
+              121.89
+            ],
+            [
+              58.7,
+              118.91
+            ],
+            [
+              59.69,
+              112.94
+            ],
+            [
+              59.69,
+              109.95
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "iluminacion",
+          "coordenadas": [
+            [
+              115.41,
+              62.2
+            ],
+            [
+              118.39,
+              67.17
+            ],
+            [
+              122.37,
+              69.16
+            ],
+            [
+              127.35,
+              70.16
+            ],
+            [
+              131.33,
+              70.16
+            ],
+            [
+              134.31,
+              68.17
+            ],
+            [
+              135.31,
+              65.18
+            ],
+            [
+              135.31,
+              63.19
+            ],
+            [
+              131.33,
+              63.19
+            ],
+            [
+              125.36,
+              65.18
+            ],
+            [
+              119.39,
+              69.16
+            ],
+            [
+              116.4,
+              72.15
+            ],
+            [
+              115.41,
+              72.15
+            ],
+            [
+              117.4,
+              65.18
+            ],
+            [
+              120.38,
+              59.21
+            ],
+            [
+              121.38,
+              57.22
+            ],
+            [
+              121.38,
+              56.23
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "iluminacion",
+          "coordenadas": [
+            [
+              121.38,
+              50.26
+            ],
+            [
+              119.39,
+              53.24
+            ],
+            [
+              119.39,
+              61.2
+            ],
+            [
+              119.39,
+              68.17
+            ],
+            [
+              119.39,
+              73.14
+            ],
+            [
+              119.39,
+              68.17
+            ],
+            [
+              119.39,
+              58.22
+            ],
+            [
+              119.39,
+              50.26
+            ],
+            [
+              116.4,
+              46.28
+            ],
+            [
+              114.41,
+              45.28
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "iluminacion",
+          "coordenadas": [
+            [
+              190.03,
+              46.28
+            ],
+            [
+              195.0,
+              50.26
+            ],
+            [
+              191.02,
+              49.26
+            ],
+            [
+              187.04,
+              49.26
+            ],
+            [
+              184.06,
+              49.26
+            ],
+            [
+              183.06,
+              52.25
+            ],
+            [
+              183.06,
+              54.24
+            ],
+            [
+              183.06,
+              55.23
+            ],
+            [
+              187.04,
+              55.23
+            ],
+            [
+              189.03,
+              52.25
+            ],
+            [
+              189.03,
+              48.27
+            ],
+            [
+              189.03,
+              45.28
+            ],
+            [
+              187.04,
+              45.28
+            ],
+            [
+              183.06,
+              47.27
+            ],
+            [
+              181.07,
+              52.25
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              299.46,
+              104.98
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_2",
+      "pregunta": "10",
+      "usuario": "user_wc5m0x3g5",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              286.53,
+              50.26
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              296.48,
+              100.0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_2",
+      "pregunta": "10",
+      "usuario": "user_xjlcr5n3m",
+      "corregido": false,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              276.53,
+              120.87
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

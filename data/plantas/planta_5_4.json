@@ -1,0 +1,2488 @@
+{
+  "plantas": [
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_174doc9da",
+      "corregido": true,
+      "tamañoCanvas": [
+        "414",
+        "414"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_1yohuz28e",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_1yohuz28e",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_5squzdixh",
+      "corregido": false,
+      "tamañoCanvas": [
+        "820",
+        "820"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_86dngz7r4",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "alfombra",
+          "identificador": "1762964950999_ebx8xopsa",
+          "coordenadas": [
+            [
+              93.52,
+              245.26
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "acolchado",
+          "identificador": "1762964967267_qi21hdjun",
+          "coordenadas": [
+            [
+              106.45,
+              304.95
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "vidrio",
+          "identificador": "1762964993945_pxvvg03e5",
+          "coordenadas": [
+            [
+              97.5,
+              69.16
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "m�rmol",
+          "identificador": "1762965006773_ufgm0e1q8",
+          "coordenadas": [
+            [
+              250.71,
+              176.61
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_b9jc1avex",
+      "corregido": false,
+      "tamañoCanvas": [
+        "414",
+        "414"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Piedra",
+          "identificador": "1762965014450_3d8i57x12",
+          "coordenadas": [
+            [
+              262.73,
+              120.43
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Azulejo",
+          "identificador": "1762965030025_wrb25p74y",
+          "coordenadas": [
+            [
+              45.78,
+              218.96
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_cofkwhhpl",
+      "corregido": false,
+      "tamañoCanvas": [
+        "402",
+        "402"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "pl�stico",
+          "identificador": "1762964905722_5ldfjvx2b",
+          "coordenadas": [
+            [
+              108.46,
+              307.49
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "piedra",
+          "identificador": "1762964911245_y02uhqby7",
+          "coordenadas": [
+            [
+              188.06,
+              198.03
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "piedra",
+          "identificador": "1762964933399_seyoq6pmi",
+          "coordenadas": [
+            [
+              275.63,
+              121.41
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_cwybhfv68",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "madera baldosas",
+          "identificador": "1762964896825_zkqsd6f23",
+          "coordenadas": [
+            [
+              116.4,
+              242.27
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_ifujns4rl",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "asientos",
+          "contenido": "madera",
+          "identificador": "1762964953436_4n1bep6f7",
+          "coordenadas": [
+            [
+              158.19,
+              216.91
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_j4gqnp21l",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_kx30ukw20",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_luuquimif",
+      "corregido": false,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Madera",
+          "identificador": "1762964908682_pap2ppdip",
+          "coordenadas": [
+            [
+              148.21,
+              157.67
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_q25z8y6i8",
+      "corregido": false,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "Piedra natural",
+          "identificador": "1762965004512_1mx2uuxvv",
+          "coordenadas": [
+            [
+              88.59,
+              136.88
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "Azulejo",
+          "identificador": "1762965012261_cwpibfpnz",
+          "coordenadas": [
+            [
+              259.79,
+              165.74
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "Madera",
+          "identificador": "1762965038984_0dijwlc0a",
+          "coordenadas": [
+            [
+              105.51,
+              290.17
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_rztuntjuc",
+      "corregido": false,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "azulejo",
+          "identificador": "1762964915895_sgzg9xnz9",
+          "coordenadas": [
+            [
+              261.68,
+              108.21
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "puerta",
+          "identificador": "1762964933587_4j4txoaj6",
+          "coordenadas": [
+            [
+              99.16,
+              105.3
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "cristal",
+          "identificador": "1762964937553_we8xqwx9e",
+          "coordenadas": [
+            [
+              119.8,
+              117.76
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "suelo madera",
+          "identificador": "1762964943328_2769adljo",
+          "coordenadas": [
+            [
+              234.78,
+              231.92
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_rztuntjuc",
+      "corregido": true,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "azulejo",
+          "identificador": "1762964915895_sgzg9xnz9",
+          "coordenadas": [
+            [
+              261.68,
+              108.21
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "puerta",
+          "identificador": "1762964933587_4j4txoaj6",
+          "coordenadas": [
+            [
+              99.16,
+              105.3
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "cristal",
+          "identificador": "1762964937553_we8xqwx9e",
+          "coordenadas": [
+            [
+              119.8,
+              117.76
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "suelo madera",
+          "identificador": "1762964943328_2769adljo",
+          "coordenadas": [
+            [
+              234.78,
+              231.92
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "borrador",
+          "contenido": "alfombra",
+          "identificador": "1762965911791_9h88lpccp",
+          "coordenadas": [
+            [
+              134.93,
+              228.18
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "alfombra",
+          "identificador": "1762965967269_nuu132gbe",
+          "coordenadas": [
+            [
+              149.78,
+              220.08
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "peludita",
+          "identificador": "1762965971034_5shban270",
+          "coordenadas": [
+            [
+              157.63,
+              233.99
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_sr7gbhit6",
+      "corregido": false,
+      "tamañoCanvas": [
+        "402",
+        "402"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_t9n6auiti",
+      "corregido": false,
+      "tamañoCanvas": [
+        "654",
+        "654"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Cristal",
+          "identificador": "1762964938953_2q68k34e0",
+          "coordenadas": [
+            [
+              168.48,
+              201.4
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Lacado",
+          "identificador": "1762964953240_9ruffn9ee",
+          "coordenadas": [
+            [
+              198.39,
+              418.74
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Metal",
+          "identificador": "1762964974963_wbfh7gk4l",
+          "coordenadas": [
+            [
+              415.73,
+              400.79
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_tjmz1ky87",
+      "corregido": false,
+      "tamañoCanvas": [
+        "642",
+        "642"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Azulejo.",
+          "identificador": "1762964829435_1h4ifq2qx",
+          "coordenadas": [
+            [
+              438.63,
+              206.36
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Cama",
+          "identificador": "1762964839863_tkue7p9ik",
+          "coordenadas": [
+            [
+              247.23,
+              488.48
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Textil",
+          "identificador": "1762964897622_e0u6tliio",
+          "coordenadas": [
+            [
+              225.3,
+              400.75
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Madera",
+          "identificador": "1762964903572_22uu1523f",
+          "coordenadas": [
+            [
+              118.63,
+              318.01
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Madrra",
+          "identificador": "1762964908789_yhfro12s9",
+          "coordenadas": [
+            [
+              529.35,
+              386.8
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Madera",
+          "identificador": "1762964918154_yn9s115xa",
+          "coordenadas": [
+            [
+              120.62,
+              141.56
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_ue9s9967n",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "borrador",
+          "contenido": "Madera",
+          "identificador": "1762964856440_6aznpu9g6",
+          "coordenadas": [
+            [
+              222.96,
+              214.02
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "borrador",
+          "contenido": "M�rmol",
+          "identificador": "1762964865902_0hflz3pje",
+          "coordenadas": [
+            [
+              250.83,
+              192.12
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_vko3zk45v",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "Madera",
+          "identificador": "1762964866202_j8njdrnrd",
+          "coordenadas": [
+            [
+              62.68,
+              130.84
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "Marmol",
+          "identificador": "1762964870161_uem2h7t37",
+          "coordenadas": [
+            [
+              212.91,
+              132.83
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "plantas",
+          "contenido": "Baldosas",
+          "identificador": "1762964879537_22cp2fpip",
+          "coordenadas": [
+            [
+              150.23,
+              234.31
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_vko3zk45v",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Draw",
+          "color": "borrador",
+          "coordenadas": [
+            [
+              106.45,
+              209.44
+            ],
+            [
+              106.45,
+              216.41
+            ],
+            [
+              106.45,
+              221.38
+            ],
+            [
+              106.45,
+              229.34
+            ],
+            [
+              108.44,
+              232.32
+            ],
+            [
+              109.44,
+              232.32
+            ],
+            [
+              111.43,
+              227.35
+            ],
+            [
+              113.42,
+              214.42
+            ],
+            [
+              114.41,
+              199.49
+            ],
+            [
+              114.41,
+              189.54
+            ],
+            [
+              114.41,
+              184.57
+            ],
+            [
+              114.41,
+              183.57
+            ],
+            [
+              114.41,
+              187.55
+            ],
+            [
+              114.41,
+              195.51
+            ],
+            [
+              113.42,
+              204.47
+            ],
+            [
+              113.42,
+              215.41
+            ],
+            [
+              112.42,
+              224.37
+            ],
+            [
+              112.42,
+              231.33
+            ],
+            [
+              112.42,
+              235.31
+            ],
+            [
+              112.42,
+              227.35
+            ],
+            [
+              112.42,
+              213.42
+            ],
+            [
+              110.43,
+              199.49
+            ],
+            [
+              108.44,
+              187.55
+            ],
+            [
+              107.45,
+              179.59
+            ],
+            [
+              106.45,
+              178.6
+            ],
+            [
+              105.46,
+              178.6
+            ],
+            [
+              104.46,
+              183.57
+            ],
+            [
+              104.46,
+              194.52
+            ],
+            [
+              103.47,
+              208.45
+            ],
+            [
+              103.47,
+              223.37
+            ],
+            [
+              103.47,
+              234.31
+            ],
+            [
+              103.47,
+              243.27
+            ],
+            [
+              103.47,
+              247.25
+            ],
+            [
+              103.47,
+              248.24
+            ],
+            [
+              103.47,
+              245.26
+            ],
+            [
+              104.46,
+              228.34
+            ],
+            [
+              107.45,
+              205.46
+            ],
+            [
+              109.44,
+              185.56
+            ],
+            [
+              109.44,
+              173.63
+            ],
+            [
+              110.43,
+              170.64
+            ],
+            [
+              110.43,
+              172.63
+            ],
+            [
+              110.43,
+              177.6
+            ],
+            [
+              110.43,
+              186.56
+            ],
+            [
+              109.44,
+              199.49
+            ],
+            [
+              108.44,
+              212.43
+            ],
+            [
+              108.44,
+              222.38
+            ],
+            [
+              108.44,
+              229.34
+            ],
+            [
+              108.44,
+              233.32
+            ],
+            [
+              108.44,
+              230.33
+            ],
+            [
+              108.44,
+              216.41
+            ],
+            [
+              108.44,
+              194.52
+            ],
+            [
+              108.44,
+              176.61
+            ],
+            [
+              108.44,
+              171.64
+            ],
+            [
+              107.45,
+              176.61
+            ],
+            [
+              107.45,
+              185.56
+            ],
+            [
+              107.45,
+              198.5
+            ],
+            [
+              107.45,
+              211.43
+            ],
+            [
+              107.45,
+              222.38
+            ],
+            [
+              108.44,
+              229.34
+            ],
+            [
+              111.43,
+              232.32
+            ],
+            [
+              115.41,
+              232.32
+            ],
+            [
+              121.38,
+              230.33
+            ],
+            [
+              128.34,
+              221.38
+            ],
+            [
+              136.3,
+              212.43
+            ],
+            [
+              142.27,
+              204.47
+            ],
+            [
+              145.26,
+              198.5
+            ],
+            [
+              145.26,
+              196.51
+            ],
+            [
+              144.26,
+              196.51
+            ],
+            [
+              138.29,
+              197.5
+            ],
+            [
+              130.33,
+              202.48
+            ],
+            [
+              122.37,
+              207.45
+            ],
+            [
+              114.41,
+              213.42
+            ],
+            [
+              107.45,
+              220.39
+            ],
+            [
+              103.47,
+              226.35
+            ],
+            [
+              101.48,
+              230.33
+            ],
+            [
+              101.48,
+              231.33
+            ],
+            [
+              106.45,
+              231.33
+            ],
+            [
+              120.38,
+              225.36
+            ],
+            [
+              134.31,
+              216.41
+            ],
+            [
+              145.26,
+              207.45
+            ],
+            [
+              154.21,
+              200.49
+            ],
+            [
+              158.19,
+              195.51
+            ],
+            [
+              158.19,
+              194.52
+            ],
+            [
+              155.2,
+              194.52
+            ],
+            [
+              143.27,
+              195.51
+            ],
+            [
+              130.33,
+              200.49
+            ],
+            [
+              118.39,
+              205.46
+            ],
+            [
+              108.44,
+              210.44
+            ],
+            [
+              104.46,
+              212.43
+            ],
+            [
+              105.46,
+              212.43
+            ],
+            [
+              118.39,
+              210.44
+            ],
+            [
+              136.3,
+              203.47
+            ],
+            [
+              150.23,
+              196.51
+            ],
+            [
+              157.19,
+              190.54
+            ],
+            [
+              158.19,
+              189.54
+            ],
+            [
+              152.22,
+              192.53
+            ],
+            [
+              145.26,
+              198.5
+            ],
+            [
+              138.29,
+              203.47
+            ],
+            [
+              132.32,
+              207.45
+            ],
+            [
+              127.35,
+              209.44
+            ],
+            [
+              126.35,
+              209.44
+            ],
+            [
+              126.35,
+              207.45
+            ],
+            [
+              126.35,
+              204.47
+            ],
+            [
+              126.35,
+              203.47
+            ],
+            [
+              126.35,
+              201.48
+            ],
+            [
+              123.37,
+              200.49
+            ],
+            [
+              113.42,
+              200.49
+            ],
+            [
+              105.46,
+              201.48
+            ],
+            [
+              101.48,
+              203.47
+            ],
+            [
+              99.49,
+              207.45
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "borrador",
+          "coordenadas": [
+            [
+              123.37,
+              241.28
+            ],
+            [
+              143.27,
+              245.26
+            ],
+            [
+              166.15,
+              245.26
+            ],
+            [
+              186.05,
+              247.25
+            ],
+            [
+              200.97,
+              247.25
+            ],
+            [
+              205.94,
+              247.25
+            ],
+            [
+              205.94,
+              248.24
+            ],
+            [
+              199.97,
+              249.24
+            ],
+            [
+              188.04,
+              250.23
+            ],
+            [
+              169.13,
+              250.23
+            ],
+            [
+              152.22,
+              251.23
+            ],
+            [
+              140.28,
+              251.23
+            ],
+            [
+              132.32,
+              252.22
+            ],
+            [
+              127.35,
+              254.21
+            ],
+            [
+              125.36,
+              255.21
+            ],
+            [
+              137.3,
+              255.21
+            ],
+            [
+              160.18,
+              255.21
+            ],
+            [
+              182.07,
+              255.21
+            ],
+            [
+              196.99,
+              255.21
+            ],
+            [
+              203.95,
+              255.21
+            ],
+            [
+              199.97,
+              257.2
+            ],
+            [
+              190.03,
+              257.2
+            ],
+            [
+              172.12,
+              257.2
+            ],
+            [
+              149.23,
+              257.2
+            ],
+            [
+              130.33,
+              257.2
+            ],
+            [
+              115.41,
+              257.2
+            ],
+            [
+              106.45,
+              257.2
+            ],
+            [
+              105.46,
+              257.2
+            ],
+            [
+              107.45,
+              257.2
+            ],
+            [
+              116.4,
+              257.2
+            ],
+            [
+              135.31,
+              257.2
+            ],
+            [
+              156.2,
+              257.2
+            ],
+            [
+              173.11,
+              257.2
+            ],
+            [
+              186.05,
+              257.2
+            ],
+            [
+              190.03,
+              257.2
+            ],
+            [
+              186.05,
+              258.19
+            ],
+            [
+              176.1,
+              258.19
+            ],
+            [
+              160.18,
+              258.19
+            ],
+            [
+              139.29,
+              258.19
+            ],
+            [
+              120.38,
+              259.19
+            ],
+            [
+              105.46,
+              260.18
+            ],
+            [
+              96.51,
+              260.18
+            ],
+            [
+              95.51,
+              261.18
+            ],
+            [
+              96.51,
+              261.18
+            ],
+            [
+              103.47,
+              261.18
+            ],
+            [
+              119.39,
+              261.18
+            ],
+            [
+              142.27,
+              261.18
+            ],
+            [
+              163.16,
+              261.18
+            ],
+            [
+              179.08,
+              261.18
+            ],
+            [
+              189.03,
+              261.18
+            ],
+            [
+              190.03,
+              262.17
+            ],
+            [
+              190.03,
+              264.16
+            ],
+            [
+              183.06,
+              265.16
+            ],
+            [
+              172.12,
+              266.15
+            ],
+            [
+              155.2,
+              266.15
+            ],
+            [
+              137.3,
+              266.15
+            ],
+            [
+              121.38,
+              266.15
+            ],
+            [
+              108.44,
+              266.15
+            ],
+            [
+              102.47,
+              266.15
+            ],
+            [
+              101.48,
+              266.15
+            ],
+            [
+              103.47,
+              265.16
+            ],
+            [
+              109.44,
+              264.16
+            ],
+            [
+              126.35,
+              263.17
+            ],
+            [
+              148.24,
+              263.17
+            ],
+            [
+              168.14,
+              263.17
+            ],
+            [
+              184.06,
+              263.17
+            ],
+            [
+              190.03,
+              263.17
+            ],
+            [
+              187.04,
+              263.17
+            ],
+            [
+              177.09,
+              263.17
+            ],
+            [
+              165.15,
+              263.17
+            ],
+            [
+              144.26,
+              262.17
+            ],
+            [
+              123.37,
+              261.18
+            ],
+            [
+              104.46,
+              260.18
+            ],
+            [
+              89.54,
+              259.19
+            ],
+            [
+              85.56,
+              259.19
+            ],
+            [
+              83.57,
+              259.19
+            ],
+            [
+              86.56,
+              257.2
+            ],
+            [
+              99.49,
+              255.21
+            ],
+            [
+              126.35,
+              253.22
+            ],
+            [
+              155.2,
+              252.22
+            ],
+            [
+              181.07,
+              251.23
+            ],
+            [
+              196.99,
+              250.23
+            ],
+            [
+              200.97,
+              249.24
+            ],
+            [
+              198.98,
+              249.24
+            ],
+            [
+              190.03,
+              249.24
+            ],
+            [
+              176.1,
+              249.24
+            ],
+            [
+              154.21,
+              249.24
+            ],
+            [
+              133.32,
+              248.24
+            ],
+            [
+              124.36,
+              248.24
+            ],
+            [
+              108.44,
+              247.25
+            ],
+            [
+              107.45,
+              247.25
+            ],
+            [
+              111.43,
+              245.26
+            ],
+            [
+              122.37,
+              243.27
+            ],
+            [
+              145.26,
+              242.27
+            ],
+            [
+              168.14,
+              239.29
+            ],
+            [
+              185.05,
+              237.3
+            ],
+            [
+              190.03,
+              236.3
+            ],
+            [
+              181.07,
+              236.3
+            ],
+            [
+              163.16,
+              236.3
+            ],
+            [
+              137.3,
+              236.3
+            ],
+            [
+              117.4,
+              236.3
+            ],
+            [
+              106.45,
+              236.3
+            ],
+            [
+              104.46,
+              236.3
+            ],
+            [
+              105.46,
+              236.3
+            ],
+            [
+              110.43,
+              236.3
+            ],
+            [
+              125.36,
+              235.31
+            ],
+            [
+              148.24,
+              234.31
+            ],
+            [
+              169.13,
+              232.32
+            ],
+            [
+              181.07,
+              230.33
+            ],
+            [
+              183.06,
+              230.33
+            ],
+            [
+              181.07,
+              230.33
+            ],
+            [
+              170.13,
+              230.33
+            ],
+            [
+              152.22,
+              230.33
+            ],
+            [
+              129.34,
+              230.33
+            ],
+            [
+              112.42,
+              231.33
+            ],
+            [
+              104.46,
+              231.33
+            ],
+            [
+              103.47,
+              231.33
+            ],
+            [
+              106.45,
+              231.33
+            ],
+            [
+              113.42,
+              230.33
+            ],
+            [
+              131.33,
+              226.35
+            ],
+            [
+              153.21,
+              222.38
+            ],
+            [
+              168.14,
+              219.39
+            ],
+            [
+              173.11,
+              218.4
+            ],
+            [
+              172.12,
+              218.4
+            ],
+            [
+              161.17,
+              218.4
+            ],
+            [
+              147.24,
+              218.4
+            ],
+            [
+              130.33,
+              218.4
+            ],
+            [
+              118.39,
+              218.4
+            ],
+            [
+              113.42,
+              218.4
+            ],
+            [
+              116.4,
+              218.4
+            ],
+            [
+              121.38,
+              216.41
+            ],
+            [
+              133.32,
+              213.42
+            ],
+            [
+              150.23,
+              210.44
+            ],
+            [
+              163.16,
+              209.44
+            ],
+            [
+              165.15,
+              209.44
+            ],
+            [
+              152.22,
+              210.44
+            ],
+            [
+              140.28,
+              211.43
+            ],
+            [
+              120.38,
+              214.42
+            ],
+            [
+              103.47,
+              215.41
+            ],
+            [
+              93.52,
+              216.41
+            ],
+            [
+              92.53,
+              216.41
+            ],
+            [
+              94.52,
+              216.41
+            ],
+            [
+              101.48,
+              214.42
+            ],
+            [
+              107.45,
+              213.42
+            ],
+            [
+              136.3,
+              210.44
+            ],
+            [
+              154.21,
+              208.45
+            ],
+            [
+              163.16,
+              207.45
+            ],
+            [
+              158.19,
+              207.45
+            ],
+            [
+              150.23,
+              210.44
+            ],
+            [
+              141.28,
+              213.42
+            ],
+            [
+              130.33,
+              217.4
+            ],
+            [
+              121.38,
+              221.38
+            ],
+            [
+              117.4,
+              224.37
+            ],
+            [
+              119.39,
+              224.37
+            ],
+            [
+              126.35,
+              224.37
+            ],
+            [
+              137.3,
+              224.37
+            ],
+            [
+              148.24,
+              224.37
+            ],
+            [
+              153.21,
+              226.35
+            ],
+            [
+              154.21,
+              229.34
+            ],
+            [
+              151.22,
+              233.32
+            ],
+            [
+              140.28,
+              237.3
+            ],
+            [
+              123.37,
+              241.28
+            ],
+            [
+              110.43,
+              243.27
+            ],
+            [
+              107.45,
+              244.26
+            ],
+            [
+              113.42,
+              242.27
+            ],
+            [
+              130.33,
+              238.29
+            ],
+            [
+              150.23,
+              236.3
+            ],
+            [
+              162.17,
+              236.3
+            ],
+            [
+              165.15,
+              236.3
+            ],
+            [
+              164.16,
+              239.29
+            ],
+            [
+              147.24,
+              243.27
+            ],
+            [
+              123.37,
+              248.24
+            ],
+            [
+              112.42,
+              250.23
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "plantas",
+          "coordenadas": [
+            [
+              326.33,
+              248.24
+            ],
+            [
+              319.36,
+              258.19
+            ],
+            [
+              319.36,
+              265.16
+            ],
+            [
+              322.35,
+              273.12
+            ],
+            [
+              327.32,
+              275.1
+            ],
+            [
+              328.32,
+              275.1
+            ],
+            [
+              332.3,
+              269.14
+            ],
+            [
+              333.29,
+              259.19
+            ],
+            [
+              333.29,
+              252.22
+            ],
+            [
+              331.3,
+              248.24
+            ],
+            [
+              327.32,
+              246.25
+            ],
+            [
+              325.33,
+              246.25
+            ],
+            [
+              323.34,
+              246.25
+            ],
+            [
+              322.35,
+              251.23
+            ],
+            [
+              321.35,
+              257.2
+            ],
+            [
+              321.35,
+              263.17
+            ],
+            [
+              323.34,
+              264.16
+            ],
+            [
+              325.33,
+              260.18
+            ],
+            [
+              327.32,
+              250.23
+            ],
+            [
+              327.32,
+              238.29
+            ],
+            [
+              327.32,
+              228.34
+            ],
+            [
+              327.32,
+              223.37
+            ],
+            [
+              324.34,
+              223.37
+            ],
+            [
+              322.35,
+              225.36
+            ],
+            [
+              321.35,
+              233.32
+            ],
+            [
+              321.35,
+              242.27
+            ],
+            [
+              321.35,
+              247.25
+            ],
+            [
+              324.34,
+              247.25
+            ],
+            [
+              327.32,
+              243.27
+            ],
+            [
+              329.31,
+              231.33
+            ],
+            [
+              329.31,
+              221.38
+            ],
+            [
+              329.31,
+              215.41
+            ],
+            [
+              329.31,
+              213.42
+            ],
+            [
+              328.32,
+              213.42
+            ],
+            [
+              327.32,
+              218.4
+            ],
+            [
+              327.32,
+              226.35
+            ],
+            [
+              327.32,
+              230.33
+            ],
+            [
+              327.32,
+              224.37
+            ],
+            [
+              327.32,
+              211.43
+            ],
+            [
+              326.33,
+              203.47
+            ],
+            [
+              325.33,
+              201.48
+            ],
+            [
+              327.32,
+              208.45
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "plantas",
+          "coordenadas": [
+            [
+              182.07,
+              63.19
+            ],
+            [
+              180.08,
+              70.16
+            ],
+            [
+              182.07,
+              77.12
+            ],
+            [
+              186.05,
+              82.09
+            ],
+            [
+              191.02,
+              82.09
+            ],
+            [
+              195.0,
+              77.12
+            ],
+            [
+              195.0,
+              67.17
+            ],
+            [
+              195.0,
+              60.21
+            ],
+            [
+              193.01,
+              58.22
+            ],
+            [
+              187.04,
+              58.22
+            ],
+            [
+              180.08,
+              61.2
+            ],
+            [
+              175.1,
+              68.17
+            ],
+            [
+              172.12,
+              76.13
+            ],
+            [
+              172.12,
+              83.09
+            ],
+            [
+              175.1,
+              84.08
+            ],
+            [
+              185.05,
+              82.09
+            ],
+            [
+              194.01,
+              72.15
+            ],
+            [
+              200.97,
+              62.2
+            ],
+            [
+              207.93,
+              54.24
+            ],
+            [
+              211.91,
+              51.25
+            ],
+            [
+              212.91,
+              51.25
+            ],
+            [
+              213.9,
+              56.23
+            ],
+            [
+              213.9,
+              65.18
+            ],
+            [
+              215.89,
+              71.15
+            ],
+            [
+              217.88,
+              74.14
+            ],
+            [
+              219.87,
+              75.13
+            ],
+            [
+              221.86,
+              71.15
+            ],
+            [
+              222.86,
+              64.19
+            ],
+            [
+              223.85,
+              59.21
+            ],
+            [
+              225.84,
+              57.22
+            ],
+            [
+              228.83,
+              57.22
+            ],
+            [
+              233.8,
+              60.21
+            ],
+            [
+              238.78,
+              64.19
+            ],
+            [
+              242.76,
+              66.18
+            ],
+            [
+              245.74,
+              66.18
+            ],
+            [
+              247.73,
+              65.18
+            ],
+            [
+              247.73,
+              63.19
+            ],
+            [
+              247.73,
+              62.2
+            ],
+            [
+              247.73,
+              67.17
+            ],
+            [
+              247.73,
+              73.14
+            ],
+            [
+              250.71,
+              75.13
+            ],
+            [
+              255.69,
+              75.13
+            ],
+            [
+              259.67,
+              70.16
+            ],
+            [
+              263.65,
+              65.18
+            ],
+            [
+              264.64,
+              64.19
+            ],
+            [
+              265.64,
+              64.19
+            ],
+            [
+              266.63,
+              67.17
+            ],
+            [
+              268.62,
+              71.15
+            ],
+            [
+              269.62,
+              73.14
+            ],
+            [
+              270.61,
+              74.14
+            ],
+            [
+              271.61,
+              74.14
+            ],
+            [
+              271.61,
+              73.14
+            ],
+            [
+              273.6,
+              73.14
+            ],
+            [
+              277.58,
+              73.14
+            ],
+            [
+              287.53,
+              73.14
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "plantas",
+          "coordenadas": [
+            [
+              61.68,
+              144.77
+            ],
+            [
+              57.7,
+              156.71
+            ],
+            [
+              57.7,
+              160.69
+            ],
+            [
+              57.7,
+              165.67
+            ],
+            [
+              57.7,
+              168.65
+            ],
+            [
+              58.7,
+              168.65
+            ],
+            [
+              60.69,
+              168.65
+            ],
+            [
+              63.67,
+              163.68
+            ],
+            [
+              64.67,
+              159.7
+            ],
+            [
+              62.68,
+              167.66
+            ],
+            [
+              60.69,
+              178.6
+            ],
+            [
+              58.7,
+              187.55
+            ],
+            [
+              58.7,
+              193.52
+            ],
+            [
+              58.7,
+              195.51
+            ],
+            [
+              65.66,
+              187.55
+            ],
+            [
+              70.64,
+              179.59
+            ],
+            [
+              73.62,
+              176.61
+            ],
+            [
+              73.62,
+              179.59
+            ],
+            [
+              71.63,
+              186.56
+            ],
+            [
+              66.66,
+              197.5
+            ],
+            [
+              64.67,
+              209.44
+            ],
+            [
+              62.68,
+              216.41
+            ],
+            [
+              62.68,
+              217.4
+            ],
+            [
+              65.66,
+              214.42
+            ],
+            [
+              69.64,
+              211.43
+            ],
+            [
+              71.63,
+              210.44
+            ],
+            [
+              71.63,
+              218.4
+            ],
+            [
+              66.66,
+              228.34
+            ],
+            [
+              64.67,
+              235.31
+            ],
+            [
+              63.67,
+              237.3
+            ],
+            [
+              65.66,
+              236.3
+            ],
+            [
+              68.65,
+              234.31
+            ],
+            [
+              70.64,
+              234.31
+            ],
+            [
+              69.64,
+              239.29
+            ],
+            [
+              65.66,
+              251.23
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              70.64,
+              181.58
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_wc5m0x3g5",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Madera pintada de color rojo",
+          "identificador": "1762964869586_d8dotwcf9",
+          "coordenadas": [
+            [
+              100.48,
+              283.06
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Madera pintada de color amarillo",
+          "identificador": "1762964878016_9zshr92zt",
+          "coordenadas": [
+            [
+              104.46,
+              144.77
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Verde",
+          "identificador": "1762964885040_dbwc3twf9",
+          "coordenadas": [
+            [
+              74.62,
+              86.07
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "4",
+      "usuario": "user_zoo2oabg3",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    }
+  ]
+}

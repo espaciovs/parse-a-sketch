@@ -1,0 +1,214 @@
+{
+  "plantas": [
+    {
+      "planta": "planta_13",
+      "pregunta": "18",
+      "usuario": "user_4wtu02kro",
+      "corregido": false,
+      "tamañoCanvas": [
+        "427",
+        "427"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Estudia",
+          "identificador": "1763055720618_t0suquuyp",
+          "coordenadas": [
+            [
+              75.71,
+              149.24
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_13",
+      "pregunta": "18",
+      "usuario": "user_b7navsg1z",
+      "corregido": true,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Dormir",
+          "identificador": "1763056593967_1obs3ikkl",
+          "coordenadas": [
+            [
+              248.67,
+              103.96
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_13",
+      "pregunta": "18",
+      "usuario": "user_e6v0asxj5",
+      "corregido": false,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "descansar",
+          "identificador": "1763055764422_jfwl4sl0a",
+          "coordenadas": [
+            [
+              204.76,
+              108.51
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_13",
+      "pregunta": "18",
+      "usuario": "user_e6v0asxj5",
+      "corregido": true,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_13",
+      "pregunta": "18",
+      "usuario": "user_extnembq9",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_13",
+      "pregunta": "18",
+      "usuario": "user_extnembq9",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_13",
+      "pregunta": "18",
+      "usuario": "user_hflyzvj5q",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "M�s luz natural",
+          "identificador": "1763055732774_9qu5rvkqu",
+          "coordenadas": [
+            [
+              83.61,
+              36.35
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_13",
+      "pregunta": "18",
+      "usuario": "user_hrk6mg965",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_13",
+      "pregunta": "18",
+      "usuario": "user_hrk6mg965",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_13",
+      "pregunta": "18",
+      "usuario": "user_rx58y19ec",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_13",
+      "pregunta": "18",
+      "usuario": "user_rx58y19ec",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "renders",
+          "identificador": "1763056450806_igi9z4eoj",
+          "coordenadas": [
+            [
+              66.66,
+              126.37
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_13",
+      "pregunta": "18",
+      "usuario": "user_tm9939w6v",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "leer",
+          "identificador": "1763055739924_tgycvyjb0",
+          "coordenadas": [
+            [
+              114.48,
+              82.64
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

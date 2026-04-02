@@ -1,0 +1,361 @@
+{
+  "plantas": [
+    {
+      "planta": "planta_12",
+      "pregunta": "4",
+      "usuario": "user_0qrcf1mff",
+      "corregido": false,
+      "tamañoCanvas": [
+        "360",
+        "360"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "suelo cer�mica y pintura pl�stica",
+          "identificador": "1763054668159_b97ui0pjn",
+          "coordenadas": [
+            [
+              215.8,
+              172.3
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_12",
+      "pregunta": "4",
+      "usuario": "user_4wtu02kro",
+      "corregido": false,
+      "tamañoCanvas": [
+        "427",
+        "427"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Mobiliario: Madera",
+          "identificador": "1763054834053_j2qpt7xmt",
+          "coordenadas": [
+            [
+              198.87,
+              99.44
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Paredes: Palilleria mader",
+          "identificador": "1763054846796_q6kybvg0u",
+          "coordenadas": [
+            [
+              63.7,
+              171.53
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_12",
+      "pregunta": "4",
+      "usuario": "user_52wv6tnax",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Hormig�n",
+          "identificador": "1763054678208_nr9m9vkvh",
+          "coordenadas": [
+            [
+              66.69,
+              150.81
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Hormig�n",
+          "identificador": "1763054682894_5haj3ix5y",
+          "coordenadas": [
+            [
+              258.79,
+              93.08
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Hormig�n",
+          "identificador": "1763054689278_la2zcygod",
+          "coordenadas": [
+            [
+              138.35,
+              323.01
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_12",
+      "pregunta": "4",
+      "usuario": "user_b7navsg1z",
+      "corregido": false,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Madera",
+          "identificador": "1763054623350_19raifwnb",
+          "coordenadas": [
+            [
+              223.81,
+              214.37
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Porcelanico",
+          "identificador": "1763054629721_so769xxb1",
+          "coordenadas": [
+            [
+              84.55,
+              272.06
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_12",
+      "pregunta": "4",
+      "usuario": "user_b7navsg1z",
+      "corregido": true,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Madera",
+          "identificador": "1763054623350_19raifwnb",
+          "coordenadas": [
+            [
+              223.81,
+              214.37
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Porcelanico",
+          "identificador": "1763054629721_so769xxb1",
+          "coordenadas": [
+            [
+              84.55,
+              272.06
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_12",
+      "pregunta": "4",
+      "usuario": "user_e6v0asxj5",
+      "corregido": false,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Acabados c�lidos",
+          "identificador": "1763054672135_z1vakjmoz",
+          "coordenadas": [
+            [
+              182.96,
+              174.46
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_12",
+      "pregunta": "4",
+      "usuario": "user_e6v0asxj5",
+      "corregido": true,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_12",
+      "pregunta": "4",
+      "usuario": "user_extnembq9",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_12",
+      "pregunta": "4",
+      "usuario": "user_fhxa8sj8w",
+      "corregido": false,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Cemento y madera",
+          "identificador": "1763054632453_mkaicjux8",
+          "coordenadas": [
+            [
+              130.39,
+              191.62
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_12",
+      "pregunta": "4",
+      "usuario": "user_ka66bkqfx",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Todo blanco y toques de como",
+          "identificador": "1763054667970_u490a1dlq",
+          "coordenadas": [
+            [
+              111.49,
+              208.07
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_12",
+      "pregunta": "4",
+      "usuario": "user_kczcahoks",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Madera",
+          "identificador": "1763054738372_gkqw61hqg",
+          "coordenadas": [
+            [
+              166.15,
+              172.63
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_12",
+      "pregunta": "4",
+      "usuario": "user_rx58y19ec",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_12",
+      "pregunta": "4",
+      "usuario": "user_rx58y19ec",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "melamina",
+          "identificador": "1763055344746_0hwrrsc83",
+          "coordenadas": [
+            [
+              169.14,
+              185.07
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_12",
+      "pregunta": "4",
+      "usuario": "user_vtjtn4scf",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "materiales reciclados",
+          "identificador": "1763054628168_xuaxsml98",
+          "coordenadas": [
+            [
+              213.9,
+              236.3
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

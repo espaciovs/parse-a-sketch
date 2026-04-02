@@ -1,0 +1,229 @@
+{
+  "plantas": [
+    {
+      "planta": "planta_3",
+      "pregunta": "18",
+      "usuario": "user_174doc9da",
+      "corregido": false,
+      "tamañoCanvas": [
+        "414",
+        "414"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_3",
+      "pregunta": "18",
+      "usuario": "user_1yohuz28e",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Pintar",
+          "identificador": "1762968587137_46043wjmb",
+          "coordenadas": [
+            [
+              96.51,
+              299.49
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_3",
+      "pregunta": "18",
+      "usuario": "user_cofkwhhpl",
+      "corregido": false,
+      "tamañoCanvas": [
+        "402",
+        "402"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "leer",
+          "identificador": "1762968326329_9pw7r8jvs",
+          "coordenadas": [
+            [
+              314.44,
+              235.84
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_3",
+      "pregunta": "18",
+      "usuario": "user_cofkwhhpl",
+      "corregido": true,
+      "tamañoCanvas": [
+        "402",
+        "402"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "leer",
+          "identificador": "1762968326329_9pw7r8jvs",
+          "coordenadas": [
+            [
+              314.44,
+              235.84
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_3",
+      "pregunta": "18",
+      "usuario": "user_kx30ukw20",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_3",
+      "pregunta": "18",
+      "usuario": "user_rvm7cpg1b",
+      "corregido": false,
+      "tamañoCanvas": [
+        "613",
+        "613"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Dormir",
+          "identificador": "1762968411481_mcqcs3f5z",
+          "coordenadas": [
+            [
+              79.24,
+              324.94
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_3",
+      "pregunta": "18",
+      "usuario": "user_sr7gbhit6",
+      "corregido": false,
+      "tamañoCanvas": [
+        "402",
+        "402"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_3",
+      "pregunta": "18",
+      "usuario": "user_ue9s9967n",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Una cama bastante espaciosa",
+          "identificador": "1762968452750_fitzu1uj0",
+          "coordenadas": [
+            [
+              109.49,
+              252.83
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_3",
+      "pregunta": "18",
+      "usuario": "user_vko3zk45v",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Bailar",
+          "identificador": "1762968422606_o9i9ipjzi",
+          "coordenadas": [
+            [
+              197.98,
+              221.38
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_3",
+      "pregunta": "18",
+      "usuario": "user_wc5m0x3g5",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Comer",
+          "identificador": "1762968461698_f5bzk6h5p",
+          "coordenadas": [
+            [
+              131.33,
+              266.15
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_3",
+      "pregunta": "18",
+      "usuario": "user_xjlcr5n3m",
+      "corregido": false,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Dibujar",
+          "identificador": "1762968482089_37nsabyyf",
+          "coordenadas": [
+            [
+              269.56,
+              208.4
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,573 @@
+{
+  "plantas": [
+    {
+      "planta": "planta_5",
+      "pregunta": "14",
+      "usuario": "user_174doc9da",
+      "corregido": true,
+      "tamañoCanvas": [
+        "414",
+        "414"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "14",
+      "usuario": "user_1yohuz28e",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Bailar",
+          "identificador": "1762965311980_7rc0t8hoc",
+          "coordenadas": [
+            [
+              142.28,
+              183.08
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Picotear",
+          "identificador": "1762965326991_k39hgpg6m",
+          "coordenadas": [
+            [
+              271.62,
+              247.75
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "14",
+      "usuario": "user_5squzdixh",
+      "corregido": false,
+      "tamañoCanvas": [
+        "820",
+        "820"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Sexo",
+          "identificador": "1762964998071_0d2dpxah6",
+          "coordenadas": [
+            [
+              682.34,
+              505.28
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Sexo",
+          "identificador": "1762965001381_og3lhq11v",
+          "coordenadas": [
+            [
+              236.42,
+              612.02
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Sexo",
+          "identificador": "1762965005001_vmxs5a1ny",
+          "coordenadas": [
+            [
+              174.57,
+              156.13
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "14",
+      "usuario": "user_86dngz7r4",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "bailar",
+          "identificador": "1762965360345_q28h9nrxb",
+          "coordenadas": [
+            [
+              264.64,
+              133.83
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "dormir",
+          "identificador": "1762965364694_kb86smbc7",
+          "coordenadas": [
+            [
+              144.26,
+              298.98
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "14",
+      "usuario": "user_cofkwhhpl",
+      "corregido": false,
+      "tamañoCanvas": [
+        "402",
+        "402"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "dormir",
+          "identificador": "1762965216612_as7r6h84r",
+          "coordenadas": [
+            [
+              156.22,
+              307.49
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "caerme",
+          "identificador": "1762965221382_6gcwpi2ib",
+          "coordenadas": [
+            [
+              200.0,
+              214.95
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "hacer pis",
+          "identificador": "1762965226000_oapqbbda8",
+          "coordenadas": [
+            [
+              280.6,
+              126.39
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "14",
+      "usuario": "user_cwybhfv68",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "14",
+      "usuario": "user_j4gqnp21l",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "14",
+      "usuario": "user_kx30ukw20",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "14",
+      "usuario": "user_luuquimif",
+      "corregido": false,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Baile",
+          "identificador": "1762965212230_n7al9rtn6",
+          "coordenadas": [
+            [
+              188.99,
+              210.39
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "14",
+      "usuario": "user_rztuntjuc",
+      "corregido": false,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "dormir",
+          "identificador": "1762965339422_nh9gdc5y6",
+          "coordenadas": [
+            [
+              129.79,
+              293.98
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "makeup",
+          "identificador": "1762965346329_ih1uggn5k",
+          "coordenadas": [
+            [
+              260.0,
+              112.57
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "ducharme",
+          "identificador": "1762965354363_m5z6db0v6",
+          "coordenadas": [
+            [
+              271.39,
+              128.13
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "eatudiar",
+          "identificador": "1762965360372_mksqn0e6s",
+          "coordenadas": [
+            [
+              298.85,
+              251.63
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "14",
+      "usuario": "user_rztuntjuc",
+      "corregido": true,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "dormir",
+          "identificador": "1762965339422_nh9gdc5y6",
+          "coordenadas": [
+            [
+              129.79,
+              293.98
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "makeup",
+          "identificador": "1762965346329_ih1uggn5k",
+          "coordenadas": [
+            [
+              260.0,
+              112.57
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "ducharme",
+          "identificador": "1762965354363_m5z6db0v6",
+          "coordenadas": [
+            [
+              271.39,
+              128.13
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "eatudiar",
+          "identificador": "1762965360372_mksqn0e6s",
+          "coordenadas": [
+            [
+              298.85,
+              251.63
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "tomar el",
+          "identificador": "1762966348119_nto71fpkb",
+          "coordenadas": [
+            [
+              89.07,
+              104.06
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "sol",
+          "identificador": "1762966351254_xlqpubi95",
+          "coordenadas": [
+            [
+              104.2,
+              125.02
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "14",
+      "usuario": "user_t9n6auiti",
+      "corregido": false,
+      "tamañoCanvas": [
+        "654",
+        "654"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Ba�o",
+          "identificador": "1762965316550_hcc7r8yxp",
+          "coordenadas": [
+            [
+              437.66,
+              205.39
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Beber",
+          "identificador": "1762965321852_6142yd0cy",
+          "coordenadas": [
+            [
+              317.03,
+              392.81
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Fumar",
+          "identificador": "1762965326805_tsmkobarv",
+          "coordenadas": [
+            [
+              127.61,
+              185.45
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "14",
+      "usuario": "user_tjmz1ky87",
+      "corregido": false,
+      "tamañoCanvas": [
+        "642",
+        "642"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "borrador",
+          "contenido": "Sexo",
+          "identificador": "1762965090922_dhvvsub3b",
+          "coordenadas": [
+            [
+              239.25,
+              479.51
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "borrador",
+          "contenido": "Sexo",
+          "identificador": "1762965097071_qq9q5q4xs",
+          "coordenadas": [
+            [
+              319.01,
+              171.47
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "borrador",
+          "contenido": "Sexo",
+          "identificador": "1762965100984_d6s09f2x6",
+          "coordenadas": [
+            [
+              111.65,
+              123.61
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "borrador",
+          "contenido": "Bebida",
+          "identificador": "1762965107702_s3ih81dgh",
+          "coordenadas": [
+            [
+              114.64,
+              321.0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "14",
+      "usuario": "user_ue9s9967n",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "14",
+      "usuario": "user_vko3zk45v",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Socializa",
+          "identificador": "1762965119960_ywygekxh2",
+          "coordenadas": [
+            [
+              164.16,
+              199.49
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Hablar",
+          "identificador": "1762965128517_135zl9qx2",
+          "coordenadas": [
+            [
+              266.63,
+              127.86
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Descansar",
+          "identificador": "1762965131791_fju9ita8u",
+          "coordenadas": [
+            [
+              146.25,
+              288.04
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "14",
+      "usuario": "user_vko3zk45v",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_5",
+      "pregunta": "14",
+      "usuario": "user_wc5m0x3g5",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    }
+  ]
+}

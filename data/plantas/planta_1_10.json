@@ -1,0 +1,3335 @@
+{
+  "plantas": [
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_1yohuz28e",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              179.09,
+              96.52
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_21gt1ok1h",
+      "corregido": true,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              69.63,
+              150.21
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              89.52,
+              157.18
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              97.48,
+              162.15
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              77.59,
+              168.12
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              68.63,
+              161.16
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              81.56,
+              140.27
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              96.49,
+              158.17
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              59.68,
+              181.05
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              62.67,
+              147.23
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              91.51,
+              151.21
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              84.55,
+              182.04
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              60.68,
+              157.18
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              97.48,
+              160.16
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_42qhkogul",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              218.01,
+              95.58
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              220.0,
+              96.58
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              238.91,
+              89.61
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              246.88,
+              100.56
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              232.94,
+              100.56
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              221.99,
+              104.54
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              205.07,
+              111.51
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              229.95,
+              96.58
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              244.89,
+              97.57
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              258.82,
+              102.55
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              264.8,
+              104.54
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              269.77,
+              98.57
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              274.75,
+              103.54
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              292.67,
+              99.56
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              297.65,
+              109.52
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              306.61,
+              106.53
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              313.57,
+              108.52
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              323.53,
+              105.54
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              331.49,
+              111.51
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              342.44,
+              105.54
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              342.44,
+              94.59
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              336.47,
+              90.6
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              331.49,
+              76.67
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              314.57,
+              88.61
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              283.71,
+              100.56
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              251.86,
+              97.57
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              241.9,
+              98.57
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              297.65,
+              96.58
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              328.51,
+              88.61
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              333.48,
+              94.59
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              325.52,
+              95.58
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              312.58,
+              95.58
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              308.6,
+              100.56
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              306.61,
+              99.56
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              323.53,
+              102.55
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              329.5,
+              101.55
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              252.85,
+              100.56
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              218.01,
+              112.5
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              192.13,
+              109.52
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              236.92,
+              92.59
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_5squzdixh",
+      "corregido": true,
+      "tamañoCanvas": [
+        "820",
+        "820"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              500.87,
+              95.69
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              504.85,
+              104.66
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              510.83,
+              98.68
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              508.84,
+              102.67
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              501.86,
+              105.66
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              501.86,
+              110.64
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              510.83,
+              109.64
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              514.82,
+              107.65
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              508.84,
+              97.68
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              497.88,
+              103.66
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              502.86,
+              121.6
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              510.83,
+              119.61
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              507.84,
+              108.65
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              493.89,
+              102.67
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              505.85,
+              114.63
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              513.82,
+              106.65
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              491.9,
+              106.65
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              490.9,
+              118.61
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              503.86,
+              120.61
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              509.84,
+              110.64
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_b9jc1avex",
+      "corregido": true,
+      "tamañoCanvas": [
+        "414",
+        "414"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              266.71,
+              103.52
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              250.79,
+              102.52
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              252.78,
+              83.61
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              254.77,
+              93.56
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              246.81,
+              118.44
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              293.58,
+              92.57
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              300.55,
+              92.57
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              255.76,
+              94.56
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              220.93,
+              101.53
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              210.98,
+              98.54
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              206.0,
+              82.62
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              238.85,
+              110.48
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              271.69,
+              98.54
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_cofkwhhpl",
+      "corregido": true,
+      "tamañoCanvas": [
+        "402",
+        "402"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              324.39,
+              64.69
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              260.7,
+              61.71
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              301.5,
+              68.67
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              242.79,
+              77.63
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              190.05,
+              73.65
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              173.14,
+              68.67
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              225.88,
+              60.71
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              292.54,
+              59.72
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              307.47,
+              63.7
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              244.78,
+              69.67
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              202.99,
+              72.65
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              252.74,
+              65.69
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              296.52,
+              62.7
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "green",
+          "coordenadas": [
+            [
+              162.19,
+              60.71
+            ],
+            [
+              162.19,
+              59.72
+            ],
+            [
+              167.17,
+              59.72
+            ],
+            [
+              173.14,
+              60.71
+            ],
+            [
+              180.1,
+              60.71
+            ],
+            [
+              188.06,
+              60.71
+            ],
+            [
+              196.02,
+              60.71
+            ],
+            [
+              203.99,
+              59.72
+            ],
+            [
+              210.95,
+              58.72
+            ],
+            [
+              218.91,
+              58.72
+            ],
+            [
+              225.88,
+              58.72
+            ],
+            [
+              232.84,
+              57.73
+            ],
+            [
+              239.81,
+              57.73
+            ],
+            [
+              246.77,
+              56.73
+            ],
+            [
+              252.74,
+              56.73
+            ],
+            [
+              257.72,
+              56.73
+            ],
+            [
+              263.69,
+              56.73
+            ],
+            [
+              268.66,
+              56.73
+            ],
+            [
+              274.63,
+              56.73
+            ],
+            [
+              280.6,
+              56.73
+            ],
+            [
+              286.57,
+              56.73
+            ],
+            [
+              292.54,
+              56.73
+            ],
+            [
+              298.51,
+              56.73
+            ],
+            [
+              303.49,
+              56.73
+            ],
+            [
+              307.47,
+              56.73
+            ],
+            [
+              312.45,
+              55.74
+            ],
+            [
+              317.42,
+              55.74
+            ],
+            [
+              322.4,
+              55.74
+            ],
+            [
+              327.37,
+              54.74
+            ],
+            [
+              331.35,
+              54.74
+            ],
+            [
+              335.33,
+              54.74
+            ],
+            [
+              339.31,
+              54.74
+            ],
+            [
+              341.3,
+              54.74
+            ],
+            [
+              343.29,
+              54.74
+            ],
+            [
+              344.29,
+              54.74
+            ],
+            [
+              344.29,
+              55.74
+            ],
+            [
+              344.29,
+              59.72
+            ],
+            [
+              344.29,
+              63.7
+            ],
+            [
+              345.28,
+              67.68
+            ],
+            [
+              346.28,
+              70.66
+            ],
+            [
+              347.27,
+              73.65
+            ],
+            [
+              348.27,
+              75.64
+            ],
+            [
+              349.26,
+              78.62
+            ],
+            [
+              350.26,
+              81.61
+            ],
+            [
+              350.26,
+              84.59
+            ],
+            [
+              350.26,
+              88.57
+            ],
+            [
+              350.26,
+              92.56
+            ],
+            [
+              350.26,
+              98.53
+            ],
+            [
+              350.26,
+              102.51
+            ],
+            [
+              350.26,
+              107.48
+            ],
+            [
+              350.26,
+              111.46
+            ],
+            [
+              350.26,
+              115.44
+            ],
+            [
+              350.26,
+              120.42
+            ],
+            [
+              350.26,
+              124.4
+            ],
+            [
+              350.26,
+              129.37
+            ],
+            [
+              350.26,
+              132.36
+            ],
+            [
+              350.26,
+              135.34
+            ],
+            [
+              350.26,
+              136.34
+            ],
+            [
+              350.26,
+              137.33
+            ],
+            [
+              350.26,
+              138.33
+            ],
+            [
+              350.26,
+              139.32
+            ],
+            [
+              350.26,
+              140.32
+            ],
+            [
+              350.26,
+              142.31
+            ],
+            [
+              350.26,
+              143.3
+            ],
+            [
+              350.26,
+              144.3
+            ],
+            [
+              347.27,
+              144.3
+            ],
+            [
+              343.29,
+              144.3
+            ],
+            [
+              338.32,
+              144.3
+            ],
+            [
+              332.35,
+              144.3
+            ],
+            [
+              325.38,
+              144.3
+            ],
+            [
+              318.42,
+              144.3
+            ],
+            [
+              311.45,
+              144.3
+            ],
+            [
+              304.49,
+              144.3
+            ],
+            [
+              297.52,
+              144.3
+            ],
+            [
+              290.55,
+              144.3
+            ],
+            [
+              284.58,
+              144.3
+            ],
+            [
+              277.62,
+              144.3
+            ],
+            [
+              271.65,
+              144.3
+            ],
+            [
+              265.68,
+              144.3
+            ],
+            [
+              260.7,
+              144.3
+            ],
+            [
+              254.73,
+              144.3
+            ],
+            [
+              248.76,
+              144.3
+            ],
+            [
+              242.79,
+              144.3
+            ],
+            [
+              236.82,
+              144.3
+            ],
+            [
+              230.85,
+              144.3
+            ],
+            [
+              224.88,
+              143.3
+            ],
+            [
+              219.91,
+              143.3
+            ],
+            [
+              214.93,
+              143.3
+            ],
+            [
+              209.96,
+              143.3
+            ],
+            [
+              203.99,
+              143.3
+            ],
+            [
+              200.0,
+              143.3
+            ],
+            [
+              195.03,
+              143.3
+            ],
+            [
+              191.05,
+              142.31
+            ],
+            [
+              187.07,
+              142.31
+            ],
+            [
+              183.09,
+              142.31
+            ],
+            [
+              179.11,
+              142.31
+            ],
+            [
+              175.13,
+              142.31
+            ],
+            [
+              171.15,
+              142.31
+            ],
+            [
+              167.17,
+              142.31
+            ],
+            [
+              163.19,
+              142.31
+            ],
+            [
+              161.2,
+              142.31
+            ],
+            [
+              159.21,
+              142.31
+            ],
+            [
+              159.21,
+              140.32
+            ],
+            [
+              159.21,
+              137.33
+            ],
+            [
+              159.21,
+              133.35
+            ],
+            [
+              159.21,
+              128.38
+            ],
+            [
+              159.21,
+              122.41
+            ],
+            [
+              159.21,
+              116.44
+            ],
+            [
+              159.21,
+              110.47
+            ],
+            [
+              159.21,
+              104.5
+            ],
+            [
+              160.2,
+              98.53
+            ],
+            [
+              160.2,
+              93.55
+            ],
+            [
+              160.2,
+              87.58
+            ],
+            [
+              160.2,
+              82.6
+            ],
+            [
+              160.2,
+              77.63
+            ],
+            [
+              160.2,
+              73.65
+            ],
+            [
+              160.2,
+              70.66
+            ],
+            [
+              160.2,
+              67.68
+            ],
+            [
+              160.2,
+              65.69
+            ],
+            [
+              160.2,
+              62.7
+            ],
+            [
+              160.2,
+              60.71
+            ],
+            [
+              160.2,
+              59.72
+            ],
+            [
+              161.2,
+              59.72
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "green",
+          "coordenadas": [
+            [
+              137.32,
+              141.31
+            ],
+            [
+              144.28,
+              144.3
+            ],
+            [
+              147.27,
+              144.3
+            ],
+            [
+              152.24,
+              144.3
+            ],
+            [
+              157.22,
+              144.3
+            ],
+            [
+              163.19,
+              144.3
+            ],
+            [
+              168.16,
+              143.3
+            ],
+            [
+              173.14,
+              143.3
+            ],
+            [
+              178.11,
+              142.31
+            ],
+            [
+              183.09,
+              142.31
+            ],
+            [
+              188.06,
+              141.31
+            ],
+            [
+              194.03,
+              141.31
+            ],
+            [
+              199.01,
+              140.32
+            ],
+            [
+              203.99,
+              140.32
+            ],
+            [
+              208.96,
+              140.32
+            ],
+            [
+              213.94,
+              140.32
+            ],
+            [
+              218.91,
+              140.32
+            ],
+            [
+              223.89,
+              140.32
+            ],
+            [
+              228.86,
+              140.32
+            ],
+            [
+              233.84,
+              139.32
+            ],
+            [
+              239.81,
+              139.32
+            ],
+            [
+              244.78,
+              139.32
+            ],
+            [
+              249.76,
+              139.32
+            ],
+            [
+              253.74,
+              138.33
+            ],
+            [
+              256.72,
+              138.33
+            ],
+            [
+              259.71,
+              138.33
+            ],
+            [
+              261.7,
+              138.33
+            ],
+            [
+              263.69,
+              138.33
+            ],
+            [
+              265.68,
+              138.33
+            ],
+            [
+              267.67,
+              138.33
+            ],
+            [
+              268.66,
+              138.33
+            ],
+            [
+              269.66,
+              138.33
+            ],
+            [
+              269.66,
+              140.32
+            ],
+            [
+              269.66,
+              143.3
+            ],
+            [
+              269.66,
+              146.29
+            ],
+            [
+              269.66,
+              150.27
+            ],
+            [
+              270.65,
+              152.26
+            ],
+            [
+              270.65,
+              155.24
+            ],
+            [
+              270.65,
+              157.23
+            ],
+            [
+              271.65,
+              158.23
+            ],
+            [
+              271.65,
+              159.22
+            ],
+            [
+              272.64,
+              160.22
+            ],
+            [
+              270.65,
+              160.22
+            ],
+            [
+              264.68,
+              159.22
+            ],
+            [
+              257.72,
+              158.23
+            ],
+            [
+              251.75,
+              158.23
+            ],
+            [
+              245.78,
+              157.23
+            ],
+            [
+              238.81,
+              156.24
+            ],
+            [
+              231.85,
+              155.24
+            ],
+            [
+              223.89,
+              155.24
+            ],
+            [
+              214.93,
+              155.24
+            ],
+            [
+              206.97,
+              155.24
+            ],
+            [
+              200.0,
+              155.24
+            ],
+            [
+              194.03,
+              155.24
+            ],
+            [
+              188.06,
+              155.24
+            ],
+            [
+              182.09,
+              155.24
+            ],
+            [
+              176.12,
+              155.24
+            ],
+            [
+              170.15,
+              156.24
+            ],
+            [
+              164.18,
+              157.23
+            ],
+            [
+              158.21,
+              157.23
+            ],
+            [
+              152.24,
+              158.23
+            ],
+            [
+              148.26,
+              158.23
+            ],
+            [
+              144.28,
+              158.23
+            ],
+            [
+              142.29,
+              158.23
+            ],
+            [
+              138.31,
+              158.23
+            ],
+            [
+              135.33,
+              158.23
+            ],
+            [
+              133.34,
+              158.23
+            ],
+            [
+              132.34,
+              158.23
+            ],
+            [
+              133.34,
+              158.23
+            ],
+            [
+              139.31,
+              158.23
+            ],
+            [
+              147.27,
+              158.23
+            ],
+            [
+              157.22,
+              156.24
+            ],
+            [
+              170.15,
+              154.25
+            ],
+            [
+              184.08,
+              152.26
+            ],
+            [
+              199.01,
+              150.27
+            ],
+            [
+              213.94,
+              148.28
+            ],
+            [
+              229.86,
+              147.28
+            ],
+            [
+              245.78,
+              147.28
+            ],
+            [
+              258.71,
+              147.28
+            ],
+            [
+              268.66,
+              147.28
+            ],
+            [
+              271.65,
+              147.28
+            ],
+            [
+              269.66,
+              147.28
+            ],
+            [
+              261.7,
+              147.28
+            ],
+            [
+              248.76,
+              147.28
+            ],
+            [
+              230.85,
+              146.29
+            ],
+            [
+              210.95,
+              146.29
+            ],
+            [
+              189.06,
+              146.29
+            ],
+            [
+              169.16,
+              146.29
+            ],
+            [
+              151.25,
+              148.28
+            ],
+            [
+              140.3,
+              149.27
+            ],
+            [
+              136.32,
+              150.27
+            ],
+            [
+              137.32,
+              150.27
+            ],
+            [
+              142.29,
+              150.27
+            ],
+            [
+              150.25,
+              149.27
+            ],
+            [
+              165.18,
+              148.28
+            ],
+            [
+              185.08,
+              147.28
+            ],
+            [
+              206.97,
+              146.29
+            ],
+            [
+              229.86,
+              145.29
+            ],
+            [
+              248.76,
+              145.29
+            ],
+            [
+              260.7,
+              145.29
+            ],
+            [
+              263.69,
+              145.29
+            ],
+            [
+              258.71,
+              145.29
+            ],
+            [
+              249.76,
+              145.29
+            ],
+            [
+              234.83,
+              145.29
+            ],
+            [
+              216.92,
+              145.29
+            ],
+            [
+              197.02,
+              145.29
+            ],
+            [
+              179.11,
+              145.29
+            ],
+            [
+              162.19,
+              145.29
+            ],
+            [
+              149.26,
+              144.3
+            ],
+            [
+              141.3,
+              144.3
+            ],
+            [
+              138.31,
+              144.3
+            ],
+            [
+              140.3,
+              144.3
+            ],
+            [
+              148.26,
+              144.3
+            ],
+            [
+              160.2,
+              144.3
+            ],
+            [
+              175.13,
+              144.3
+            ],
+            [
+              194.03,
+              145.29
+            ],
+            [
+              213.94,
+              145.29
+            ],
+            [
+              233.84,
+              146.29
+            ],
+            [
+              249.76,
+              146.29
+            ],
+            [
+              260.7,
+              146.29
+            ],
+            [
+              262.69,
+              146.29
+            ],
+            [
+              258.71,
+              146.29
+            ],
+            [
+              250.75,
+              146.29
+            ],
+            [
+              241.8,
+              146.29
+            ],
+            [
+              232.84,
+              146.29
+            ],
+            [
+              223.89,
+              146.29
+            ],
+            [
+              213.94,
+              146.29
+            ],
+            [
+              203.99,
+              146.29
+            ],
+            [
+              194.03,
+              146.29
+            ],
+            [
+              184.08,
+              146.29
+            ],
+            [
+              177.12,
+              146.29
+            ],
+            [
+              176.12,
+              146.29
+            ],
+            [
+              186.07,
+              146.29
+            ],
+            [
+              201.0,
+              145.29
+            ],
+            [
+              218.91,
+              145.29
+            ],
+            [
+              235.83,
+              145.29
+            ],
+            [
+              250.75,
+              145.29
+            ],
+            [
+              262.69,
+              145.29
+            ],
+            [
+              268.66,
+              145.29
+            ],
+            [
+              269.66,
+              145.29
+            ],
+            [
+              268.66,
+              145.29
+            ],
+            [
+              267.67,
+              145.29
+            ],
+            [
+              266.67,
+              145.29
+            ],
+            [
+              264.68,
+              145.29
+            ],
+            [
+              257.72,
+              145.29
+            ],
+            [
+              245.78,
+              145.29
+            ],
+            [
+              227.87,
+              147.28
+            ],
+            [
+              209.96,
+              150.27
+            ],
+            [
+              197.02,
+              152.26
+            ],
+            [
+              192.04,
+              152.26
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "green",
+          "coordenadas": [
+            [
+              170.15,
+              226.89
+            ],
+            [
+              171.15,
+              234.85
+            ],
+            [
+              171.15,
+              239.82
+            ],
+            [
+              171.15,
+              245.79
+            ],
+            [
+              171.15,
+              250.77
+            ],
+            [
+              171.15,
+              255.74
+            ],
+            [
+              171.15,
+              259.72
+            ],
+            [
+              171.15,
+              264.7
+            ],
+            [
+              171.15,
+              267.68
+            ],
+            [
+              171.15,
+              270.67
+            ],
+            [
+              171.15,
+              273.65
+            ],
+            [
+              171.15,
+              274.65
+            ],
+            [
+              171.15,
+              275.64
+            ],
+            [
+              171.15,
+              274.65
+            ],
+            [
+              171.15,
+              271.66
+            ],
+            [
+              171.15,
+              269.67
+            ],
+            [
+              171.15,
+              266.69
+            ],
+            [
+              171.15,
+              262.71
+            ],
+            [
+              170.15,
+              257.73
+            ],
+            [
+              170.15,
+              251.76
+            ],
+            [
+              170.15,
+              246.79
+            ],
+            [
+              170.15,
+              241.81
+            ],
+            [
+              170.15,
+              238.83
+            ],
+            [
+              170.15,
+              235.84
+            ],
+            [
+              170.15,
+              234.85
+            ],
+            [
+              170.15,
+              233.85
+            ],
+            [
+              170.15,
+              232.86
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "green",
+          "coordenadas": [
+            [
+              177.12,
+              233.85
+            ],
+            [
+              176.12,
+              235.84
+            ],
+            [
+              176.12,
+              248.78
+            ],
+            [
+              176.12,
+              260.72
+            ],
+            [
+              175.13,
+              271.66
+            ],
+            [
+              174.13,
+              280.62
+            ],
+            [
+              174.13,
+              284.6
+            ],
+            [
+              174.13,
+              275.64
+            ],
+            [
+              176.12,
+              263.7
+            ],
+            [
+              178.11,
+              251.76
+            ],
+            [
+              181.1,
+              242.81
+            ],
+            [
+              182.09,
+              237.83
+            ],
+            [
+              183.09,
+              236.84
+            ],
+            [
+              183.09,
+              241.81
+            ],
+            [
+              183.09,
+              248.78
+            ],
+            [
+              183.09,
+              256.74
+            ],
+            [
+              183.09,
+              263.7
+            ],
+            [
+              184.08,
+              267.68
+            ],
+            [
+              184.08,
+              268.68
+            ],
+            [
+              187.07,
+              262.71
+            ],
+            [
+              190.05,
+              252.76
+            ],
+            [
+              192.04,
+              243.8
+            ],
+            [
+              193.04,
+              236.84
+            ],
+            [
+              194.03,
+              234.85
+            ],
+            [
+              194.03,
+              238.83
+            ],
+            [
+              194.03,
+              244.8
+            ],
+            [
+              193.04,
+              251.76
+            ],
+            [
+              193.04,
+              255.74
+            ],
+            [
+              193.04,
+              257.73
+            ],
+            [
+              195.03,
+              251.76
+            ],
+            [
+              197.02,
+              246.79
+            ],
+            [
+              198.01,
+              242.81
+            ],
+            [
+              198.01,
+              240.82
+            ],
+            [
+              198.01,
+              242.81
+            ],
+            [
+              198.01,
+              247.78
+            ],
+            [
+              198.01,
+              253.75
+            ],
+            [
+              198.01,
+              259.72
+            ],
+            [
+              198.01,
+              262.71
+            ],
+            [
+              198.01,
+              263.7
+            ],
+            [
+              199.01,
+              260.72
+            ],
+            [
+              201.0,
+              251.76
+            ],
+            [
+              202.0,
+              242.81
+            ],
+            [
+              202.0,
+              233.85
+            ],
+            [
+              202.0,
+              226.89
+            ],
+            [
+              202.0,
+              222.91
+            ],
+            [
+              202.99,
+              227.88
+            ],
+            [
+              202.99,
+              237.83
+            ],
+            [
+              203.99,
+              248.78
+            ],
+            [
+              204.98,
+              256.74
+            ],
+            [
+              205.98,
+              261.71
+            ],
+            [
+              205.98,
+              262.71
+            ],
+            [
+              205.98,
+              257.73
+            ],
+            [
+              205.98,
+              250.77
+            ],
+            [
+              205.98,
+              244.8
+            ],
+            [
+              205.98,
+              237.83
+            ],
+            [
+              205.98,
+              230.87
+            ],
+            [
+              205.98,
+              224.9
+            ],
+            [
+              203.99,
+              221.91
+            ],
+            [
+              202.0,
+              220.92
+            ],
+            [
+              201.0,
+              222.91
+            ],
+            [
+              199.01,
+              234.85
+            ],
+            [
+              196.02,
+              248.78
+            ],
+            [
+              193.04,
+              261.71
+            ],
+            [
+              190.05,
+              270.67
+            ],
+            [
+              187.07,
+              272.66
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "green",
+          "coordenadas": [
+            [
+              161.2,
+              235.84
+            ],
+            [
+              165.18,
+              237.83
+            ],
+            [
+              172.14,
+              237.83
+            ],
+            [
+              178.11,
+              237.83
+            ],
+            [
+              185.08,
+              237.83
+            ],
+            [
+              191.05,
+              238.83
+            ],
+            [
+              197.02,
+              241.81
+            ],
+            [
+              203.99,
+              245.79
+            ],
+            [
+              210.95,
+              250.77
+            ],
+            [
+              218.91,
+              256.74
+            ],
+            [
+              224.88,
+              262.71
+            ],
+            [
+              230.85,
+              268.68
+            ],
+            [
+              234.83,
+              273.65
+            ],
+            [
+              235.83,
+              274.65
+            ],
+            [
+              237.82,
+              275.64
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "green",
+          "coordenadas": [
+            [
+              228.86,
+              225.89
+            ],
+            [
+              221.9,
+              228.88
+            ],
+            [
+              217.92,
+              229.87
+            ],
+            [
+              211.95,
+              233.85
+            ],
+            [
+              203.99,
+              238.83
+            ],
+            [
+              197.02,
+              246.79
+            ],
+            [
+              188.06,
+              253.75
+            ],
+            [
+              180.1,
+              261.71
+            ],
+            [
+              172.14,
+              268.68
+            ],
+            [
+              167.17,
+              274.65
+            ],
+            [
+              164.18,
+              277.63
+            ],
+            [
+              164.18,
+              278.63
+            ],
+            [
+              168.16,
+              276.64
+            ],
+            [
+              175.13,
+              268.68
+            ],
+            [
+              187.07,
+              259.72
+            ],
+            [
+              200.0,
+              248.78
+            ],
+            [
+              211.95,
+              239.82
+            ],
+            [
+              220.9,
+              232.86
+            ],
+            [
+              225.88,
+              229.87
+            ],
+            [
+              226.87,
+              228.88
+            ],
+            [
+              227.87,
+              228.88
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_cwybhfv68",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              235.79,
+              91.05
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_fgi2a66cp",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              187.04,
+              68.17
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              318.37,
+              199.49
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_h287nzq6j",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              237.78,
+              95.03
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_ij00m8rin",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              230.82,
+              77.12
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              296.48,
+              226.35
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_j4gqnp21l",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              237.79,
+              98.51
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_luuquimif",
+      "corregido": true,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              227.79,
+              87.05
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              248.67,
+              179.56
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_q25z8y6i8",
+      "corregido": true,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              251.83,
+              102.04
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              301.6,
+              197.6
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_rztuntjuc",
+      "corregido": true,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              325.57,
+              55.69
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              228.52,
+              86.41
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              302.68,
+              182.31
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              257.2,
+              175.46
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              105.23,
+              299.17
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              163.79,
+              70.64
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_sr7gbhit6",
+      "corregido": true,
+      "tamañoCanvas": [
+        "402",
+        "402"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              243.79,
+              90.57
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_tjmz1ky87",
+      "corregido": true,
+      "tamañoCanvas": [
+        "642",
+        "642"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_ue9s9967n",
+      "corregido": true,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              274.72,
+              105.52
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_vko3zk45v",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              265.64,
+              66.18
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_wc5m0x3g5",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              167.14,
+              53.24
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              242.76,
+              69.16
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              232.81,
+              73.14
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              234.8,
+              77.12
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              269.62,
+              75.13
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              251.71,
+              74.14
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              264.64,
+              80.1
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              249.72,
+              89.06
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              238.78,
+              83.09
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              224.85,
+              91.05
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              268.62,
+              98.01
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              242.76,
+              71.15
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              247.73,
+              89.06
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_zoo2oabg3",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              197.98,
+              105.97
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_1",
+      "pregunta": "10",
+      "usuario": "user_zxnws81xz",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              204.95,
+              78.12
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              234.8,
+              83.09
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              263.65,
+              75.13
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              249.72,
+              77.12
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              236.79,
+              99.01
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              197.98,
+              83.09
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              245.74,
+              79.11
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              247.73,
+              88.06
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              206.94,
+              96.02
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              244.74,
+              75.13
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

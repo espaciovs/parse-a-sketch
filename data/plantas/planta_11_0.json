@@ -1,0 +1,633 @@
+{
+  "plantas": [
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_0qrcf1mff",
+      "corregido": false,
+      "tamañoCanvas": [
+        "360",
+        "360"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_0qrcf1mff",
+      "corregido": true,
+      "tamañoCanvas": [
+        "360",
+        "360"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Draw",
+          "color": "green",
+          "coordenadas": [
+            [
+              358.51,
+              329.43
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "green",
+          "coordenadas": [
+            [
+              68.12,
+              293.63
+            ],
+            [
+              68.12,
+              293.63
+            ],
+            [
+              92.49,
+              309.54
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "green",
+          "coordenadas": [
+            [
+              358.51,
+              324.46
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "green",
+          "coordenadas": [
+            [
+              358.51,
+              343.35
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "green",
+          "coordenadas": [
+            [
+              115.86,
+              200.15
+            ],
+            [
+              "Draw",
+              "green"
+            ],
+            [
+              115.86,
+              200.15
+            ],
+            [
+              115.86,
+              200.15
+            ],
+            [
+              115.86,
+              200.15
+            ],
+            [
+              132.76,
+              185.23
+            ],
+            [
+              147.68,
+              173.3
+            ],
+            [
+              164.09,
+              161.86
+            ],
+            [
+              175.03,
+              154.9
+            ],
+            [
+              196.41,
+              141.97
+            ],
+            [
+              211.82,
+              133.52
+            ],
+            [
+              224.25,
+              128.05
+            ],
+            [
+              228.23,
+              126.55
+            ],
+            [
+              234.2,
+              124.07
+            ],
+            [
+              239.67,
+              122.08
+            ],
+            [
+              243.65,
+              120.09
+            ],
+            [
+              245.14,
+              119.59
+            ],
+            [
+              248.12,
+              118.1
+            ],
+            [
+              251.1,
+              116.61
+            ],
+            [
+              254.09,
+              115.12
+            ],
+            [
+              256.08,
+              114.12
+            ],
+            [
+              259.56,
+              111.64
+            ],
+            [
+              262.54,
+              109.65
+            ],
+            [
+              265.03,
+              108.16
+            ],
+            [
+              267.51,
+              106.17
+            ],
+            [
+              268.51,
+              105.67
+            ],
+            [
+              270.0,
+              104.68
+            ],
+            [
+              270.99,
+              104.18
+            ],
+            [
+              271.49,
+              103.68
+            ],
+            [
+              272.49,
+              103.18
+            ],
+            [
+              272.98,
+              102.69
+            ],
+            [
+              272.98,
+              102.69
+            ],
+            [
+              273.48,
+              102.19
+            ],
+            [
+              273.48,
+              102.19
+            ],
+            [
+              273.48,
+              102.19
+            ],
+            [
+              273.48,
+              102.19
+            ],
+            [
+              273.48,
+              102.19
+            ],
+            [
+              273.48,
+              102.19
+            ],
+            [
+              273.48,
+              102.19
+            ],
+            [
+              273.48,
+              102.19
+            ],
+            [
+              273.48,
+              102.19
+            ],
+            [
+              273.48,
+              102.19
+            ],
+            [
+              273.48,
+              102.19
+            ],
+            [
+              272.98,
+              102.19
+            ],
+            [
+              272.98,
+              102.69
+            ],
+            [
+              272.49,
+              102.69
+            ],
+            [
+              271.99,
+              102.69
+            ],
+            [
+              271.49,
+              102.69
+            ],
+            [
+              270.5,
+              103.18
+            ],
+            [
+              269.01,
+              103.68
+            ],
+            [
+              267.02,
+              105.17
+            ],
+            [
+              265.03,
+              106.17
+            ],
+            [
+              261.05,
+              108.16
+            ],
+            [
+              257.57,
+              110.64
+            ],
+            [
+              253.59,
+              112.63
+            ],
+            [
+              249.61,
+              115.12
+            ],
+            [
+              247.13,
+              116.61
+            ],
+            [
+              241.66,
+              120.59
+            ],
+            [
+              236.69,
+              124.57
+            ],
+            [
+              230.72,
+              130.04
+            ],
+            [
+              226.24,
+              134.51
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_2s1lontzm",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_2s1lontzm",
+      "corregido": true,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_4wtu02kro",
+      "corregido": false,
+      "tamañoCanvas": [
+        "427",
+        "427"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_52wv6tnax",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_52wv6tnax",
+      "corregido": true,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_b7navsg1z",
+      "corregido": false,
+      "tamañoCanvas": [
+        "280",
+        "280"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_b7navsg1z",
+      "corregido": true,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_e6v0asxj5",
+      "corregido": false,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_e6v0asxj5",
+      "corregido": true,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_extnembq9",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_fhxa8sj8w",
+      "corregido": false,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_fhxa8sj8w",
+      "corregido": true,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_hrk6mg965",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_hrk6mg965",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_ka66bkqfx",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_kczcahoks",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_kczcahoks",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_rx58y19ec",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_rx58y19ec",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_tm9939w6v",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_tm9939w6v",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Draw",
+          "color": "resto",
+          "coordenadas": [
+            [
+              296.65,
+              381.28
+            ],
+            [
+              296.65,
+              374.31
+            ],
+            [
+              298.64,
+              360.38
+            ],
+            [
+              298.64,
+              356.4
+            ],
+            [
+              302.62,
+              346.44
+            ],
+            [
+              308.6,
+              332.5
+            ],
+            [
+              315.57,
+              318.57
+            ],
+            [
+              320.54,
+              305.63
+            ],
+            [
+              326.52,
+              294.68
+            ],
+            [
+              331.49,
+              287.71
+            ],
+            [
+              333.48,
+              284.72
+            ],
+            [
+              334.48,
+              285.72
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_vtjtn4scf",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "0",
+      "usuario": "user_vtjtn4scf",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    }
+  ]
+}

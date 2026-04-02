@@ -1,0 +1,1281 @@
+{
+  "plantas": [
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_2s1lontzm",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_2s1lontzm",
+      "corregido": true,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              184.14,
+              124.93
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_4wtu02kro",
+      "corregido": false,
+      "tamañoCanvas": [
+        "427",
+        "427"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Caos",
+          "identificador": "1763049052306_elgyko6hv",
+          "coordenadas": [
+            [
+              183.11,
+              125.38
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Tranquilidad",
+          "identificador": "1763049059604_ydlr8d1st",
+          "coordenadas": [
+            [
+              93.76,
+              294.29
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_4wtu02kro",
+      "corregido": true,
+      "tamañoCanvas": [
+        "427",
+        "427"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Caos",
+          "identificador": "1763049052306_elgyko6hv",
+          "coordenadas": [
+            [
+              183.11,
+              125.38
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Tranquilidad",
+          "identificador": "1763049059604_ydlr8d1st",
+          "coordenadas": [
+            [
+              93.76,
+              294.29
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_52wv6tnax",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Orden",
+          "identificador": "1763049187468_wmouyrtxh",
+          "coordenadas": [
+            [
+              313.53,
+              95.07
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Modificaci�n",
+          "identificador": "1763049203066_9fwzmbjd3",
+          "coordenadas": [
+            [
+              68.68,
+              107.02
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Relajaci�n",
+          "identificador": "1763049220453_ex331gu8n",
+          "coordenadas": [
+            [
+              85.6,
+              283.19
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_52wv6tnax",
+      "corregido": true,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Orden",
+          "identificador": "1763049187468_wmouyrtxh",
+          "coordenadas": [
+            [
+              313.53,
+              95.07
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Modificaci�n",
+          "identificador": "1763049203066_9fwzmbjd3",
+          "coordenadas": [
+            [
+              68.68,
+              107.02
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Relajaci�n",
+          "identificador": "1763049220453_ex331gu8n",
+          "coordenadas": [
+            [
+              85.6,
+              283.19
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_8fgvheatl",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_ay5ypf6hl",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Qu� es?",
+          "identificador": "1763049125075_rijtu2mzs",
+          "coordenadas": [
+            [
+              241.76,
+              232.32
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_b7navsg1z",
+      "corregido": false,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Actividades",
+          "identificador": "1763049187024_3ixacswk5",
+          "coordenadas": [
+            [
+              154.18,
+              225.31
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_b7navsg1z",
+      "corregido": true,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Actividades",
+          "identificador": "1763049187024_3ixacswk5",
+          "coordenadas": [
+            [
+              154.18,
+              225.31
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_bja9dppen",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "peque�o",
+          "identificador": "1763049097781_l07zdnzl3",
+          "coordenadas": [
+            [
+              226.84,
+              264.16
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_bja9dppen",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              170.13,
+              106.97
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "peque�o",
+          "identificador": "1763049097781_l07zdnzl3",
+          "coordenadas": [
+            [
+              226.84,
+              264.16
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_e6v0asxj5",
+      "corregido": false,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "resto",
+          "contenido": "Desprotegido (no ves el acceso desde la cama)",
+          "identificador": "1763049174398_8bckj6nw7",
+          "coordenadas": [
+            [
+              148.92,
+              123.4
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "resto",
+          "contenido": "Estrecho",
+          "identificador": "1763049188404_n45b1vqg7",
+          "coordenadas": [
+            [
+              74.46,
+              266.47
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "resto",
+          "contenido": "espacio perdido tras la puerta",
+          "identificador": "1763049201944_dyho7r0zd",
+          "coordenadas": [
+            [
+              143.6,
+              310.08
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_e6v0asxj5",
+      "corregido": true,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "resto",
+          "contenido": "Desprotegido (no ves el acceso desde la cama)",
+          "identificador": "1763049174398_8bckj6nw7",
+          "coordenadas": [
+            [
+              148.92,
+              123.4
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "resto",
+          "contenido": "Estrecho",
+          "identificador": "1763049188404_n45b1vqg7",
+          "coordenadas": [
+            [
+              74.46,
+              266.47
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "resto",
+          "contenido": "espacio perdido tras la puerta",
+          "identificador": "1763049201944_dyho7r0zd",
+          "coordenadas": [
+            [
+              143.6,
+              310.08
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_extnembq9",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Privacidad",
+          "identificador": "1763049099399_dff9a0chr",
+          "coordenadas": [
+            [
+              64.71,
+              300.65
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Descanso",
+          "identificador": "1763049111982_z0eyt50xo",
+          "coordenadas": [
+            [
+              228.96,
+              133.41
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Comer",
+          "identificador": "1763049121833_c8lrp8oey",
+          "coordenadas": [
+            [
+              312.58,
+              329.52
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_extnembq9",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Privacidad",
+          "identificador": "1763049099399_dff9a0chr",
+          "coordenadas": [
+            [
+              64.71,
+              300.65
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Descanso",
+          "identificador": "1763049111982_z0eyt50xo",
+          "coordenadas": [
+            [
+              228.96,
+              133.41
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Comer",
+          "identificador": "1763049121833_c8lrp8oey",
+          "coordenadas": [
+            [
+              312.58,
+              329.52
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_fhxa8sj8w",
+      "corregido": false,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Amplitud",
+          "identificador": "1763049255574_9y9tts75s",
+          "coordenadas": [
+            [
+              159.26,
+              151.81
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Versatilidad",
+          "identificador": "1763049262185_y24pvxi4w",
+          "coordenadas": [
+            [
+              231.92,
+              332.97
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Intimidad",
+          "identificador": "1763049269765_vmyr9ga5u",
+          "coordenadas": [
+            [
+              75.65,
+              290.17
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_fhxa8sj8w",
+      "corregido": true,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Amplitud",
+          "identificador": "1763049255574_9y9tts75s",
+          "coordenadas": [
+            [
+              159.26,
+              151.81
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Versatilidad",
+          "identificador": "1763049262185_y24pvxi4w",
+          "coordenadas": [
+            [
+              231.92,
+              332.97
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Intimidad",
+          "identificador": "1763049269765_vmyr9ga5u",
+          "coordenadas": [
+            [
+              75.65,
+              290.17
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_frmi8yobi",
+      "corregido": true,
+      "tamañoCanvas": [
+        "414",
+        "414"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_hrk6mg965",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "curiosidad",
+          "identificador": "1763049131712_izel8hno1",
+          "coordenadas": [
+            [
+              236.79,
+              246.25
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "tranquilidad; espacioso",
+          "identificador": "1763049148467_3wloay0v7",
+          "coordenadas": [
+            [
+              81.58,
+              106.97
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_hrk6mg965",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "�til",
+          "identificador": "1763049976092_0tlvrbjj6",
+          "coordenadas": [
+            [
+              293.49,
+              275.1
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "aprovechamiento",
+          "identificador": "1763049984876_27ngn4xgw",
+          "coordenadas": [
+            [
+              196.99,
+              210.44
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_j7hldomc8",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "agobio",
+          "identificador": "1763049083199_7c05ggf42",
+          "coordenadas": [
+            [
+              238.78,
+              244.26
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_j7hldomc8",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "agobio",
+          "identificador": "1763049083199_7c05ggf42",
+          "coordenadas": [
+            [
+              238.78,
+              244.26
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_ka66bkqfx",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Ansiedad",
+          "identificador": "1763049205810_5e271aa6k",
+          "coordenadas": [
+            [
+              250.86,
+              236.94
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_ka66bkqfx",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Ansiedad",
+          "identificador": "1763049205810_5e271aa6k",
+          "coordenadas": [
+            [
+              277.74,
+              623.18
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "resto",
+          "contenido": "Movilidad",
+          "identificador": "1763049959042_um0yaidg0",
+          "coordenadas": [
+            [
+              252.85,
+              288.7
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "resto",
+          "contenido": "Movilidad",
+          "identificador": "1763049987459_c1ukoei1d",
+          "coordenadas": [
+            [
+              148.33,
+              149.34
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_kczcahoks",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "claustrofobia",
+          "identificador": "1763049149946_98kqmztsc",
+          "coordenadas": [
+            [
+              197.98,
+              198.5
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_kczcahoks",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "claustrofobia",
+          "identificador": "1763049149946_98kqmztsc",
+          "coordenadas": [
+            [
+              197.98,
+              198.5
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Diferente",
+          "identificador": "1763050036655_o07l0cww1",
+          "coordenadas": [
+            [
+              142.27,
+              261.18
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_lmhb06zgx",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "ortogonal",
+          "identificador": "1763049156495_kvcgcr972",
+          "coordenadas": [
+            [
+              208.93,
+              241.28
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_o0049ttm3",
+      "corregido": false,
+      "tamañoCanvas": [
+        "834",
+        "834"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "movilidad",
+          "identificador": "1763049172787_v3y5jf3so",
+          "coordenadas": [
+            [
+              474.86,
+              714.3
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_o0049ttm3",
+      "corregido": true,
+      "tamañoCanvas": [
+        "834",
+        "834"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "movilidad",
+          "identificador": "1763049172787_v3y5jf3so",
+          "coordenadas": [
+            [
+              474.86,
+              714.3
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_pf8ag1cjm",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "trabquilidad",
+          "identificador": "1763049178555_xsbmvmxtg",
+          "coordenadas": [
+            [
+              211.23,
+              163.39
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_pf8ag1cjm",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "orden",
+          "identificador": "1763050023492_653908f6x",
+          "coordenadas": [
+            [
+              213.49,
+              156.73
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_rx58y19ec",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "agobiante",
+          "identificador": "1763049153873_8dw305qd3",
+          "coordenadas": [
+            [
+              121.38,
+              123.39
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "LEGO",
+          "identificador": "1763049160278_bst1snmuw",
+          "coordenadas": [
+            [
+              293.51,
+              234.82
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "peque�o",
+          "identificador": "1763049165481_dq7y7aapi",
+          "coordenadas": [
+            [
+              75.62,
+              270.64
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_rx58y19ec",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "agobiante",
+          "identificador": "1763049153873_8dw305qd3",
+          "coordenadas": [
+            [
+              121.38,
+              123.39
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "LEGO",
+          "identificador": "1763049160278_bst1snmuw",
+          "coordenadas": [
+            [
+              293.51,
+              234.82
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "peque�o",
+          "identificador": "1763049165481_dq7y7aapi",
+          "coordenadas": [
+            [
+              75.62,
+              270.64
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "puzzle",
+          "identificador": "1763050011149_044a65qcq",
+          "coordenadas": [
+            [
+              220.88,
+              256.71
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_tm9939w6v",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "movilidad compleja",
+          "identificador": "1763049197077_my1swt0xd",
+          "coordenadas": [
+            [
+              167.24,
+              287.71
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_tm9939w6v",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "movilidad compleja",
+          "identificador": "1763049197077_my1swt0xd",
+          "coordenadas": [
+            [
+              167.24,
+              287.71
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_uzqjoc9ru",
+      "corregido": false,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Especialidad",
+          "identificador": "1763049112435_j1mq25rod",
+          "coordenadas": [
+            [
+              271.74,
+              226.46
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_v4z5p6x45",
+      "corregido": false,
+      "tamañoCanvas": [
+        "414",
+        "414"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "ortogonal",
+          "identificador": "1763049162413_wre4nxvty",
+          "coordenadas": [
+            [
+              251.78,
+              277.67
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_w5605xsqc",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Desorden",
+          "identificador": "1763049137165_8fifm5diw",
+          "coordenadas": [
+            [
+              165.15,
+              241.28
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_8",
+      "pregunta": "8",
+      "usuario": "user_w5605xsqc",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Desorden",
+          "identificador": "1763049137165_8fifm5diw",
+          "coordenadas": [
+            [
+              165.15,
+              241.28
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Orden",
+          "identificador": "1763049996486_s8viy2756",
+          "coordenadas": [
+            [
+              236.79,
+              282.07
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

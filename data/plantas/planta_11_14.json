@@ -1,0 +1,598 @@
+{
+  "plantas": [
+    {
+      "planta": "planta_11",
+      "pregunta": "14",
+      "usuario": "user_0qrcf1mff",
+      "corregido": false,
+      "tamañoCanvas": [
+        "360",
+        "360"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "bailar",
+          "identificador": "1763053739118_a2nhhcm2l",
+          "coordenadas": [
+            [
+              239.67,
+              83.3
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "beber",
+          "identificador": "1763053750972_27pmz6fkj",
+          "coordenadas": [
+            [
+              86.52,
+              115.62
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "14",
+      "usuario": "user_4wtu02kro",
+      "corregido": false,
+      "tamañoCanvas": [
+        "427",
+        "427"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Zona de sentarse",
+          "identificador": "1763053669549_x4rm4xq5c",
+          "coordenadas": [
+            [
+              16.39,
+              279.23
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Bebidas",
+          "identificador": "1763053675208_a7cwmeqti",
+          "coordenadas": [
+            [
+              185.17,
+              181.49
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Necesidades",
+          "identificador": "1763053681913_wgghmf5o1",
+          "coordenadas": [
+            [
+              178.13,
+              268.78
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "14",
+      "usuario": "user_52wv6tnax",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "14",
+      "usuario": "user_52wv6tnax",
+      "corregido": true,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "14",
+      "usuario": "user_b7navsg1z",
+      "corregido": false,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Bailar",
+          "identificador": "1763053964853_e3t2cocjn",
+          "coordenadas": [
+            [
+              244.69,
+              107.94
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Hablar",
+          "identificador": "1763053974395_wfbmv3d3o",
+          "coordenadas": [
+            [
+              69.63,
+              85.06
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Evacuar",
+          "identificador": "1763053984679_el6gvkpbl",
+          "coordenadas": [
+            [
+              172.08,
+              219.35
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Beber",
+          "identificador": "1763054001192_7is8t8fer",
+          "coordenadas": [
+            [
+              163.13,
+              147.73
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "14",
+      "usuario": "user_b7navsg1z",
+      "corregido": true,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Bailar",
+          "identificador": "1763053964853_e3t2cocjn",
+          "coordenadas": [
+            [
+              244.69,
+              107.94
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Hablar",
+          "identificador": "1763053974395_wfbmv3d3o",
+          "coordenadas": [
+            [
+              69.63,
+              85.06
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Evacuar",
+          "identificador": "1763053984679_el6gvkpbl",
+          "coordenadas": [
+            [
+              172.08,
+              219.35
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "ventana",
+          "contenido": "Beber",
+          "identificador": "1763054001192_7is8t8fer",
+          "coordenadas": [
+            [
+              156.17,
+              122.86
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "14",
+      "usuario": "user_e6v0asxj5",
+      "corregido": false,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "resto",
+          "contenido": "descansar",
+          "identificador": "1763053843888_r28lbo0zc",
+          "coordenadas": [
+            [
+              71.27,
+              245.19
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "resto",
+          "contenido": "admirar el paisaje",
+          "identificador": "1763053853061_u9fwiegp6",
+          "coordenadas": [
+            [
+              175.51,
+              69.68
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "14",
+      "usuario": "user_e6v0asxj5",
+      "corregido": true,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              102.65,
+              261.15
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "14",
+      "usuario": "user_extnembq9",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Bailar",
+          "identificador": "1763051392652_qkogt75ai",
+          "coordenadas": [
+            [
+              109.5,
+              108.52
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "borrador",
+          "contenido": "Leer",
+          "identificador": "1763053871807_feg67wvyo",
+          "coordenadas": [
+            [
+              129.41,
+              96.58
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "14",
+      "usuario": "user_fhxa8sj8w",
+      "corregido": false,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "14",
+      "usuario": "user_fhxa8sj8w",
+      "corregido": true,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Bailar y charlar",
+          "identificador": "1763054398913_g0eh2gr4b",
+          "coordenadas": [
+            [
+              157.27,
+              105.03
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "14",
+      "usuario": "user_hrk6mg965",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "hablar",
+          "identificador": "1763053675154_ldfhlvj83",
+          "coordenadas": [
+            [
+              57.7,
+              255.21
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "bailar",
+          "identificador": "1763053680763_wohrgbox1",
+          "coordenadas": [
+            [
+              265.64,
+              98.01
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "14",
+      "usuario": "user_hrk6mg965",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "hablar",
+          "identificador": "1763053675154_ldfhlvj83",
+          "coordenadas": [
+            [
+              57.7,
+              255.21
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "bailar",
+          "identificador": "1763053680763_wohrgbox1",
+          "coordenadas": [
+            [
+              265.64,
+              98.01
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "dormir",
+          "identificador": "1763054382511_i9ocdsquh",
+          "coordenadas": [
+            [
+              65.66,
+              215.41
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "14",
+      "usuario": "user_ka66bkqfx",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "borrador",
+          "contenido": "Bailar",
+          "identificador": "1763053738898_pqfc3xnzs",
+          "coordenadas": [
+            [
+              296.65,
+              94.59
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "14",
+      "usuario": "user_kczcahoks",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Pista de baile",
+          "identificador": "1763053983553_e2mxhfzr6",
+          "coordenadas": [
+            [
+              91.53,
+              249.24
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Hablar por tel�fono",
+          "identificador": "1763053996745_jr7vq3mmn",
+          "coordenadas": [
+            [
+              183.06,
+              312.91
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "iluminacion",
+          "contenido": "Barra",
+          "identificador": "1763054005143_4ttt6n48r",
+          "coordenadas": [
+            [
+              120.38,
+              97.02
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "14",
+      "usuario": "user_tm9939w6v",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "14",
+      "usuario": "user_vtjtn4scf",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "borrador",
+          "contenido": "m�sica",
+          "identificador": "1763053649944_to8147e7d",
+          "coordenadas": [
+            [
+              224.85,
+              101.0
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "m�sica",
+          "identificador": "1763053659683_9d19nctt5",
+          "coordenadas": [
+            [
+              110.43,
+              292.02
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_11",
+      "pregunta": "14",
+      "usuario": "user_vtjtn4scf",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "borrador",
+          "contenido": "m�sica",
+          "identificador": "1763053649944_to8147e7d",
+          "coordenadas": [
+            [
+              224.85,
+              101.0
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "m�sica",
+          "identificador": "1763053659683_9d19nctt5",
+          "coordenadas": [
+            [
+              110.43,
+              292.02
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

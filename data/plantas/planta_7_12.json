@@ -1,0 +1,2192 @@
+{
+  "plantas": [
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_2s1lontzm",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              332.45,
+              219.49
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_2s1lontzm",
+      "corregido": true,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              332.45,
+              219.49
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_415jz6bqf",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              295.48,
+              266.15
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_4wtu02kro",
+      "corregido": false,
+      "tamañoCanvas": [
+        "427",
+        "427"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              333.67,
+              185.2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_4wtu02kro",
+      "corregido": true,
+      "tamañoCanvas": [
+        "427",
+        "427"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              333.67,
+              185.2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_52wv6tnax",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              335.43,
+              272.24
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_52wv6tnax",
+      "corregido": true,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              335.43,
+              272.24
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_8fgvheatl",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              298.48,
+              258.7
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_8fgvheatl",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              298.48,
+              258.7
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_b7navsg1z",
+      "corregido": false,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              129.31,
+              64.17
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              68.63,
+              111.92
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              90.52,
+              77.1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_b7navsg1z",
+      "corregido": true,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              129.31,
+              64.17
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              68.63,
+              111.92
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              90.52,
+              77.1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_bja9dppen",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              231.81,
+              73.14
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_bja9dppen",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Draw",
+          "color": "red",
+          "coordenadas": [
+            [
+              322.35,
+              337.78
+            ],
+            [
+              327.32,
+              345.74
+            ],
+            [
+              332.3,
+              345.74
+            ],
+            [
+              337.27,
+              345.74
+            ],
+            [
+              342.24,
+              343.75
+            ],
+            [
+              346.22,
+              341.76
+            ],
+            [
+              349.21,
+              338.78
+            ],
+            [
+              351.2,
+              334.8
+            ],
+            [
+              352.19,
+              330.82
+            ],
+            [
+              352.19,
+              326.84
+            ],
+            [
+              352.19,
+              322.86
+            ],
+            [
+              352.19,
+              319.88
+            ],
+            [
+              351.2,
+              316.89
+            ],
+            [
+              349.21,
+              313.91
+            ],
+            [
+              347.22,
+              310.92
+            ],
+            [
+              344.23,
+              308.93
+            ],
+            [
+              341.25,
+              306.94
+            ],
+            [
+              337.27,
+              305.95
+            ],
+            [
+              332.3,
+              305.95
+            ],
+            [
+              327.32,
+              305.95
+            ],
+            [
+              321.35,
+              307.94
+            ],
+            [
+              316.38,
+              311.92
+            ],
+            [
+              312.4,
+              315.9
+            ],
+            [
+              309.41,
+              319.88
+            ],
+            [
+              306.43,
+              324.85
+            ],
+            [
+              305.43,
+              328.83
+            ],
+            [
+              305.43,
+              333.8
+            ],
+            [
+              305.43,
+              337.78
+            ],
+            [
+              309.41,
+              341.76
+            ],
+            [
+              313.39,
+              343.75
+            ],
+            [
+              319.36,
+              343.75
+            ],
+            [
+              324.34,
+              343.75
+            ],
+            [
+              327.32,
+              343.75
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "red",
+          "coordenadas": [
+            [
+              279.57,
+              304.95
+            ],
+            [
+              272.6,
+              301.97
+            ],
+            [
+              267.63,
+              301.97
+            ],
+            [
+              264.64,
+              302.96
+            ],
+            [
+              261.66,
+              306.94
+            ],
+            [
+              259.67,
+              311.92
+            ],
+            [
+              258.67,
+              316.89
+            ],
+            [
+              257.68,
+              321.87
+            ],
+            [
+              256.68,
+              324.85
+            ],
+            [
+              256.68,
+              326.84
+            ],
+            [
+              256.68,
+              328.83
+            ],
+            [
+              256.68,
+              330.82
+            ],
+            [
+              257.68,
+              331.81
+            ],
+            [
+              259.67,
+              333.8
+            ],
+            [
+              262.65,
+              335.79
+            ],
+            [
+              266.63,
+              335.79
+            ],
+            [
+              270.61,
+              335.79
+            ],
+            [
+              275.59,
+              335.79
+            ],
+            [
+              281.56,
+              335.79
+            ],
+            [
+              286.53,
+              335.79
+            ],
+            [
+              290.51,
+              335.79
+            ],
+            [
+              294.49,
+              335.79
+            ],
+            [
+              296.48,
+              334.8
+            ],
+            [
+              297.47,
+              332.81
+            ],
+            [
+              297.47,
+              329.82
+            ],
+            [
+              297.47,
+              324.85
+            ],
+            [
+              296.48,
+              318.88
+            ],
+            [
+              293.49,
+              314.9
+            ],
+            [
+              289.52,
+              311.92
+            ],
+            [
+              286.53,
+              308.93
+            ],
+            [
+              282.55,
+              305.95
+            ],
+            [
+              279.57,
+              303.96
+            ],
+            [
+              275.59,
+              302.96
+            ],
+            [
+              272.6,
+              302.96
+            ],
+            [
+              270.61,
+              302.96
+            ],
+            [
+              267.63,
+              302.96
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "red",
+          "coordenadas": [
+            [
+              337.27,
+              175.62
+            ],
+            [
+              325.33,
+              173.63
+            ],
+            [
+              323.34,
+              177.6
+            ],
+            [
+              322.35,
+              182.58
+            ],
+            [
+              321.35,
+              187.55
+            ],
+            [
+              319.36,
+              192.53
+            ],
+            [
+              319.36,
+              196.51
+            ],
+            [
+              318.37,
+              201.48
+            ],
+            [
+              318.37,
+              207.45
+            ],
+            [
+              318.37,
+              212.43
+            ],
+            [
+              318.37,
+              217.4
+            ],
+            [
+              318.37,
+              222.38
+            ],
+            [
+              318.37,
+              226.35
+            ],
+            [
+              319.36,
+              231.33
+            ],
+            [
+              320.36,
+              237.3
+            ],
+            [
+              323.34,
+              241.28
+            ],
+            [
+              326.33,
+              245.26
+            ],
+            [
+              329.31,
+              247.25
+            ],
+            [
+              333.29,
+              248.24
+            ],
+            [
+              337.27,
+              248.24
+            ],
+            [
+              341.25,
+              248.24
+            ],
+            [
+              344.23,
+              248.24
+            ],
+            [
+              347.22,
+              246.25
+            ],
+            [
+              349.21,
+              241.28
+            ],
+            [
+              350.2,
+              235.31
+            ],
+            [
+              351.2,
+              228.34
+            ],
+            [
+              351.2,
+              222.38
+            ],
+            [
+              351.2,
+              216.41
+            ],
+            [
+              351.2,
+              210.44
+            ],
+            [
+              351.2,
+              203.47
+            ],
+            [
+              348.21,
+              196.51
+            ],
+            [
+              345.23,
+              190.54
+            ],
+            [
+              341.25,
+              186.56
+            ],
+            [
+              338.27,
+              183.57
+            ],
+            [
+              334.29,
+              181.58
+            ],
+            [
+              331.3,
+              179.59
+            ],
+            [
+              329.31,
+              176.61
+            ],
+            [
+              327.32,
+              174.62
+            ],
+            [
+              327.32,
+              171.64
+            ],
+            [
+              327.32,
+              170.64
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "red",
+          "coordenadas": [
+            [
+              273.6,
+              223.37
+            ],
+            [
+              264.64,
+              232.32
+            ],
+            [
+              262.65,
+              237.3
+            ],
+            [
+              261.66,
+              243.27
+            ],
+            [
+              260.66,
+              248.24
+            ],
+            [
+              260.66,
+              253.22
+            ],
+            [
+              261.66,
+              258.19
+            ],
+            [
+              264.64,
+              261.18
+            ],
+            [
+              269.62,
+              261.18
+            ],
+            [
+              274.59,
+              261.18
+            ],
+            [
+              280.56,
+              257.2
+            ],
+            [
+              284.54,
+              251.23
+            ],
+            [
+              288.52,
+              246.25
+            ],
+            [
+              291.51,
+              241.28
+            ],
+            [
+              293.49,
+              238.29
+            ],
+            [
+              294.49,
+              234.31
+            ],
+            [
+              294.49,
+              230.33
+            ],
+            [
+              294.49,
+              225.36
+            ],
+            [
+              290.51,
+              222.38
+            ],
+            [
+              285.54,
+              219.39
+            ],
+            [
+              280.56,
+              218.4
+            ],
+            [
+              274.59,
+              217.4
+            ],
+            [
+              271.61,
+              217.4
+            ],
+            [
+              268.62,
+              217.4
+            ],
+            [
+              267.63,
+              217.4
+            ],
+            [
+              267.63,
+              218.4
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "red",
+          "coordenadas": [
+            [
+              335.28,
+              101.99
+            ],
+            [
+              327.32,
+              100.0
+            ],
+            [
+              325.33,
+              101.0
+            ],
+            [
+              322.35,
+              103.98
+            ],
+            [
+              320.36,
+              107.96
+            ],
+            [
+              318.37,
+              113.93
+            ],
+            [
+              317.37,
+              119.9
+            ],
+            [
+              316.38,
+              126.87
+            ],
+            [
+              316.38,
+              133.83
+            ],
+            [
+              316.38,
+              139.8
+            ],
+            [
+              317.37,
+              145.77
+            ],
+            [
+              320.36,
+              150.74
+            ],
+            [
+              324.34,
+              153.73
+            ],
+            [
+              328.32,
+              154.72
+            ],
+            [
+              332.3,
+              155.72
+            ],
+            [
+              335.28,
+              155.72
+            ],
+            [
+              338.27,
+              153.73
+            ],
+            [
+              341.25,
+              147.76
+            ],
+            [
+              343.24,
+              141.79
+            ],
+            [
+              345.23,
+              135.82
+            ],
+            [
+              346.22,
+              129.85
+            ],
+            [
+              347.22,
+              122.89
+            ],
+            [
+              348.21,
+              116.92
+            ],
+            [
+              348.21,
+              110.95
+            ],
+            [
+              348.21,
+              105.97
+            ],
+            [
+              346.22,
+              100.0
+            ],
+            [
+              343.24,
+              96.02
+            ],
+            [
+              340.26,
+              92.04
+            ],
+            [
+              336.28,
+              91.05
+            ],
+            [
+              332.3,
+              90.05
+            ],
+            [
+              328.32,
+              90.05
+            ],
+            [
+              325.33,
+              90.05
+            ],
+            [
+              322.35,
+              91.05
+            ],
+            [
+              320.36,
+              94.03
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "red",
+          "coordenadas": [
+            [
+              271.61,
+              130.84
+            ],
+            [
+              264.64,
+              137.81
+            ],
+            [
+              264.64,
+              141.79
+            ],
+            [
+              263.65,
+              149.75
+            ],
+            [
+              263.65,
+              155.72
+            ],
+            [
+              263.65,
+              160.69
+            ],
+            [
+              265.64,
+              164.67
+            ],
+            [
+              270.61,
+              165.67
+            ],
+            [
+              275.59,
+              165.67
+            ],
+            [
+              280.56,
+              165.67
+            ],
+            [
+              283.55,
+              164.67
+            ],
+            [
+              287.53,
+              159.7
+            ],
+            [
+              289.52,
+              150.74
+            ],
+            [
+              290.51,
+              141.79
+            ],
+            [
+              290.51,
+              135.82
+            ],
+            [
+              290.51,
+              132.83
+            ],
+            [
+              288.52,
+              130.84
+            ],
+            [
+              283.55,
+              129.85
+            ],
+            [
+              277.58,
+              129.85
+            ],
+            [
+              271.61,
+              129.85
+            ],
+            [
+              265.64,
+              129.85
+            ],
+            [
+              259.67,
+              131.84
+            ],
+            [
+              255.69,
+              134.82
+            ],
+            [
+              251.71,
+              137.81
+            ],
+            [
+              250.71,
+              139.8
+            ],
+            [
+              250.71,
+              142.78
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "red",
+          "coordenadas": [
+            [
+              254.69,
+              42.3
+            ],
+            [
+              246.73,
+              46.28
+            ],
+            [
+              240.77,
+              55.23
+            ],
+            [
+              237.78,
+              62.2
+            ],
+            [
+              235.79,
+              68.17
+            ],
+            [
+              235.79,
+              73.14
+            ],
+            [
+              235.79,
+              78.12
+            ],
+            [
+              239.77,
+              80.1
+            ],
+            [
+              244.74,
+              82.09
+            ],
+            [
+              249.72,
+              83.09
+            ],
+            [
+              254.69,
+              83.09
+            ],
+            [
+              259.67,
+              83.09
+            ],
+            [
+              264.64,
+              80.1
+            ],
+            [
+              268.62,
+              73.14
+            ],
+            [
+              270.61,
+              67.17
+            ],
+            [
+              271.61,
+              62.2
+            ],
+            [
+              271.61,
+              58.22
+            ],
+            [
+              271.61,
+              56.23
+            ],
+            [
+              268.62,
+              54.24
+            ],
+            [
+              263.65,
+              53.24
+            ],
+            [
+              257.68,
+              52.25
+            ],
+            [
+              250.71,
+              52.25
+            ],
+            [
+              245.74,
+              52.25
+            ],
+            [
+              241.76,
+              52.25
+            ],
+            [
+              239.77,
+              52.25
+            ],
+            [
+              239.77,
+              51.25
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              231.81,
+              73.14
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_e6v0asxj5",
+      "corregido": false,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              293.58,
+              267.53
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_e6v0asxj5",
+      "corregido": true,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              293.58,
+              267.53
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_extnembq9",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              137.38,
+              78.66
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              368.33,
+              364.36
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_extnembq9",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              137.38,
+              78.66
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              368.33,
+              364.36
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_fhxa8sj8w",
+      "corregido": false,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              144.33,
+              150.81
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_fhxa8sj8w",
+      "corregido": true,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              329.47,
+              299.12
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_frmi8yobi",
+      "corregido": false,
+      "tamañoCanvas": [
+        "414",
+        "414"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              340.36,
+              67.69
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_frmi8yobi",
+      "corregido": true,
+      "tamañoCanvas": [
+        "414",
+        "414"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              340.36,
+              67.69
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_hflyzvj5q",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              156.27,
+              139.86
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_hflyzvj5q",
+      "corregido": true,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              156.27,
+              139.86
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_hrk6mg965",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              110.43,
+              86.07
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_hrk6mg965",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              110.43,
+              86.07
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_j7hldomc8",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              317.37,
+              235.31
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_ka66bkqfx",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              117.47,
+              104.54
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_ka66bkqfx",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              117.47,
+              104.54
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_kczcahoks",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              86.56,
+              156.71
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              125.36,
+              193.52
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              181.07,
+              182.58
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              200.97,
+              159.7
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              198.98,
+              114.93
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              176.1,
+              85.08
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              119.39,
+              88.06
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              96.51,
+              99.01
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              86.56,
+              131.84
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              98.49,
+              159.7
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_kczcahoks",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              86.56,
+              156.71
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              125.36,
+              193.52
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              181.07,
+              182.58
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              200.97,
+              159.7
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              198.98,
+              114.93
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              176.1,
+              85.08
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              119.39,
+              88.06
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              96.51,
+              99.01
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              86.56,
+              131.84
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              98.49,
+              159.7
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_minrhm0y0",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              308.42,
+              318.88
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_pf8ag1cjm",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              308.23,
+              208.58
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_pf8ag1cjm",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              308.23,
+              208.58
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_rtchureca",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_rtchureca",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_rx58y19ec",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              301.47,
+              303.47
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_rx58y19ec",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              301.47,
+              303.47
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              307.44,
+              307.45
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_tm9939w6v",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              263.8,
+              342.46
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_tm9939w6v",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              263.8,
+              342.46
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_uzqjoc9ru",
+      "corregido": false,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              254.81,
+              62.23
+            ]
+          ]
+        },
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              266.76,
+              101.05
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_uzqjoc9ru",
+      "corregido": true,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Draw",
+          "color": "green",
+          "coordenadas": [
+            [
+              261.78,
+              334.96
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "green",
+          "coordenadas": [
+            [
+              244.86,
+              335.95
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "green",
+          "coordenadas": [
+            [
+              252.82,
+              340.93
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "green",
+          "coordenadas": [
+            [
+              246.85,
+              347.9
+            ]
+          ]
+        },
+        {
+          "herramienta": "Draw",
+          "color": "green",
+          "coordenadas": [
+            [
+              246.85,
+              341.93
+            ],
+            [
+              247.85,
+              340.93
+            ],
+            [
+              257.8,
+              329.98
+            ],
+            [
+              273.73,
+              310.07
+            ],
+            [
+              290.65,
+              292.16
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_w5605xsqc",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              287.53,
+              260.18
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_w5605xsqc",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              325.33,
+              66.18
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "12",
+      "usuario": "user_y3u7euxxb",
+      "corregido": false,
+      "tamañoCanvas": [
+        "360",
+        "360"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              291.62,
+              150.48
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -6,6 +6,14 @@ const configuracion = {
   onChange: null, // callback para visualizacion.js
 };
 
+// Notifica un cambio de planta o pregunta:
+// - llama al callback de visualizacion.js
+// - dispara un CustomEvent para que respuestas.js pueda recargar el JSON
+function notificarCambioSeleccion() {
+  document.dispatchEvent(new CustomEvent('config-seleccion-cambio'));
+  if (configuracion.onChange) configuracion.onChange();
+}
+
 async function cargarPlantas() {
   const res = await fetch('examples/canvas-experiments/json/plantas.json');
   const data = await res.json();
@@ -28,7 +36,7 @@ async function cargarPlantas() {
       document.querySelectorAll('.planta').forEach(b => b.classList.remove('activo'));
       btn.classList.add('activo');
       configuracion.planta = { id: planta.id, titulo: planta.titulo, imagen: planta.imagen };
-      if (configuracion.onChange) configuracion.onChange();
+      notificarCambioSeleccion();
     });
 
     grid.appendChild(btn);
@@ -61,7 +69,7 @@ async function cargarPreguntas() {
   select.addEventListener('change', () => {
     const seleccionada = data.preguntas.find(p => p.id === select.value);
     configuracion.pregunta = seleccionada ? { ...seleccionada } : null;
-    if (configuracion.onChange) configuracion.onChange();
+    notificarCambioSeleccion();
   });
 }
 

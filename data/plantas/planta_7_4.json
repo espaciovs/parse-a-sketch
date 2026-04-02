@@ -1,0 +1,1391 @@
+{
+  "plantas": [
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_2s1lontzm",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Porcel�nico liso de gran formato efecto piedra gris en paredes; suelo de microcemento verde y textiles de seda roja",
+          "identificador": "1763048078664_u9bw7irej",
+          "coordenadas": [
+            [
+              -148.31,
+              76.16
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_2s1lontzm",
+      "corregido": true,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Porcel�nico liso de gran formato efecto piedra gris en paredes; suelo de microcemento verde y textiles de seda roja",
+          "identificador": "1763048078664_u9bw7irej",
+          "coordenadas": [
+            [
+              -148.31,
+              76.16
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_415jz6bqf",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Rugosa; hormig�n",
+          "identificador": "1763047908292_yv65p2l8h",
+          "coordenadas": [
+            [
+              83.57,
+              218.4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_4wtu02kro",
+      "corregido": false,
+      "tamañoCanvas": [
+        "427",
+        "427"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Suelo: Porcelanico madera oscura",
+          "identificador": "1763047955403_wo3wyd8ff",
+          "coordenadas": [
+            [
+              89.61,
+              282.58
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Paredes: Hormigon/Estucado gris",
+          "identificador": "1763047976281_u7p66igkj",
+          "coordenadas": [
+            [
+              101.62,
+              43.9
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Puertas interiores: Cristal translucido",
+          "identificador": "1763048013210_upk0010tk",
+          "coordenadas": [
+            [
+              60.38,
+              195.89
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_4wtu02kro",
+      "corregido": true,
+      "tamañoCanvas": [
+        "427",
+        "427"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Suelo: Porcelanico madera oscura",
+          "identificador": "1763047955403_wo3wyd8ff",
+          "coordenadas": [
+            [
+              89.61,
+              282.58
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Paredes: Hormigon/Estucado gris",
+          "identificador": "1763047976281_u7p66igkj",
+          "coordenadas": [
+            [
+              101.62,
+              43.9
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Puertas interiores: Cristal translucido",
+          "identificador": "1763048013210_upk0010tk",
+          "coordenadas": [
+            [
+              60.38,
+              195.89
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_52wv6tnax",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Madera",
+          "identificador": "1763048456228_2l9nmry8d",
+          "coordenadas": [
+            [
+              84.6,
+              275.23
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Cristal",
+          "identificador": "1763048466496_keku1lper",
+          "coordenadas": [
+            [
+              301.59,
+              198.59
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_52wv6tnax",
+      "corregido": true,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "pared",
+          "contenido": "Madera",
+          "identificador": "1763048456228_2l9nmry8d",
+          "coordenadas": [
+            [
+              84.6,
+              275.23
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Cristal",
+          "identificador": "1763048466496_keku1lper",
+          "coordenadas": [
+            [
+              301.59,
+              198.59
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_8fgvheatl",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Pondr�a un revestimiento blanco en yeso y estructura met�lica ya que el dise�o es bastante futurista",
+          "identificador": "1763047914726_nobyy8lg2",
+          "coordenadas": [
+            [
+              176.1,
+              259.69
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_8fgvheatl",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Pondr�a un revestimiento blanco en yeso y estructura met�lica ya que el dise�o es bastante futurista",
+          "identificador": "1763047914726_nobyy8lg2",
+          "coordenadas": [
+            [
+              176.1,
+              259.69
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_b7navsg1z",
+      "corregido": false,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Telas",
+          "identificador": "1763048027081_lfw7bcb0i",
+          "coordenadas": [
+            [
+              237.73,
+              268.09
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Vidrios",
+          "identificador": "1763048042190_l3xj8scj2",
+          "coordenadas": [
+            [
+              157.16,
+              230.29
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Espejos",
+          "identificador": "1763048046852_bj78wjwh5",
+          "coordenadas": [
+            [
+              149.2,
+              305.88
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_b7navsg1z",
+      "corregido": true,
+      "tamañoCanvas": [
+        "375",
+        "375"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Telas",
+          "identificador": "1763048027081_lfw7bcb0i",
+          "coordenadas": [
+            [
+              237.73,
+              268.09
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Vidrios",
+          "identificador": "1763048042190_l3xj8scj2",
+          "coordenadas": [
+            [
+              157.16,
+              230.29
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Espejos",
+          "identificador": "1763048046852_bj78wjwh5",
+          "coordenadas": [
+            [
+              149.2,
+              305.88
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_bja9dppen",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "suelo porcelanico",
+          "identificador": "1763047911300_yspyayh9b",
+          "coordenadas": [
+            [
+              179.08,
+              261.18
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_bja9dppen",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Point",
+          "color": "point",
+          "coordenadas": [
+            [
+              76.61,
+              230.33
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_e6v0asxj5",
+      "corregido": false,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Elegir�a acabados flexibles y de f�cil implantaci�n; sobre todo para las paredes curvas; como por ejemplo papel pintado; papel vin�lico; pintura pl�stica. En cuanto a los cuartos h�medos; materiales c�lidos y de apariencia limpia (blancos; grises; beige o amarillos) con un despiece peque�o.",
+          "identificador": "1763048068386_qeb53sgg2",
+          "coordenadas": [
+            [
+              157.43,
+              280.3
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_e6v0asxj5",
+      "corregido": true,
+      "tamañoCanvas": [
+        "384",
+        "384"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Elegir�a acabados flexibles y de f�cil implantaci�n; sobre todo para las paredes curvas; como por ejemplo papel pintado; papel vin�lico; pintura pl�stica. En cuanto a los cuartos h�medos; materiales c�lidos y de apariencia limpia (blancos; grises; beige o amarillos) con un despiece peque�o.",
+          "identificador": "1763048068386_qeb53sgg2",
+          "coordenadas": [
+            [
+              157.43,
+              280.3
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_extnembq9",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Papel tapiz; moqueta; bastante art deco",
+          "identificador": "1763047897213_fjv48wini",
+          "coordenadas": [
+            [
+              63.71,
+              311.6
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_extnembq9",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Papel tapiz; moqueta; bastante art deco",
+          "identificador": "1763047897213_fjv48wini",
+          "coordenadas": [
+            [
+              63.71,
+              311.6
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_fhxa8sj8w",
+      "corregido": false,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Micro cemento gris",
+          "identificador": "1763047915622_gjcp7427e",
+          "coordenadas": [
+            [
+              112.48,
+              296.14
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Alfombra",
+          "identificador": "1763047924134_089co5rp5",
+          "coordenadas": [
+            [
+              144.33,
+              148.82
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_fhxa8sj8w",
+      "corregido": true,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Micro cemento gris",
+          "identificador": "1763047915622_gjcp7427e",
+          "coordenadas": [
+            [
+              112.48,
+              296.14
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Alfombra",
+          "identificador": "1763047924134_089co5rp5",
+          "coordenadas": [
+            [
+              144.33,
+              148.82
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_frmi8yobi",
+      "corregido": false,
+      "tamañoCanvas": [
+        "414",
+        "414"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "terciopelo",
+          "identificador": "1763047947303_zranwfgl7",
+          "coordenadas": [
+            [
+              107.48,
+              149.29
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Moqueta",
+          "identificador": "1763048023205_k66svm9lc",
+          "coordenadas": [
+            [
+              157.24,
+              277.67
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "textura lisa",
+          "identificador": "1763048069868_6zd3z9vkn",
+          "coordenadas": [
+            [
+              255.76,
+              150.29
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_frmi8yobi",
+      "corregido": true,
+      "tamañoCanvas": [
+        "414",
+        "414"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "terciopelo",
+          "identificador": "1763047947303_zranwfgl7",
+          "coordenadas": [
+            [
+              107.48,
+              149.29
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Moqueta",
+          "identificador": "1763048023205_k66svm9lc",
+          "coordenadas": [
+            [
+              157.24,
+              277.67
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "textura lisa",
+          "identificador": "1763048069868_6zd3z9vkn",
+          "coordenadas": [
+            [
+              255.76,
+              150.29
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Madera",
+          "identificador": "1763048765848_riqw70n08",
+          "coordenadas": [
+            [
+              243.82,
+              180.15
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_hflyzvj5q",
+      "corregido": false,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "har�a el m�dulo entero de un color para camuflar el poco mobiliario existente. Haria un m�dulo habitacional entero en marr�n utilizando diferentes materiales; gresite en los ba�os para generar umbral; madera oscura en el suelo�",
+          "identificador": "1763048074241_5na6tvcv3",
+          "coordenadas": [
+            [
+              143.33,
+              169.72
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_hflyzvj5q",
+      "corregido": true,
+      "tamañoCanvas": [
+        "428",
+        "428"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "har�a el m�dulo entero de un color para camuflar el poco mobiliario existente. Haria un m�dulo habitacional entero en marr�n utilizando diferentes materiales; gresite en los ba�os para generar umbral; madera oscura en el suelo�",
+          "identificador": "1763048074241_5na6tvcv3",
+          "coordenadas": [
+            [
+              143.33,
+              169.72
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_hrk6mg965",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "texturas fr�as; como alicatados; un porcelanico para el solado y liso en las paredes con un papel o pintura con no mucho color",
+          "identificador": "1763048024543_49nab6lru",
+          "coordenadas": [
+            [
+              181.07,
+              240.28
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "texturas lisas y fr�as; como un porcelanico en el solado; alicatados en el ba�o y dichas y en las paredes pintura o alg�n papel sencillo",
+          "identificador": "1763048087088_qeo9nt1cq",
+          "coordenadas": [
+            [
+              175.1,
+              220.39
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "texturas lisas y fr�as como porcelanico para el suelo; alicatados en el ba�o y ducha; y pintura o un papel sencillo",
+          "identificador": "1763048150626_5tdnsve6d",
+          "coordenadas": [
+            [
+              171.12,
+              261.18
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_hrk6mg965",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "texturas fr�as; como alicatados; un porcelanico para el solado y liso en las paredes con un papel o pintura con no mucho color",
+          "identificador": "1763048024543_49nab6lru",
+          "coordenadas": [
+            [
+              181.07,
+              240.28
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "texturas lisas y fr�as; como un porcelanico en el solado; alicatados en el ba�o y dichas y en las paredes pintura o alg�n papel sencillo",
+          "identificador": "1763048087088_qeo9nt1cq",
+          "coordenadas": [
+            [
+              175.1,
+              220.39
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "texturas lisas y fr�as como porcelanico para el suelo; alicatados en el ba�o y ducha; y pintura o un papel sencillo",
+          "identificador": "1763048150626_5tdnsve6d",
+          "coordenadas": [
+            [
+              171.12,
+              261.18
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_j7hldomc8",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "azulejos y madera",
+          "identificador": "1763048801098_hodcwhlis",
+          "coordenadas": [
+            [
+              206.94,
+              281.07
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_ka66bkqfx",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Materiales c�lidos y acogedores",
+          "identificador": "1763047950432_2ee3dcv1l",
+          "coordenadas": [
+            [
+              60.72,
+              396.21
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_ka66bkqfx",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Materiales c�lidos y acogedores",
+          "identificador": "1763047950432_2ee3dcv1l",
+          "coordenadas": [
+            [
+              60.72,
+              396.21
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_kczcahoks",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Pondr�a madera en el suelo; y mobiliario con tela",
+          "identificador": "1763047906414_b3r2futfh",
+          "coordenadas": [
+            [
+              171.12,
+              258.19
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_kczcahoks",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Pondr�a madera en el suelo; y mobiliario con tela",
+          "identificador": "1763047906414_b3r2futfh",
+          "coordenadas": [
+            [
+              106.45,
+              159.7
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_minrhm0y0",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "micro cemento",
+          "identificador": "1763047935082_eceu4ygvk",
+          "coordenadas": [
+            [
+              182.07,
+              294.01
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_pf8ag1cjm",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "madera; hormig�n y vidrio",
+          "identificador": "1763047927538_1ehodalyv",
+          "coordenadas": [
+            [
+              203.35,
+              235.71
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_pf8ag1cjm",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "madera; hormig�n y vidrio",
+          "identificador": "1763047927538_1ehodalyv",
+          "coordenadas": [
+            [
+              203.35,
+              235.71
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_rtchureca",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_rtchureca",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": []
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_rx58y19ec",
+      "corregido": false,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "moqueta",
+          "identificador": "1763047971459_vor08tb34",
+          "coordenadas": [
+            [
+              135.31,
+              268.65
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "madera",
+          "identificador": "1763047980033_mfunjdwrw",
+          "coordenadas": [
+            [
+              228.84,
+              251.73
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "ceramico",
+          "identificador": "1763047996028_srgvk0v4r",
+          "coordenadas": [
+            [
+              249.73,
+              170.15
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_rx58y19ec",
+      "corregido": true,
+      "tamañoCanvas": [
+        "393",
+        "393"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "moqueta",
+          "identificador": "1763047971459_vor08tb34",
+          "coordenadas": [
+            [
+              135.31,
+              268.65
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "madera",
+          "identificador": "1763047980033_mfunjdwrw",
+          "coordenadas": [
+            [
+              228.84,
+              251.73
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "ceramico",
+          "identificador": "1763047996028_srgvk0v4r",
+          "coordenadas": [
+            [
+              249.73,
+              170.15
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_tm9939w6v",
+      "corregido": false,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Microcemento en paredes",
+          "identificador": "1763047959599_di71nr1nk",
+          "coordenadas": [
+            [
+              109.5,
+              292.69
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Laminado en los suelos",
+          "identificador": "1763047991646_h1fxwjrlq",
+          "coordenadas": [
+            [
+              259.82,
+              406.17
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "alicatado verde oscuro en los ba�os",
+          "identificador": "1763048019948_y6h1lq7dq",
+          "coordenadas": [
+            [
+              277.74,
+              39.83
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "puertas en acorde�n verdes",
+          "identificador": "1763048089055_5vhzy0ch1",
+          "coordenadas": [
+            [
+              59.73,
+              374.31
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_tm9939w6v",
+      "corregido": true,
+      "tamañoCanvas": [
+        "440",
+        "440"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Microcemento en paredes",
+          "identificador": "1763047959599_di71nr1nk",
+          "coordenadas": [
+            [
+              109.5,
+              292.69
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Laminado en los suelos",
+          "identificador": "1763047991646_h1fxwjrlq",
+          "coordenadas": [
+            [
+              259.82,
+              406.17
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "alicatado verde oscuro en los ba�os",
+          "identificador": "1763048019948_y6h1lq7dq",
+          "coordenadas": [
+            [
+              277.74,
+              39.83
+            ]
+          ]
+        },
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "puertas en acorde�n verdes",
+          "identificador": "1763048089055_5vhzy0ch1",
+          "coordenadas": [
+            [
+              59.73,
+              374.31
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_uzqjoc9ru",
+      "corregido": false,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Azulejos; aluminio; vidrio",
+          "identificador": "1763048180738_n19r2rihp",
+          "coordenadas": [
+            [
+              201.06,
+              292.16
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_uzqjoc9ru",
+      "corregido": true,
+      "tamañoCanvas": [
+        "430",
+        "430"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "green",
+          "contenido": "Azulejos; aluminio; vidrio",
+          "identificador": "1763048180738_n19r2rihp",
+          "coordenadas": [
+            [
+              201.06,
+              292.16
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_w5605xsqc",
+      "corregido": false,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Azulejos; texturas que recuerden al mar; a la naturaleza..",
+          "identificador": "1763047895690_4ku311xyh",
+          "coordenadas": [
+            [
+              156.2,
+              116.92
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_w5605xsqc",
+      "corregido": true,
+      "tamañoCanvas": [
+        "390",
+        "390"
+      ],
+      "trazos": [
+        {
+          "herramienta": "Text",
+          "color": "red",
+          "contenido": "Azulejos; texturas que recuerden al mar; a la naturaleza..",
+          "identificador": "1763047895690_4ku311xyh",
+          "coordenadas": [
+            [
+              59.69,
+              144.78
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "planta": "planta_7",
+      "pregunta": "4",
+      "usuario": "user_y3u7euxxb",
+      "corregido": false,
+      "tamañoCanvas": [
+        "360",
+        "360"
+      ],
+      "trazos": []
+    }
+  ]
+}
